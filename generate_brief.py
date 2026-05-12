@@ -3,10 +3,22 @@
 
 import yfinance as yf
 import os
+import subprocess
+import json
+import urllib.request
 from datetime import datetime, date, timedelta
 import pytz
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Vercel 部署基础 URL
+PAGES_BASE_URL = "https://daily-brief-puce.vercel.app"
+
+# 飞书 Webhook（从环境变量读取，避免泄露）
+FEISHU_WEBHOOK_URL = os.environ.get(
+    "FEISHU_WEBHOOK_URL",
+    "https://open.feishu.cn/open-apis/bot/v2/hook/d88b1297-7b79-4398-a359-dca140682500"
+)
 
 INDICES = [
     ("^GSPC",  "标普500",      "🇺🇸", "S&P 500"),
@@ -663,6 +675,79 @@ body {{ background: var(--bg); color: var(--text); font-family: -apple-system,Bl
 </html>"""
 
 
+# ── Git Push ──────────────────────────────────────────
+def git_push_report(file_path: str, today_str: str):
+    """将生成的报告 push 到 GitHub"""
+    try:
+        filename = os.path.basename(file_path)
+        subprocess.run(["git", "add", filename], cwd=OUTPUT_DIR, check=True,
+                       capture_output=True, text=True)
+        subprocess.run(["git", "commit", "-m", f"report: {today_str}"],
+                       cwd=OUTPUT_DIR, check=True, capture_output=True, text=True)
+        result = subprocess.run(["git", "push"], cwd=OUTPUT_DIR, check=True,
+                                capture_output=True, text=True)
+        print(f"✅ 已推送到 GitHub")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Git push 失败: {e.stderr}")
+        return False
+
+
+# ── 飞书通知 ──────────────────────────────────────────
+def send_feishu_notification(today_str: str, headline: str):
+    """通过飞书 Webhook 发送卡片消息"""
+    report_url = f"{PAGES_BASE_URL}/daily_brief_{today_str}.html"
+
+    card = {
+        "msg_type": "interactive",
+        "card": {
+            "header": {
+                "title": {
+                    "tag": "plain_text",
+                    "content": f"📊 美日金融市场 Daily Brief · {today_str}"
+                },
+                "template": "blue"
+            },
+            "elements": [
+                {
+                    "tag": "markdown",
+                    "content": f"**今日市场概览**\n\n{headline}"
+                },
+                {
+                    "tag": "action",
+                    "actions": [
+                        {
+                            "tag": "button",
+                            "text": {
+                                "tag": "plain_text",
+                                "content": "查看完整报告"
+                            },
+                            "url": report_url,
+                            "type": "primary"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+
+    try:
+        data = json.dumps(card).encode("utf-8")
+        req = urllib.request.Request(
+            FEISHU_WEBHOOK_URL,
+            data=data,
+            headers={"Content-Type": "application/json"}
+        )
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read())
+            if result.get("code") == 0:
+                print(f"✅ 飞书通知发送成功")
+            else:
+                print(f"❌ 飞书通知失败: {result}")
+    except Exception as e:
+        print(f"❌ 飞书通知异常: {e}")
+
+
 # ── 主程序 ─────────────────────────────────────────────
 def main():
     print("正在拉取市场数据...")
@@ -691,6 +776,7 @@ def main():
     print("个股详情拉取完成")
 
     html = build_html(data, stock_details)
+    headline = generate_headline(data)
 
     et_tz = pytz.timezone("America/New_York")
     today_str = datetime.now(et_tz).strftime("%Y-%m-%d")
@@ -700,6 +786,13 @@ def main():
         f.write(html)
 
     print(f"✅ 已保存: {output_path}")
+
+    # 推送到 GitHub Pages
+    git_push_report(output_path, today_str)
+
+    # 发送飞书通知
+    send_feishu_notification(today_str, headline)
+
     return output_path
 
 
