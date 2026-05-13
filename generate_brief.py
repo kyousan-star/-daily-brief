@@ -14,11 +14,8 @@ OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 # GitHub Pages 部署基础 URL
 PAGES_BASE_URL = "https://kyousan-star.github.io/-daily-brief"
 
-# 飞书 Webhook（从环境变量读取，避免泄露）
-FEISHU_WEBHOOK_URL = os.environ.get(
-    "FEISHU_WEBHOOK_URL",
-    "https://open.feishu.cn/open-apis/bot/v2/hook/d88b1297-7b79-4398-a359-dca140682500"
-)
+# 飞书 Webhook（从环境变量读取）
+FEISHU_WEBHOOK_URL = os.environ.get("FEISHU_WEBHOOK_URL", "")
 
 INDICES = [
     ("^GSPC",  "标普500",      "🇺🇸", "S&P 500"),
