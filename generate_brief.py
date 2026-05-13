@@ -11,8 +11,8 @@ import pytz
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Vercel 部署基础 URL
-PAGES_BASE_URL = "https://daily-brief-puce.vercel.app"
+# GitHub Pages 部署基础 URL
+PAGES_BASE_URL = "https://kyousan-star.github.io/-daily-brief"
 
 # 飞书 Webhook（从环境变量读取，避免泄露）
 FEISHU_WEBHOOK_URL = os.environ.get(
