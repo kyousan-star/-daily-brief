@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>美日金融市场 Daily Brief · 2026-05-28</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #1c2128;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --green: #00c47a;
+  --red: #ff4d4d;
+  --accent: #58a6ff;
+  --gold: #f0b429;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',sans-serif; font-size: 14px; padding: 24px; }
+.page { max-width: 1200px; margin: 0 auto; }
+
+/* ── Header ── */
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-icon { font-size: 22px; }
+.header-title { font-size: 22px; font-weight: 800; color: var(--accent); }
+.header-date { font-size: 13px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; }
+
+/* ── Headline ── */
+.headline { background: var(--surface2); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 12px 16px; margin-bottom: 20px; font-size: 14px; color: #ddd; line-height: 1.6; }
+.headline-icon { color: var(--gold); margin-right: 6px; }
+
+/* ── Section title ── */
+.section-title { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+.section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); margin-left: 8px; }
+
+/* ── Card ── */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+
+/* ── Index cards ── */
+.idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.idx-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+.idx-header { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.idx-flag { font-size: 14px; }
+.idx-name { font-size: 12px; color: var(--muted); }
+.idx-en { font-size: 11px; color: #444d56; margin-left: auto; }
+.idx-price { font-size: 22px; font-weight: 700; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+.idx-chg { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.idx-yc { font-size: 11px; color: var(--muted); }
+
+/* ── FX ── */
+.fx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px; }
+.fx-row { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: var(--surface2); border-radius: 6px; }
+.fx-icon { width: 18px; text-align: center; font-size: 13px; }
+.fx-name { color: var(--muted); flex: 1; font-size: 13px; }
+.fx-price { font-variant-numeric: tabular-nums; font-size: 13px; }
+.fx-chg { font-weight: 600; font-size: 13px; min-width: 70px; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ── Sector ETF ── */
+.sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.sc-card { border: 1px solid; border-radius: 8px; padding: 12px 10px; text-align: center; }
+.sc-label { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+.sc-etf { font-size: 11px; color: #555; margin-bottom: 6px; }
+.sc-pct { font-size: 18px; font-weight: 700; }
+
+/* ── Stock table ── */
+.stock-section { margin-bottom: 16px; }
+.ss-title { font-size: 13px; font-weight: 600; color: var(--accent); padding: 6px 0 8px 8px; border-left: 3px solid var(--accent); margin-bottom: 8px; }
+.stock-table { width: 100%; border-collapse: collapse; }
+.stock-table thead tr { border-bottom: 1px solid var(--border); }
+.stock-table th { padding: 7px 10px; text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .3px; }
+.stock-table tbody tr { border-bottom: 1px solid #1a1f25; transition: background .15s; }
+.stock-table tbody tr:hover { background: var(--surface2); }
+.stock-table td { padding: 9px 10px; vertical-align: middle; }
+.st-ticker { font-weight: 700; color: var(--accent); font-size: 13px; width: 70px; }
+.st-name { width: 140px; }
+.st-cn { display: block; font-size: 13px; }
+.st-en { display: block; font-size: 11px; color: var(--muted); }
+.st-price { font-variant-numeric: tabular-nums; font-size: 14px; font-weight: 600; width: 90px; }
+.st-chg { font-weight: 700; font-size: 13px; width: 80px; font-variant-numeric: tabular-nums; }
+.st-hl { font-size: 12px; color: var(--muted); }
+
+/* ── Events ── */
+.ev-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.ev-row:last-child { border-bottom: none; }
+.ev-when { width: 44px; color: var(--muted); font-size: 13px; flex-shrink: 0; }
+.badge-high { background: rgba(255,77,77,.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,.25); border-radius: 4px; padding: 1px 7px; font-size: 11px; flex-shrink: 0; }
+.badge-med  { background: rgba(88,166,255,.08); color: var(--accent); border: 1px solid rgba(88,166,255,.2); border-radius: 4px; padding: 1px 7px; font-size: 11px; flex-shrink: 0; }
+.badge-done { background: rgba(139,148,158,.10); color: var(--muted); border: 1px solid rgba(139,148,158,.2); border-radius: 4px; padding: 1px 7px; font-size: 11px; flex-shrink: 0; }
+.ev-desc { font-size: 13px; flex: 1; }
+.ev-past .ev-desc { color: var(--muted); }
+.ev-empty { color: var(--muted); padding: 12px 0; font-size: 13px; }
+.ev-section-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; padding: 10px 0 4px; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
+
+/* ── 腾讯买入预警 ── */
+.txn-card { border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; margin-bottom: 16px; }
+.txn-card.alert { border-color: #f0b429; background: rgba(240,180,41,0.06); }
+.txn-card.normal { background: var(--surface); }
+.txn-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.txn-title { font-size: 14px; font-weight: 700; color: var(--accent); }
+.txn-alert-badge { background: #f0b429; color: #000; border-radius: 4px; padding: 2px 9px; font-size: 12px; font-weight: 800; }
+.txn-row { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+.txn-price { font-size: 26px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.txn-stat { display: flex; flex-direction: column; gap: 2px; }
+.txn-stat-label { font-size: 11px; color: var(--muted); }
+.txn-stat-val { font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.txn-alert-msg { margin-top: 10px; font-size: 13px; font-weight: 700; color: #f0b429; }
+.buy-alert-row { background: rgba(240,180,41,0.08) !important; }
+.buy-alert-badge { background: #f0b429; color: #000; border-radius: 3px; padding: 1px 7px; font-size: 11px; font-weight: 800; margin-left: 6px; }
+
+/* ── 重点持仓监控卡片 ── */
+.pt-card { background: var(--surface); border: 1px solid #58a6ff40; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.pt-table { width: 100%; border-collapse: collapse; }
+.pt-table thead tr { border-bottom: 1px solid var(--border); }
+.pt-table th { padding: 7px 10px; text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .3px; }
+.pt-table tbody tr { border-bottom: 1px solid #1a1f25; }
+.pt-table tbody tr:hover { background: var(--surface2); }
+.pt-table td { padding: 9px 10px; vertical-align: middle; font-size: 13px; }
+.pt-ticker { font-weight: 700; color: var(--accent); width: 60px; }
+.pt-name { width: 120px; color: var(--text); }
+.pt-price { width: 120px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.pt-target { width: 80px; color: var(--gold); font-weight: 600; }
+.pt-gap { width: 110px; font-weight: 600; }
+.pt-alloc { width: 60px; color: var(--muted); }
+.pt-status { width: 110px; }
+.pt-note { font-size: 12px; color: var(--muted); }
+.pt-badge { border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.pt-buy  { background: rgba(0,196,122,.15); color: #00c47a; border: 1px solid rgba(0,196,122,.3); }
+.pt-near { background: rgba(240,180,41,.15); color: #f0b429; border: 1px solid rgba(240,180,41,.3); }
+.pt-watch { background: rgba(139,148,158,.10); color: #8b949e; border: 1px solid rgba(139,148,158,.2); }
+.pt-dca  { background: rgba(88,166,255,.10); color: var(--accent); border: 1px solid rgba(88,166,255,.2); }
+
+/* ── Layout ── */
+.mb16 { margin-bottom: 16px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.data-source { font-size: 11px; color: var(--muted); text-align: right; margin-top: 4px; }
+
+@media (max-width: 800px) {
+  .row2 { grid-template-columns: 1fr; }
+  .idx-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <span class="header-icon">📊</span>
+      <span class="header-title">美日金融市场 Daily Brief</span>
+    </div>
+    <span class="header-date">📅 2026-05-28 · 周四</span>
+  </div>
+
+  <!-- 重点持仓监控 -->
+  
+    <div class="pt-card">
+      <div class="section-title">🎯 重点持仓监控（AI基建框架·$10K）</div>
+      <table class="pt-table">
+        <thead><tr>
+          <th>代码</th><th>标的</th><th>当前价</th><th>目标价</th>
+          <th>距目标</th><th>目标仓</th><th>状态</th><th>策略备注</th>
+        </tr></thead>
+        <tbody>
+        <tr>
+          <td class="pt-ticker">MU</td>
+          <td class="pt-name">美光 HBM</td>
+          <td class="pt-price">$923.52 <span style="color:#00c47a;font-size:12px">▲+2.06%</span></td>
+          <td class="pt-target">$600.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +53.9%</span></td>
+          <td class="pt-alloc">25%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">HBM唯一美国本土供应商，分批建仓</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">LITE</td>
+          <td class="pt-name">Lumentum 光模块</td>
+          <td class="pt-price">$860.62 <span style="color:#ff4d4d;font-size:12px">▼-3.66%</span></td>
+          <td class="pt-target">$740.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +16.3%</span></td>
+          <td class="pt-alloc">15%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">光互连瓶颈，NVIDIA战略投资背书</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">VRT</td>
+          <td class="pt-name">Vertiv 液冷</td>
+          <td class="pt-price">$314.18 <span style="color:#ff4d4d;font-size:12px">▼-1.25%</span></td>
+          <td class="pt-target">$300.00</td>
+          <td class="pt-gap"><span style="color:#f0b429">离目标 +4.7%</span></td>
+          <td class="pt-alloc">15%</td>
+          <td class="pt-status"><span class="pt-badge pt-near">⚡ 接近目标</span></td>
+          <td class="pt-note">液冷刚需龙头，回调中</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">BOTZ</td>
+          <td class="pt-name">机器人AI ETF</td>
+          <td class="pt-price">$40.28 <span style="color:#ff4d4d;font-size:12px">▼-0.42%</span></td>
+          <td class="pt-target">$35.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +15.1%</span></td>
+          <td class="pt-alloc">10%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">Physical AI方向，分3批DCA</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">URNM</td>
+          <td class="pt-name">铀矿/核电 ETF</td>
+          <td class="pt-price">— <span style="color:#888;font-size:12px">—</span></td>
+          <td class="pt-target">$53.00</td>
+          <td class="pt-gap">—</td>
+          <td class="pt-alloc">10%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">AI电力长期解，已回调33%可关注</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">BE</td>
+          <td class="pt-name">Bloom Energy</td>
+          <td class="pt-price">$290.01 <span style="color:#ff4d4d;font-size:12px">▼-0.72%</span></td>
+          <td class="pt-target">$195.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +48.7%</span></td>
+          <td class="pt-alloc">0%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">等回调$190-200区间，当前空仓</td>
+        </tr></tbody>
+      </table>
+    </div>
+
+  <!-- Headline -->
+  <div class="headline">
+    <span class="headline-icon">⚡</span>美股分化，S&P 500 +0.58% · 日经225 走强 +1.83% · 日元偏弱，美元/日元 159.3 · 黄金 上涨 +2.97%
+  </div>
+
+  <!-- 大盘指数 -->
+  <div class="row2">
+    <div class="card mb16" style="margin-bottom:0">
+      <div class="section-title">🇺🇸 美国大盘</div>
+      <div class="idx-grid">
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">标普500</span>
+            <span class="idx-en">S&P 500</span>
+          </div>
+          <div class="idx-price">7,563.6</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.58% +43点
+          </div>
+          <div class="idx-yc">年涨幅 +27.2%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">纳斯达克</span>
+            <span class="idx-en">NASDAQ</span>
+          </div>
+          <div class="idx-price">26,917</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.91% +243点
+          </div>
+          <div class="idx-yc">年涨幅 +39.1%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">道琼斯</span>
+            <span class="idx-en">DOW</span>
+          </div>
+          <div class="idx-price">50,669</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.05% +25点
+          </div>
+          <div class="idx-yc">年涨幅 +20.0%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">罗素2000</span>
+            <span class="idx-en">Russell 2K</span>
+          </div>
+          <div class="idx-price">2,936.6</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.57% +17点
+          </div>
+          <div class="idx-yc">年涨幅 +40.7%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">VIX恐慌指数</span>
+            <span class="idx-en">VIX</span>
+          </div>
+          <div class="idx-price">15.74</div>
+          <div class="idx-chg" style="color:#ff4d4d">
+            ▼ -3.38% -0.55点· 情绪平稳
+          </div>
+          <div class="idx-yc">年涨幅 -15.1%</div>
+        </div></div>
+      <div class="data-source">数据源：Yahoo Finance · 2026-05-28 22:33 ET</div>
+    </div>
+    <div class="card" style="margin-bottom:0">
+      <div class="section-title">🇯🇵 日本大盘</div>
+      <div class="idx-grid">
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇯🇵</span>
+            <span class="idx-name">日经225</span>
+            <span class="idx-en">Nikkei 225</span>
+          </div>
+          <div class="idx-price">65,898</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +1.83% +1187点
+          </div>
+          <div class="idx-yc">年涨幅 +70.4%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇯🇵</span>
+            <span class="idx-name">TOPIX ETF</span>
+            <span class="idx-en">TOPIX</span>
+          </div>
+          <div class="idx-price">419</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +1.21% +5.00点
+          </div>
+          <div class="idx-yc">年涨幅 -86.1%</div>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 汇率 & 大宗商品 -->
+  <div class="card mb16" style="margin-top:16px">
+    <div class="section-title">💱 汇率 · 债券 · 大宗商品</div>
+    <div class="fx-grid">
+        <div class="fx-row">
+          <span class="fx-icon">💱</span>
+          <span class="fx-name">美元/日元</span>
+          <span class="fx-price">159.29</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +0.02%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">💱</span>
+          <span class="fx-name">美元/人民币</span>
+          <span class="fx-price">6.77</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.13%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">💱</span>
+          <span class="fx-name">欧元/美元</span>
+          <span class="fx-price">1.16</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.03%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🏦</span>
+          <span class="fx-name">美债10Y(%)</span>
+          <span class="fx-price">4.45</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.58%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🏦</span>
+          <span class="fx-name">美债2Y(%)</span>
+          <span class="fx-price">3.59</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +0.14%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🛢️</span>
+          <span class="fx-name">原油WTI</span>
+          <span class="fx-price">87.90</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -4.56%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🥇</span>
+          <span class="fx-name">黄金</span>
+          <span class="fx-price">4,536.1</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +2.97%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">₿</span>
+          <span class="fx-name">比特币</span>
+          <span class="fx-price">73,281</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.32%</span>
+        </div></div>
+  </div>
+
+  <!-- 板块 ETF -->
+  <div class="row2">
+    <div class="card">
+      <div class="section-title">🔥 美国板块 ETF</div>
+      <div class="sc-grid">
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">科技</div>
+          <div class="sc-etf">XLK</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +1.66%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">半导体</div>
+          <div class="sc-etf">SOXX</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +1.98%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">消费可选</div>
+          <div class="sc-etf">XLY</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.41%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">消费必需</div>
+          <div class="sc-etf">XLP</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.39%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">能源</div>
+          <div class="sc-etf">XLE</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.40%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">国防军工</div>
+          <div class="sc-etf">XAR</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +3.21%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">核电+铀</div>
+          <div class="sc-etf">NLR</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.88%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">机器人AI</div>
+          <div class="sc-etf">BOTZ</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.42%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#88840">
+          <div class="sc-label">数据中心</div>
+          <div class="sc-etf">VPN</div>
+          <div class="sc-pct" style="color:#888"> —</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">国防科技</div>
+          <div class="sc-etf">SHLD</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +3.60%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">中国互联</div>
+          <div class="sc-etf">KWEB</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -1.58%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">电网基建</div>
+          <div class="sc-etf">GRID</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.57%</div>
+        </div></div>
+    </div>
+    <div class="card">
+      <div class="section-title">🔥 日本板块 ETF</div>
+      <div class="sc-grid">
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">日本综合</div>
+          <div class="sc-etf">EWJ</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.76%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">日本对冲</div>
+          <div class="sc-etf">HEWJ</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.55%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">日本大盘</div>
+          <div class="sc-etf">JPXN</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.35%</div>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 个股 Watchlist -->
+  <div class="row2" style="margin-top:16px">
+    <div class="card">
+      <div class="section-title">📈 美股 Watchlist</div>
+      
+        <div class="stock-section">
+          <div class="ss-title">AI / 科技核心</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">NVDA</td>
+              <td class="st-name"><span class="st-cn">英伟达</span><span class="st-en">NVIDIA</span></td>
+              <td class="st-price">$214.25</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.19%</td>
+              <td class="st-hl">市值 $5.2万亿，年涨幅 +53%，分析师目标价 $296（+38%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">MSFT</td>
+              <td class="st-name"><span class="st-cn">微软</span><span class="st-en">Microsoft</span></td>
+              <td class="st-price">$426.99</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.99%</td>
+              <td class="st-hl">市值 $3.2万亿，年涨幅 -10%，分析师目标价 $561（+31%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AAPL</td>
+              <td class="st-name"><span class="st-cn">苹果</span><span class="st-en">Apple</span></td>
+              <td class="st-price">$312.51</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.61%</td>
+              <td class="st-hl">市值 $4.6万亿，年涨幅 +55%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">META</td>
+              <td class="st-name"><span class="st-cn">Meta</span><span class="st-en">Meta</span></td>
+              <td class="st-price">$635.29</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.85%</td>
+              <td class="st-hl">市值 $1.6万亿，年涨幅 -2%，分析师目标价 $827（+30%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">GOOGL</td>
+              <td class="st-name"><span class="st-cn">谷歌</span><span class="st-en">Alphabet</span></td>
+              <td class="st-price">$390.13</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.35%</td>
+              <td class="st-hl">市值 $4.7万亿，年涨幅 +126%，分析师目标价 $431（+10%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AMZN</td>
+              <td class="st-name"><span class="st-cn">亚马逊</span><span class="st-en">Amazon</span></td>
+              <td class="st-price">$274.00</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.62%</td>
+              <td class="st-hl">市值 $2.9万亿，年涨幅 +32%，分析师目标价 $313（+14%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">半导体</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">AMD</td>
+              <td class="st-name"><span class="st-cn">超微半导体</span><span class="st-en">AMD</span></td>
+              <td class="st-price">$518.09</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.73%</td>
+              <td class="st-hl">市值 $845亿，年涨幅 +338%，分析师目标价 $472（-9%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AVGO</td>
+              <td class="st-name"><span class="st-cn">博通</span><span class="st-en">Broadcom</span></td>
+              <td class="st-price">$426.58</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.33%</td>
+              <td class="st-hl">市值 $2.0万亿，年涨幅 +74%，分析师目标价 $482（+13%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">TSM</td>
+              <td class="st-name"><span class="st-cn">台积电</span><span class="st-en">TSMC</span></td>
+              <td class="st-price">$424.86</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.79%</td>
+              <td class="st-hl">市值 $2.2万亿，年涨幅 +114%，分析师目标价 $468（+10%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">QCOM</td>
+              <td class="st-name"><span class="st-cn">高通</span><span class="st-en">Qualcomm</span></td>
+              <td class="st-price">$243.29</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.48%</td>
+              <td class="st-hl">市值 $256亿，年涨幅 +57%，分析师目标价 $178（-27%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AMAT</td>
+              <td class="st-name"><span class="st-cn">应用材料</span><span class="st-en">AMAT</span></td>
+              <td class="st-price">$449.68</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.75%</td>
+              <td class="st-hl">市值 $357亿，年涨幅 +181%，分析师目标价 $511（+14%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">消费</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">TSLA</td>
+              <td class="st-name"><span class="st-cn">特斯拉</span><span class="st-en">Tesla</span></td>
+              <td class="st-price">$442.10</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.91%</td>
+              <td class="st-hl">市值 $1.7万亿，年涨幅 +23%，分析师目标价 $412（-7%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">COST</td>
+              <td class="st-name"><span class="st-cn">好市多</span><span class="st-en">Costco</span></td>
+              <td class="st-price">$995.20</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.98%</td>
+              <td class="st-hl">市值 $442亿，年涨幅 -1%，分析师目标价 $1077（+8%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">WMT</td>
+              <td class="st-name"><span class="st-cn">沃尔玛</span><span class="st-en">Walmart</span></td>
+              <td class="st-price">$118.90</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.08%</td>
+              <td class="st-hl">市值 $948亿，年涨幅 +22%，分析师目标价 $138（+16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">NKE</td>
+              <td class="st-name"><span class="st-cn">耐克</span><span class="st-en">Nike</span></td>
+              <td class="st-price">$47.37</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.93%</td>
+              <td class="st-hl">市值 $70亿，年涨幅 -25%，分析师目标价 $61（+28%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">能源</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">XOM</td>
+              <td class="st-name"><span class="st-cn">埃克森美孚</span><span class="st-en">ExxonMobil</span></td>
+              <td class="st-price">$146.96</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.00%</td>
+              <td class="st-hl">市值 $609亿，年涨幅 +44%，分析师目标价 $170（+16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">CVX</td>
+              <td class="st-name"><span class="st-cn">雪佛龙</span><span class="st-en">Chevron</span></td>
+              <td class="st-price">$183.03</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.11%</td>
+              <td class="st-hl">市值 $365亿，年涨幅 +32%，分析师目标价 $216（+18%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">COP</td>
+              <td class="st-name"><span class="st-cn">康菲石油</span><span class="st-en">ConocoPhillips</span></td>
+              <td class="st-price">$114.99</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.13%</td>
+              <td class="st-hl">市值 $140亿，年涨幅 +34%，分析师目标价 $143（+24%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">国防 / 军工</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">LMT</td>
+              <td class="st-name"><span class="st-cn">洛克希德·马丁</span><span class="st-en">Lockheed</span></td>
+              <td class="st-price">$537.21</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.79%</td>
+              <td class="st-hl">市值 $124亿，年涨幅 +12%，分析师目标价 $625（+16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">RTX</td>
+              <td class="st-name"><span class="st-cn">雷神技术</span><span class="st-en">RTX</span></td>
+              <td class="st-price">$178.96</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.11%</td>
+              <td class="st-hl">市值 $241亿，年涨幅 +31%，分析师目标价 $215（+20%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">NOC</td>
+              <td class="st-name"><span class="st-cn">诺斯罗普</span><span class="st-en">Northrop</span></td>
+              <td class="st-price">$559.29</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.77%</td>
+              <td class="st-hl">市值 $79亿，年涨幅 +15%，分析师目标价 $697（+25%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">GD</td>
+              <td class="st-name"><span class="st-cn">通用动力</span><span class="st-en">Gen Dynamics</span></td>
+              <td class="st-price">$348.96</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.48%</td>
+              <td class="st-hl">市值 $94亿，年涨幅 +25%，分析师目标价 $392（+12%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">BA</td>
+              <td class="st-name"><span class="st-cn">波音</span><span class="st-en">Boeing</span></td>
+              <td class="st-price">$228.78</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.02%</td>
+              <td class="st-hl">市值 $180亿，年涨幅 +8%，分析师目标价 $270（+18%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">AI基建 / 电力</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">BE</td>
+              <td class="st-name"><span class="st-cn">Bloom Energy</span><span class="st-en">Bloom Energy</span></td>
+              <td class="st-price">$290.01</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.72%</td>
+              <td class="st-hl">市值 $82亿，年涨幅 +1482%，分析师目标价 $260（-10%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">CEG</td>
+              <td class="st-name"><span class="st-cn">星座能源</span><span class="st-en">Constellation</span></td>
+              <td class="st-price">$286.31</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.92%</td>
+              <td class="st-hl">市值 $103亿，年涨幅 -5%，分析师目标价 $366（+28%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">VRT</td>
+              <td class="st-name"><span class="st-cn">Vertiv液冷</span><span class="st-en">Vertiv</span></td>
+              <td class="st-price">$314.18</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.25%</td>
+              <td class="st-hl">市值 $121亿，年涨幅 +195%，分析师目标价 $377（+20%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">CORZ</td>
+              <td class="st-name"><span class="st-cn">Core Scientific</span><span class="st-en">Core Sci</span></td>
+              <td class="st-price">$27.76</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.54%</td>
+              <td class="st-hl">市值 $9亿，年涨幅 +154%，分析师目标价 $32（+15%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">光互连 / 存储</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">LITE</td>
+              <td class="st-name"><span class="st-cn">Lumentum光模块</span><span class="st-en">Lumentum</span></td>
+              <td class="st-price">$860.62</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -3.66%</td>
+              <td class="st-hl">市值 $67亿，年涨幅 +1097%，分析师目标价 $1105（+28%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">COHR</td>
+              <td class="st-name"><span class="st-cn">Coherent光互连</span><span class="st-en">Coherent</span></td>
+              <td class="st-price">$376.95</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.08%</td>
+              <td class="st-hl">市值 $74亿，年涨幅 +378%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">MU</td>
+              <td class="st-name"><span class="st-cn">美光HBM</span><span class="st-en">Micron</span></td>
+              <td class="st-price">$923.52</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.06%</td>
+              <td class="st-hl">市值 $1.0万亿，年涨幅 +859%，分析师目标价 $653（-29%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">SNDK</td>
+              <td class="st-name"><span class="st-cn">闪迪存储</span><span class="st-en">Sandisk</span></td>
+              <td class="st-price">$1,641.6</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.48%</td>
+              <td class="st-hl">市值 $243亿，年涨幅 +4019%，分析师目标价 $1552（-5%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">Physical AI / 无人机</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">AVAV</td>
+              <td class="st-name"><span class="st-cn">AeroVironment</span><span class="st-en">AeroVironment</span></td>
+              <td class="st-price">$214.39</td>
+              <td class="st-chg" style="color:#00c47a">▲ +20.38%</td>
+              <td class="st-hl">市值 $11亿，年涨幅 +5%，分析师目标价 $310（+45%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">KTOS</td>
+              <td class="st-name"><span class="st-cn">Kratos无人机</span><span class="st-en">Kratos</span></td>
+              <td class="st-price">$65.19</td>
+              <td class="st-chg" style="color:#00c47a">▲ +13.77%</td>
+              <td class="st-hl">市值 $12亿，年涨幅 +57%，分析师目标价 $113（+73%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">RKLB</td>
+              <td class="st-name"><span class="st-cn">Rocket Lab</span><span class="st-en">Rocket Lab</span></td>
+              <td class="st-price">$148.03</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.58%</td>
+              <td class="st-hl">市值 $86亿，年涨幅 +449%，分析师目标价 $104（-30%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">INTC</td>
+              <td class="st-name"><span class="st-cn">Intel国安</span><span class="st-en">Intel</span></td>
+              <td class="st-price">$120.89</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.99%</td>
+              <td class="st-hl">市值 $608亿，年涨幅 +501%，分析师目标价 $88（-27%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+    </div>
+    <div class="card">
+      <div class="section-title">📈 日股 Watchlist</div>
+      
+        <div class="stock-section">
+          <div class="ss-title">科技 / 半导体</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6758</td>
+              <td class="st-name"><span class="st-cn">索尼</span><span class="st-en">Sony</span></td>
+              <td class="st-price">¥3,454.0</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.29%</td>
+              <td class="st-hl">市值 $20.4万亿，年涨幅 -9%，分析师目标价 $4676（+35%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6861</td>
+              <td class="st-name"><span class="st-cn">基恩士</span><span class="st-en">Keyence</span></td>
+              <td class="st-price">¥80,070</td>
+              <td class="st-chg" style="color:#00c47a">▲ +6.41%</td>
+              <td class="st-hl">市值 $19.4万亿，年涨幅 +24%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6501</td>
+              <td class="st-name"><span class="st-cn">日立</span><span class="st-en">Hitachi</span></td>
+              <td class="st-price">¥5,245.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.06%</td>
+              <td class="st-hl">市值 $23.6万亿，年涨幅 +28%，分析师目标价 $5879（+12%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">8035</td>
+              <td class="st-name"><span class="st-cn">东京电子</span><span class="st-en">Tokyo Electron</span></td>
+              <td class="st-price">¥52,380</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.00%</td>
+              <td class="st-hl">市值 $23.9万亿，年涨幅 +127%，分析师评级：买入</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">半导体设备 / 材料</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6146</td>
+              <td class="st-name"><span class="st-cn">Disco切割</span><span class="st-en">Disco</span></td>
+              <td class="st-price">¥64,310</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -3.12%</td>
+              <td class="st-hl">市值 $7.0万亿，年涨幅 +102%，分析师目标价 $77400（+20%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6857</td>
+              <td class="st-name"><span class="st-cn">爱德万测试</span><span class="st-en">Advantest</span></td>
+              <td class="st-price">¥25,850</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -2.08%</td>
+              <td class="st-hl">市值 $18.7万亿，年涨幅 +258%，分析师目标价 $32695（+26%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">4063</td>
+              <td class="st-name"><span class="st-cn">信越化学</span><span class="st-en">Shin-Etsu</span></td>
+              <td class="st-price">¥7,625.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +3.73%</td>
+              <td class="st-hl">市值 $14.2万亿，年涨幅 +58%</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">3436</td>
+              <td class="st-name"><span class="st-cn">SUMCO硅晶圆</span><span class="st-en">SUMCO</span></td>
+              <td class="st-price">¥3,941.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +17.64%</td>
+              <td class="st-hl">市值 $1.4万亿，年涨幅 +241%，分析师目标价 $2448（-38%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">机器人 / Physical AI</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6506</td>
+              <td class="st-name"><span class="st-cn">安川电机</span><span class="st-en">Yaskawa</span></td>
+              <td class="st-price">¥7,136.0</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.20%</td>
+              <td class="st-hl">市值 $1.9万亿，年涨幅 +109%，分析师目标价 $6298（-12%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6954</td>
+              <td class="st-name"><span class="st-cn">发那科</span><span class="st-en">FANUC</span></td>
+              <td class="st-price">¥7,995.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.24%</td>
+              <td class="st-hl">市值 $7.5万亿，年涨幅 +106%，分析师目标价 $7364（-8%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6981</td>
+              <td class="st-name"><span class="st-cn">村田制作所</span><span class="st-en">Murata</span></td>
+              <td class="st-price">¥9,751.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +13.15%</td>
+              <td class="st-hl">市值 $17.8万亿，年涨幅 +300%，分析师目标价 $5456（-44%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">消费 / 汽车</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">7203</td>
+              <td class="st-name"><span class="st-cn">丰田</span><span class="st-en">Toyota</span></td>
+              <td class="st-price">¥3,068.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.22%</td>
+              <td class="st-hl">市值 $40.0万亿，年涨幅 +9%，分析师目标价 $3827（+25%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">7267</td>
+              <td class="st-name"><span class="st-cn">本田</span><span class="st-en">Honda</span></td>
+              <td class="st-price">¥1,459.5</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.28%</td>
+              <td class="st-hl">市值 $5.7万亿，年涨幅 -2%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">7974</td>
+              <td class="st-name"><span class="st-cn">任天堂</span><span class="st-en">Nintendo</span></td>
+              <td class="st-price">¥7,129.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.25%</td>
+              <td class="st-hl">市值 $8.2万亿，年涨幅 -41%，分析师目标价 $10641（+49%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9983</td>
+              <td class="st-name"><span class="st-cn">优衣库</span><span class="st-en">Fast Retailing</span></td>
+              <td class="st-price">¥80,590</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.89%</td>
+              <td class="st-hl">市值 $24.7万亿，年涨幅 +62%，分析师目标价 $74073（-8%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">金融 / 综合</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">9984</td>
+              <td class="st-name"><span class="st-cn">软银</span><span class="st-en">SoftBank</span></td>
+              <td class="st-price">¥7,552.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +6.59%</td>
+              <td class="st-hl">市值 $43.1万亿，年涨幅 +274%，分析师目标价 $6829（-10%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">8306</td>
+              <td class="st-name"><span class="st-cn">三菱UFJ</span><span class="st-en">MUFG</span></td>
+              <td class="st-price">¥3,004.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.81%</td>
+              <td class="st-hl">市值 $33.9万亿，年涨幅 +47%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9432</td>
+              <td class="st-name"><span class="st-cn">NTT</span><span class="st-en">NTT</span></td>
+              <td class="st-price">¥150.90</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.47%</td>
+              <td class="st-hl">市值 $12.3万亿，年涨幅 -6%，分析师目标价 $173（+14%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
+  <!-- 腾讯监控卡片 -->
+  <div style="margin-top:16px">
+    
+        <div class="txn-card alert">
+          <div class="txn-header">
+            <span class="txn-title">🇭🇰 腾讯控股 00700.HK 跟踪</span>
+            <span class="txn-alert-badge">💰 买入预警</span>
+          </div>
+          <div class="txn-row">
+            <div class="txn-price" style="color:#f0b429">HK$425.40</div>
+            <div class="txn-stat">
+          <span class="txn-stat-label">当日涨跌</span>
+          <span class="txn-stat-val" style="color:#00c47a">▲ +0.09%</span>
+        </div>
+            <div class="txn-stat">
+          <span class="txn-stat-label">2日累计（自2026-05-27）</span>
+          <span class="txn-stat-val" style="color:#ff4d4d">▼ -2.07%</span>
+        </div>
+            <div class="txn-stat">
+              <span class="txn-stat-label">买入预警线</span>
+              <span class="txn-stat-val">HK$450</span>
+            </div>
+          </div>
+          <div class="txn-alert-msg">⚠️ <strong>腾讯已跌破450港元目标区间，研究框架建议考虑加仓</strong></div>
+        </div>
+  </div>
+
+  <!-- 港股 Watchlist -->
+  <div class="card" style="margin-top:0">
+    <div class="section-title">🇭🇰 港股 Watchlist</div>
+    <div class="row2" style="margin-bottom:0">
+      
+        <div class="stock-section">
+          <div class="ss-title">AI云 / 互联网</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">9988</td>
+              <td class="st-name"><span class="st-cn">阿里巴巴</span><span class="st-en">Alibaba</span></td>
+              <td class="st-price">HK$121.10</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.57%</td>
+              <td class="st-hl">市值 $2.3万亿，年涨幅 +7%，分析师目标价 $185（+53%空间）</td>
+            </tr>
+            <tr class="buy-alert-row">
+              <td class="st-ticker">0700<span class="buy-alert-badge">💰买入预警</span></td>
+              <td class="st-name"><span class="st-cn">腾讯</span><span class="st-en">Tencent</span></td>
+              <td class="st-price">HK$426.40</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.33%</td>
+              <td class="st-hl"><strong>2日累计-2.07%</strong> · 市值 $3.8万亿，年涨幅 -15%，分析师目标价 $710（+67%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9888</td>
+              <td class="st-name"><span class="st-cn">百度</span><span class="st-en">Baidu</span></td>
+              <td class="st-price">HK$128.10</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.99%</td>
+              <td class="st-hl">市值 $348亿，年涨幅 +54%，分析师目标价 $180（+40%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">3690</td>
+              <td class="st-name"><span class="st-cn">美团</span><span class="st-en">Meituan</span></td>
+              <td class="st-price">HK$73.00</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.41%</td>
+              <td class="st-hl">市值 $450亿，年涨幅 -47%，分析师目标价 $111（+52%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">半导体 / 算力</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">0981</td>
+              <td class="st-name"><span class="st-cn">中芯国际</span><span class="st-en">SMIC</span></td>
+              <td class="st-price">HK$84.85</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -3.85%</td>
+              <td class="st-hl">市值 $684亿，年涨幅 +118%，分析师目标价 $80（-6%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">1347</td>
+              <td class="st-name"><span class="st-cn">华虹半导体</span><span class="st-en">Hua Hong</span></td>
+              <td class="st-price">HK$167.10</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.71%</td>
+              <td class="st-hl">市值 $291亿，年涨幅 +438%，分析师目标价 $110（-34%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">具身智能 / 硬件</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">1810</td>
+              <td class="st-name"><span class="st-cn">小米</span><span class="st-en">Xiaomi</span></td>
+              <td class="st-price">HK$27.82</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -2.59%</td>
+              <td class="st-hl">市值 $714亿，年涨幅 -44%，分析师目标价 $43（+53%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">1211</td>
+              <td class="st-name"><span class="st-cn">比亚迪</span><span class="st-en">BYD</span></td>
+              <td class="st-price">HK$91.25</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.05%</td>
+              <td class="st-hl">市值 $829亿，年涨幅 -31%，分析师目标价 $125（+36%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9698</td>
+              <td class="st-name"><span class="st-cn">万国数据</span><span class="st-en">GDS</span></td>
+              <td class="st-price">HK$33.44</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.09%</td>
+              <td class="st-hl">市值 $53亿，年涨幅 +35%，分析师目标价 $55（+64%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
+  <!-- 宏观事件 -->
+  <div class="card" style="margin-top:16px">
+    <div class="section-title">📅 近期宏观事件</div>
+    <div class="ev-section-label">📋 过去7天</div><div class="ev-row ev-past"><span class="ev-when">6天前</span><span class="badge-done">已发生</span><span class="ev-desc">阿里巴巴财报 Q4 FY26</span></div><div class="ev-row ev-past"><span class="ev-when">7天前</span><span class="badge-done">已发生</span><span class="ev-desc">AVAV财报 Q4 FY26（AeroVironment）</span></div><div class="ev-section-label" style="margin-top:10px">🔔 未来14天</div><div class="ev-row"><span class="ev-when">今天</span><span class="badge-med">关注</span><span class="ev-desc">日本零售销售 & 工业产出（4月）</span></div><div class="ev-row"><span class="ev-when">明天</span><span class="badge-high">重要</span><span class="ev-desc">韩国央行(BOK)利率决议</span></div><div class="ev-row"><span class="ev-when">05/31</span><span class="badge-med">关注</span><span class="ev-desc">中国NBS PMI制造业（5月）</span></div><div class="ev-row"><span class="ev-when">06/01</span><span class="badge-med">关注</span><span class="ev-desc">中国Caixin PMI制造业（5月）</span></div><div class="ev-row"><span class="ev-when">06/04</span><span class="badge-high">重要</span><span class="ev-desc">美国非农就业报告 (NFP)</span></div><div class="ev-row"><span class="ev-when">06/05</span><span class="badge-med">关注</span><span class="ev-desc">日本GDP终值 Q1</span></div><div class="ev-row"><span class="ev-when">06/05</span><span class="badge-high">重要</span><span class="ev-desc">ECB利率决议</span></div><div class="ev-row"><span class="ev-when">06/09</span><span class="badge-high">重要</span><span class="ev-desc">中国出口 & 贸易顺差（5月）</span></div><div class="ev-row"><span class="ev-when">06/10</span><span class="badge-high">重要</span><span class="ev-desc">美国CPI通胀数据</span></div><div class="ev-row"><span class="ev-when">06/10</span><span class="badge-high">重要</span><span class="ev-desc">中国CPI & PPI（5月）</span></div>
+  </div>
+
+</div>
+</body>
+</html>
