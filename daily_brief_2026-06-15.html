@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>美日金融市场 Daily Brief · 2026-06-15</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #1c2128;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --green: #00c47a;
+  --red: #ff4d4d;
+  --accent: #58a6ff;
+  --gold: #f0b429;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system,BlinkMacSystemFont,'PingFang SC','Segoe UI',sans-serif; font-size: 14px; padding: 24px; }
+.page { max-width: 1200px; margin: 0 auto; }
+
+/* ── Header ── */
+.header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-icon { font-size: 22px; }
+.header-title { font-size: 22px; font-weight: 800; color: var(--accent); }
+.header-date { font-size: 13px; color: var(--muted); background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 4px 12px; }
+
+/* ── Headline ── */
+.headline { background: var(--surface2); border-left: 3px solid var(--gold); border-radius: 0 8px 8px 0; padding: 12px 16px; margin-bottom: 20px; font-size: 14px; color: #ddd; line-height: 1.6; }
+.headline-icon { color: var(--gold); margin-right: 6px; }
+
+/* ── Section title ── */
+.section-title { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+.section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); margin-left: 8px; }
+
+/* ── Card ── */
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px; }
+
+/* ── Index cards ── */
+.idx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+.idx-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 14px; }
+.idx-header { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+.idx-flag { font-size: 14px; }
+.idx-name { font-size: 12px; color: var(--muted); }
+.idx-en { font-size: 11px; color: #444d56; margin-left: auto; }
+.idx-price { font-size: 22px; font-weight: 700; margin-bottom: 4px; font-variant-numeric: tabular-nums; }
+.idx-chg { font-size: 13px; font-weight: 600; margin-bottom: 3px; }
+.idx-yc { font-size: 11px; color: var(--muted); }
+
+/* ── FX ── */
+.fx-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 6px; }
+.fx-row { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: var(--surface2); border-radius: 6px; }
+.fx-icon { width: 18px; text-align: center; font-size: 13px; }
+.fx-name { color: var(--muted); flex: 1; font-size: 13px; }
+.fx-price { font-variant-numeric: tabular-nums; font-size: 13px; }
+.fx-chg { font-weight: 600; font-size: 13px; min-width: 70px; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ── Sector ETF ── */
+.sc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+.sc-card { border: 1px solid; border-radius: 8px; padding: 12px 10px; text-align: center; }
+.sc-label { font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+.sc-etf { font-size: 11px; color: #555; margin-bottom: 6px; }
+.sc-pct { font-size: 18px; font-weight: 700; }
+
+/* ── Stock table ── */
+.stock-section { margin-bottom: 16px; }
+.ss-title { font-size: 13px; font-weight: 600; color: var(--accent); padding: 6px 0 8px 8px; border-left: 3px solid var(--accent); margin-bottom: 8px; }
+.stock-table { width: 100%; border-collapse: collapse; }
+.stock-table thead tr { border-bottom: 1px solid var(--border); }
+.stock-table th { padding: 7px 10px; text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .3px; }
+.stock-table tbody tr { border-bottom: 1px solid #1a1f25; transition: background .15s; }
+.stock-table tbody tr:hover { background: var(--surface2); }
+.stock-table td { padding: 9px 10px; vertical-align: middle; }
+.st-ticker { font-weight: 700; color: var(--accent); font-size: 13px; width: 70px; }
+.st-name { width: 140px; }
+.st-cn { display: block; font-size: 13px; }
+.st-en { display: block; font-size: 11px; color: var(--muted); }
+.st-price { font-variant-numeric: tabular-nums; font-size: 14px; font-weight: 600; width: 90px; }
+.st-chg { font-weight: 700; font-size: 13px; width: 80px; font-variant-numeric: tabular-nums; }
+.st-hl { font-size: 12px; color: var(--muted); }
+
+/* ── Events ── */
+.ev-row { display: flex; align-items: center; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+.ev-row:last-child { border-bottom: none; }
+.ev-when { width: 44px; color: var(--muted); font-size: 13px; flex-shrink: 0; }
+.badge-high { background: rgba(255,77,77,.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,.25); border-radius: 4px; padding: 1px 7px; font-size: 11px; flex-shrink: 0; }
+.badge-med  { background: rgba(88,166,255,.08); color: var(--accent); border: 1px solid rgba(88,166,255,.2); border-radius: 4px; padding: 1px 7px; font-size: 11px; flex-shrink: 0; }
+.badge-done { background: rgba(139,148,158,.10); color: var(--muted); border: 1px solid rgba(139,148,158,.2); border-radius: 4px; padding: 1px 7px; font-size: 11px; flex-shrink: 0; }
+.ev-desc { font-size: 13px; flex: 1; }
+.ev-past .ev-desc { color: var(--muted); }
+.ev-empty { color: var(--muted); padding: 12px 0; font-size: 13px; }
+.ev-section-label { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; padding: 10px 0 4px; border-bottom: 1px solid var(--border); margin-bottom: 4px; }
+
+/* ── 6月关键事件日历 ── */
+.june-card { background: var(--surface); border: 1px solid #f0b42940; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.danger-banner { background: rgba(255,77,77,0.12); border: 1px solid rgba(255,77,77,0.4); border-radius: 8px; padding: 10px 16px; margin-bottom: 14px; font-size: 13px; color: #ff6b6b; font-weight: 600; }
+.june-legend { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 12px; color: var(--muted); flex-wrap: wrap; }
+.june-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.june-row:last-child { border-bottom: none; }
+.june-when { width: 44px; color: var(--muted); font-size: 13px; flex-shrink: 0; padding-top: 1px; }
+.june-pri { border-radius: 4px; padding: 1px 7px; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+.june-p0 { background: rgba(255,77,77,.15); color: #ff4d4d; border: 1px solid rgba(255,77,77,.3); }
+.june-p1 { background: rgba(88,166,255,.10); color: var(--accent); border: 1px solid rgba(88,166,255,.25); }
+.june-done { background: rgba(139,148,158,.08); color: var(--muted); border: 1px solid rgba(139,148,158,.15); }
+.june-label { font-size: 13px; flex: 1; }
+.june-tickers { display: flex; gap: 4px; flex-wrap: wrap; }
+.june-ticker { background: rgba(88,166,255,.10); color: var(--accent); border-radius: 3px; padding: 1px 6px; font-size: 11px; font-weight: 700; }
+.dw-mark { background: rgba(255,77,77,.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,.25); border-radius: 3px; padding: 1px 5px; font-size: 10px; font-weight: 700; flex-shrink: 0; }
+
+/* ── 投资行动提醒 ── */
+.invest-alert-card { background: var(--surface); border: 1px solid #f0b42960; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.alert-row { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.alert-row:last-child { border-bottom: none; }
+.alert-when { width: 44px; color: var(--muted); font-size: 13px; margin-right: 8px; }
+.alert-label { font-size: 13px; font-weight: 600; margin-right: 8px; }
+.alert-hint { font-size: 12px; color: var(--muted); margin-top: 5px; padding-left: 8px; border-left: 2px solid var(--border); line-height: 1.6; }
+
+/* ── 重点持仓监控卡片 ── */
+.pt-card { background: var(--surface); border: 1px solid #58a6ff40; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.pt-table { width: 100%; border-collapse: collapse; }
+.pt-table thead tr { border-bottom: 1px solid var(--border); }
+.pt-table th { padding: 7px 10px; text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .3px; }
+.pt-table tbody tr { border-bottom: 1px solid #1a1f25; }
+.pt-table tbody tr:hover { background: var(--surface2); }
+.pt-table td { padding: 9px 10px; vertical-align: middle; font-size: 13px; }
+.pt-ticker { font-weight: 700; color: var(--accent); width: 60px; }
+.pt-name { width: 120px; color: var(--text); }
+.pt-price { width: 120px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.pt-target { width: 80px; color: var(--gold); font-weight: 600; }
+.pt-gap { width: 110px; font-weight: 600; }
+.pt-alloc { width: 60px; color: var(--muted); }
+.pt-status { width: 110px; }
+.pt-note { font-size: 12px; color: var(--muted); }
+.pt-badge { border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.pt-buy  { background: rgba(0,196,122,.15); color: #00c47a; border: 1px solid rgba(0,196,122,.3); }
+.pt-near { background: rgba(240,180,41,.15); color: #f0b429; border: 1px solid rgba(240,180,41,.3); }
+.pt-watch { background: rgba(139,148,158,.10); color: #8b949e; border: 1px solid rgba(139,148,158,.2); }
+.pt-dca  { background: rgba(88,166,255,.10); color: var(--accent); border: 1px solid rgba(88,166,255,.2); }
+
+/* ── Apex 观察 & 验证卡片 ── */
+.sl-card { background: var(--surface); border: 2px solid rgba(255,77,77,.35); border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.sl-danger-banner { background: rgba(255,77,77,.12); border: 1px solid rgba(255,77,77,.4); border-radius: 6px; padding: 10px 14px; margin-bottom: 12px; font-size: 13px; color: #ff4d4d; font-weight: 700; }
+.sl-table { width: 100%; border-collapse: collapse; }
+.sl-table thead tr { border-bottom: 1px solid var(--border); }
+.sl-table th { padding: 7px 10px; text-align: left; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .3px; }
+.sl-table tbody tr { border-bottom: 1px solid #1a1f25; transition: background .15s; }
+.sl-table tbody tr:hover { background: var(--surface2); }
+.sl-table td { padding: 9px 10px; vertical-align: middle; font-size: 13px; }
+.sl-row-critical { background: rgba(255,77,77,.08) !important; }
+.sl-row-warn { background: rgba(240,180,41,.06) !important; }
+.sl-ticker { font-weight: 700; color: #ff6b6b; width: 60px; }
+.sl-name { width: 80px; }
+.sl-price { font-variant-numeric: tabular-nums; width: 110px; }
+.sl-entry { color: var(--muted); font-variant-numeric: tabular-nums; width: 80px; }
+.sl-stop { color: #ff4d4d; font-weight: 700; font-variant-numeric: tabular-nums; width: 80px; }
+.sl-shares { font-size: 12px; color: var(--muted); }
+.sl-pnl { font-variant-numeric: tabular-nums; width: 140px; }
+.sl-badge { border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.sl-critical { background: rgba(255,77,77,.18); color: #ff4d4d; border: 1px solid rgba(255,77,77,.4); animation: blink 1s step-start infinite; }
+.sl-warn { background: rgba(240,180,41,.12); color: var(--gold); border: 1px solid rgba(240,180,41,.3); }
+.sl-ok { background: rgba(0,196,122,.08); color: var(--green); border: 1px solid rgba(0,196,122,.2); }
+.sl-unknown { background: rgba(139,148,158,.1); color: var(--muted); border: 1px solid rgba(139,148,158,.2); }
+@keyframes blink { 50% { opacity: .4; } }
+.gr-card { background: var(--surface); border: 2px solid #f0b42960; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.gr-rows { display: flex; flex-direction: column; gap: 6px; }
+.gr-row { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; padding: 4px 0; border-bottom: 1px solid var(--border); }
+.gr-row:last-child { border-bottom: none; }
+.gr-icon { font-size: 14px; flex-shrink: 0; }
+.gr-label { flex: 1; line-height: 1.5; }
+.gr-sub { font-size: 12px; color: #f0b429; padding: 2px 0 2px 28px; }
+.gr-action { border-top: 1px solid var(--border); padding-top: 8px; }
+.obs-card { background: var(--surface); border: 1px solid #9b59b640; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.obs-sub-title { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 8px; letter-spacing: .3px; }
+.obs-flag-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; flex-wrap: wrap; }
+.obs-flag-row:last-child { border-bottom: none; }
+.obs-flag-icon { width: 20px; flex-shrink: 0; }
+.obs-flag-ticker { font-weight: 700; color: #ff4d4d; width: 80px; flex-shrink: 0; }
+.obs-flag-name { color: var(--muted); width: 100px; flex-shrink: 0; font-size: 12px; }
+.obs-flag-reason { color: var(--muted); font-size: 12px; flex: 1; line-height: 1.5; }
+.obs-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.obs-row:last-child { border-bottom: none; }
+.obs-ticker { font-weight: 700; color: var(--accent); width: 60px; flex-shrink: 0; font-size: 13px; }
+.obs-name { font-size: 13px; width: 140px; flex-shrink: 0; }
+.obs-cp { font-size: 11px; color: var(--gold); width: 70px; flex-shrink: 0; }
+.obs-price { font-variant-numeric: tabular-nums; font-size: 13px; width: 100px; flex-shrink: 0; }
+.obs-pri { border-radius: 3px; padding: 1px 6px; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+.obs-p0 { background: rgba(255,77,77,.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,.25); }
+.obs-p1 { background: rgba(88,166,255,.10); color: var(--accent); border: 1px solid rgba(88,166,255,.2); }
+.obs-p2 { background: rgba(139,148,158,.08); color: var(--muted); border: 1px solid rgba(139,148,158,.15); }
+.obs-entry-wrap { flex-shrink: 0; width: 120px; }
+.obs-entry { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--gold); }
+.obs-entry-hit { color: var(--green) !important; }
+.obs-entry-near { animation: blink 1.5s step-start infinite; }
+.obs-entry-event { color: var(--muted) !important; font-weight: 400; }
+.obs-trigger { font-size: 12px; color: var(--muted); flex: 1; line-height: 1.5; }
+.ver-row { display: flex; align-items: flex-start; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.ver-row:last-child { border-bottom: none; }
+.ver-id { font-size: 11px; color: var(--muted); width: 36px; flex-shrink: 0; }
+.ver-ticker { font-weight: 700; color: var(--accent); width: 90px; flex-shrink: 0; font-size: 12px; }
+.ver-cond { font-size: 12px; color: var(--text); flex: 2; line-height: 1.5; }
+.ver-date { font-size: 11px; color: var(--muted); width: 110px; flex-shrink: 0; }
+.ver-status { font-size: 12px; color: var(--gold); width: 80px; flex-shrink: 0; }
+.obs-urgent { background: rgba(255,77,77,.12); color: #ff4d4d; border: 1px solid rgba(255,77,77,.25); border-radius: 3px; padding: 1px 5px; font-size: 10px; font-weight: 700; }
+.obs-soon { background: rgba(240,180,41,.10); color: var(--gold); border: 1px solid rgba(240,180,41,.2); border-radius: 3px; padding: 1px 5px; font-size: 10px; font-weight: 700; }
+
+/* ── AI HOT 投资信号卡片 ── */
+.ah-card { background: var(--surface); border: 1px solid #ff6b3540; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.ah-row { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.ah-row:last-child { border-bottom: none; }
+.ah-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+.ah-cat { background: rgba(255,107,53,.12); color: #ff6b35; border: 1px solid rgba(255,107,53,.25); border-radius: 3px; padding: 1px 6px; font-size: 11px; font-weight: 700; }
+.ah-kw { background: rgba(88,166,255,.10); color: var(--accent); border: 1px solid rgba(88,166,255,.2); border-radius: 3px; padding: 1px 6px; font-size: 11px; }
+.ah-date { font-size: 11px; color: var(--muted); margin-left: auto; }
+.ah-title { display: block; font-size: 13px; font-weight: 600; color: var(--text); text-decoration: none; margin-bottom: 4px; line-height: 1.4; }
+.ah-title:hover { color: var(--accent); }
+.ah-summary { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 4px; }
+.ah-src { font-size: 11px; color: #444d56; }
+.sup-section-label { font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 10px 0 4px; border-top: 1px solid var(--border); margin-top: 6px; }
+
+/* ── Catalyst card ── */
+.cat-card { background: var(--surface); border: 1px solid #58a6ff25; border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+.cat-row { padding: 8px 0; border-bottom: 1px solid var(--border); }
+.cat-row:last-child { border-bottom: none; }
+.cat-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; min-height: 4px; }
+.cat-src { background: rgba(88,166,255,.10); color: var(--accent); border: 1px solid rgba(88,166,255,.2); border-radius: 3px; padding: 1px 6px; font-size: 11px; }
+.cat-title { display: block; font-size: 13px; color: var(--text); text-decoration: none; line-height: 1.5; }
+.cat-title:hover { color: var(--accent); }
+
+/* ── Layout ── */
+.mb16 { margin-bottom: 16px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.data-source { font-size: 11px; color: var(--muted); text-align: right; margin-top: 4px; }
+
+@media (max-width: 800px) {
+  .row2 { grid-template-columns: 1fr; }
+  .idx-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <span class="header-icon">📊</span>
+      <span class="header-title">美日金融市场 Daily Brief</span>
+    </div>
+    <span class="header-date">📅 2026-06-15 · 周一</span>
+  </div>
+
+  <!-- 6月关键事件日历 + 危险窗口提醒 -->
+  
+    <div class="june-card">
+      
+        <div class="danger-banner">
+          ⚠️ <strong>最危险窗口 6/10–6/18 进行中</strong>
+          &nbsp;｜&nbsp; CPI+FOMC+期权到期三重叠加，不适合重仓追高，控制仓位等待信号
+        </div>
+      <div class="section-title">📆 6月关键事件日历（5条主线）</div>
+      <div class="june-legend">
+        <span class="june-pri june-p0">P0 必看</span>
+        <span class="june-pri june-p1">P1 关注</span>
+        <span class="dw-mark">危险窗</span>
+        &nbsp;最危险窗口: 6/10–6/18 不适合重仓追高
+      </div>
+      
+        <div class="june-row" style="">
+          <span class="june-when">06/17</span>
+          <span class="june-pri june-p0">P0</span>
+          <span class="june-label">FOMC决议（新主席Warsh首次） <span class="dw-mark">危险窗</span></span>
+          <span class="june-tickers"><span class="june-ticker">MU</span><span class="june-ticker">LITE</span><span class="june-ticker">VRT</span><span class="june-ticker">BOTZ</span><span class="june-ticker">URNM</span></span>
+        </div>
+        <div class="june-row" style="">
+          <span class="june-when">06/17</span>
+          <span class="june-pri june-p1">P1</span>
+          <span class="june-label">5月零售销售 <span class="dw-mark">危险窗</span></span>
+          <span class="june-tickers"></span>
+        </div>
+        <div class="june-row" style="">
+          <span class="june-when">06/18</span>
+          <span class="june-pri june-p0">P0</span>
+          <span class="june-label">期权/股指期货季度到期 <span class="dw-mark">危险窗</span></span>
+          <span class="june-tickers"><span class="june-ticker">MU</span><span class="june-ticker">LITE</span><span class="june-ticker">VRT</span><span class="june-ticker">RKLB</span></span>
+        </div>
+        <div class="june-row" style="">
+          <span class="june-when">06/24</span>
+          <span class="june-pri june-p1">P1</span>
+          <span class="june-label">NVDA年度股东大会</span>
+          <span class="june-tickers"><span class="june-ticker">NVDA</span><span class="june-ticker">LITE</span><span class="june-ticker">VRT</span><span class="june-ticker">MU</span></span>
+        </div>
+        <div class="june-row" style="">
+          <span class="june-when">06/25</span>
+          <span class="june-pri june-p0">P0</span>
+          <span class="june-label">MU财报 Q3 FY26（美光）</span>
+          <span class="june-tickers"><span class="june-ticker">MU</span></span>
+        </div>
+        <div class="june-row" style="">
+          <span class="june-when">06/26</span>
+          <span class="june-pri june-p0">P0</span>
+          <span class="june-label">Russell 2000年度重构</span>
+          <span class="june-tickers"><span class="june-ticker">RKLB</span><span class="june-ticker">KTOS</span><span class="june-ticker">AVAV</span></span>
+        </div>
+    </div>
+
+  <!-- 持仓联动行动提醒 -->
+  
+        <div class="invest-alert-card">
+          <div class="section-title">🎯 近7天投资行动提醒（基于持仓联动）</div>
+          
+        <div class="alert-row">
+          <span class="alert-when">06/17</span>
+          <span class="june-pri june-p0">P0</span>
+          <span class="alert-label">FOMC决议（新主席Warsh首次）</span>
+          <span class="june-tickers"><span class="june-ticker">MU</span><span class="june-ticker">LITE</span><span class="june-ticker">VRT</span><span class="june-ticker">BOTZ</span><span class="june-ticker">URNM</span></span>
+          <div class="alert-hint">关注点阵图+通胀措辞+长债态度：鹰派→守仓控仓；鸽派→可考虑加仓BOTZ/MU</div>
+        </div>
+        <div class="alert-row">
+          <span class="alert-when">06/18</span>
+          <span class="june-pri june-p0">P0</span>
+          <span class="alert-label">期权/股指期货季度到期</span>
+          <span class="june-tickers"><span class="june-ticker">MU</span><span class="june-ticker">LITE</span><span class="june-ticker">VRT</span></span>
+          <div class="alert-hint">季度巫日：尾盘流动性波动加大，不追高；可趁错杀逢低买入目标价附近标的</div>
+        </div>
+        </div>
+
+  <!-- 重点持仓监控 -->
+  
+    <div class="pt-card">
+      <div class="section-title">🎯 重点持仓监控（AI基建框架·$10K）</div>
+      <table class="pt-table">
+        <thead><tr>
+          <th>代码</th><th>标的</th><th>当前价</th><th>目标价</th>
+          <th>距目标</th><th>目标仓</th><th>状态</th><th>策略备注</th>
+        </tr></thead>
+        <tbody>
+        <tr>
+          <td class="pt-ticker">MU</td>
+          <td class="pt-name">美光 HBM</td>
+          <td class="pt-price">$981.61 <span style="color:#ff4d4d;font-size:12px">▼-1.71%</span></td>
+          <td class="pt-target">$600.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +63.6%</span></td>
+          <td class="pt-alloc">25%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">HBM唯一美国本土供应商，分批建仓</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">LITE</td>
+          <td class="pt-name">Lumentum 光模块</td>
+          <td class="pt-price">$921.56 <span style="color:#00c47a;font-size:12px">▲+1.92%</span></td>
+          <td class="pt-target">$740.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +24.5%</span></td>
+          <td class="pt-alloc">15%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">光互连瓶颈，NVIDIA战略投资背书</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">VRT</td>
+          <td class="pt-name">Vertiv 液冷</td>
+          <td class="pt-price">$302.87 <span style="color:#00c47a;font-size:12px">▲+0.36%</span></td>
+          <td class="pt-target">$300.00</td>
+          <td class="pt-gap"><span style="color:#f0b429">离目标 +1.0%</span></td>
+          <td class="pt-alloc">15%</td>
+          <td class="pt-status"><span class="pt-badge pt-near">⚡ 接近目标</span></td>
+          <td class="pt-note">液冷刚需龙头·液冷同时节水，双重需求驱动</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">BOTZ</td>
+          <td class="pt-name">机器人AI ETF</td>
+          <td class="pt-price">$37.12 <span style="color:#ff4d4d;font-size:12px">▼-0.99%</span></td>
+          <td class="pt-target">$35.00</td>
+          <td class="pt-gap"><span style="color:#f0b429">离目标 +6.1%</span></td>
+          <td class="pt-alloc">10%</td>
+          <td class="pt-status"><span class="pt-badge pt-near">⚡ 接近目标</span></td>
+          <td class="pt-note">Physical AI方向，分3批DCA</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">URNM</td>
+          <td class="pt-name">铀矿/核电 ETF</td>
+          <td class="pt-price">$54.58 <span style="color:#ff4d4d;font-size:12px">▼-0.49%</span></td>
+          <td class="pt-target">$53.00</td>
+          <td class="pt-gap"><span style="color:#f0b429">离目标 +3.0%</span></td>
+          <td class="pt-alloc">10%</td>
+          <td class="pt-status"><span class="pt-badge pt-near">⚡ 接近目标</span></td>
+          <td class="pt-note">AI电力长期解，已回调28%可关注</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">CEG</td>
+          <td class="pt-name">Constellation核电</td>
+          <td class="pt-price">$253.76 <span style="color:#00c47a;font-size:12px">▲+2.22%</span></td>
+          <td class="pt-target">$260.00</td>
+          <td class="pt-gap"><span style="color:#00c47a">离目标 -2.4%</span></td>
+          <td class="pt-alloc">10%</td>
+          <td class="pt-status"><span class="pt-badge pt-buy">✅ 买入区间</span></td>
+          <td class="pt-note">美国最大核电运营商·微软20年PPA·AI电力稳仓</td>
+        </tr>
+        <tr>
+          <td class="pt-ticker">BE</td>
+          <td class="pt-name">Bloom Energy</td>
+          <td class="pt-price">$260.22 <span style="color:#00c47a;font-size:12px">▲+2.85%</span></td>
+          <td class="pt-target">$195.00</td>
+          <td class="pt-gap"><span style="color:#8b949e">离目标 +33.4%</span></td>
+          <td class="pt-alloc">0%</td>
+          <td class="pt-status"><span class="pt-badge pt-watch">👁 观望中</span></td>
+          <td class="pt-note">等回调$190-200区间，当前空仓</td>
+        </tr></tbody>
+      </table>
+    </div>
+
+  <!-- 止损线监控 -->
+  
+    <div class="sl-card">
+      <div class="section-title">🛑 实际持仓止损线监控</div>
+      
+      <table class="sl-table">
+        <thead><tr>
+          <th>代码</th><th>标的</th><th>当前价</th><th>买入价</th>
+          <th>止损线</th><th>持股 · 阶段</th><th>浮盈亏</th><th>状态</th>
+        </tr></thead>
+        <tbody>
+        <tr class="">
+          <td class="sl-ticker">TSM</td>
+          <td class="sl-name">台积电</td>
+          <td class="sl-price">$423.93 <span style="color:#00c47a;font-size:12px">▲+0.46%</span></td>
+          <td class="sl-entry">$418.45</td>
+          <td class="sl-stop">$334.76</td>
+          <td class="sl-shares">2股 · 第一步10%（2026-06-01）</td>
+          <td class="sl-pnl"><span style="color:#00c47a">▲1.3% ($+11.0)</span></td>
+          <td class="sl-alert"><span class="sl-badge sl-ok">✅ 安全 距止损 26.6%</span></td>
+        </tr>
+        <tr class="">
+          <td class="sl-ticker">NVDA</td>
+          <td class="sl-name">英伟达</td>
+          <td class="sl-price">$205.19 <span style="color:#ff4d4d;font-size:12px">▼-0.38%</span></td>
+          <td class="sl-entry">$212.49</td>
+          <td class="sl-stop">$169.99</td>
+          <td class="sl-shares">2股 · 第一步10%（2026-06-01）</td>
+          <td class="sl-pnl"><span style="color:#ff4d4d">▼3.4% ($-14.6)</span></td>
+          <td class="sl-alert"><span class="sl-badge sl-ok">✅ 安全 距止损 20.7%</span></td>
+        </tr></tbody>
+      </table>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px">止损规则：价格跌破止损线当天执行，不等"再看看" · 逻辑破坏信号出现立即清仓</div>
+    </div>
+
+  <!-- 博弈态雷达 -->
+  
+    <div class="gr-card" style="border-color:#ff4d4d;background:rgba(255,77,77,0.08)">
+      <div class="section-title">🎯 博弈态雷达（2/3 信号触发）</div>
+      <div class="gr-rows"><div class="gr-row"><span class="gr-icon">📊</span><span class="gr-label" style="color:#30a46c">VIX 17.7 ✅ 正常范围</span></div><div class="gr-row"><span class="gr-icon">🗓</span><span class="gr-label" style="color:#ff4d4d">⚠️ 危险窗口进行中（6/10–6/18），不新开仓</span></div><div class="gr-row"><span class="gr-icon">🔢</span><span class="gr-label" style="color:#f0b429">⚠️ 1 个标的处于整数关口附近</span></div><div class="gr-sub">└ NVDA $205.2 距整数关口 $200 仅 2.6%（上方），不追单</div></div>
+      <div class="gr-action" style="color:#ff4d4d;font-weight:600;margin-top:10px;font-size:13px">🚫 不开新仓，等信号消除</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:6px">触发 ≥2 个信号 → 不开新仓 · 参考 <a href="#" style="color:var(--muted)">市场博弈结构-散户生存手册</a></div>
+    </div>
+
+  <!-- Apex 观察列表 & 验证追踪 -->
+  
+    <div class="obs-card">
+      <div class="section-title">🔭 Apex 观察列表 & 验证追踪</div>
+
+      <div class="obs-sub-title">⛔ 风险警示旗（主动回避）</div>
+      <div class="obs-flags">
+        <div class="obs-flag-row">
+          <span class="obs-flag-icon">⛔</span>
+          <span class="obs-flag-ticker">6594.T</span>
+          <span class="obs-flag-name">Nidec</span>
+          <span class="obs-flag-reason">会计丑闻：¥3,900亿风险敞口，SESC 立案，管理层清洗。不碰直到三条件全满足：SESC 结案+新管理层稳定+中国工厂重启</span>
+        </div>
+        <div class="obs-flag-row">
+          <span class="obs-flag-icon">⚠️</span>
+          <span class="obs-flag-ticker">商业航天板块</span>
+          <span class="obs-flag-name">Blue Origin 爆炸余震</span>
+          <span class="obs-flag-reason">UFO ETF 6个月+100%后回调，板块估值仍偏高。ASTS/RKLB 逻辑未变，但不是抄底时机，等 BlueBird 8-10 验证</span>
+        </div></div>
+
+      <div class="obs-sub-title" style="margin-top:14px">👁 观察列表（等候入场信号）</div>
+      <div class="obs-list">
+        <div class="obs-row">
+          <span class="obs-ticker">6324</span>
+          <span class="obs-name">Harmonic Drive 谐波减速器</span>
+          <span class="obs-cp">★★★★★</span>
+          <span class="obs-price">¥6,820.0 <span style="color:#00c47a;font-size:11px">▲+4.12%</span></span>
+          <span class="obs-pri obs-p0">P0</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-near">¥6,720.0 ⚡接近</span></span>
+          <span class="obs-trigger">从高点回调 ≥20% 且 Physical AI 叙事未反转 → 评估建第一步 10%</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">6268</span>
+          <span class="obs-name">Nabtesco RV减速器</span>
+          <span class="obs-cp">★★★★☆</span>
+          <span class="obs-price">¥5,063.0 <span style="color:#00c47a;font-size:11px">▲+5.94%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-hit">¥5,196.1 ✅已触发</span></span>
+          <span class="obs-trigger">从高点回调 ≥15% 且减速器业务占比未下滑 → 评估建仓（⚠️100株最低¥476,800≈$2,978，超原计划步骤，触发后需另行决策入场方式）</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">6506</span>
+          <span class="obs-name">安川电机</span>
+          <span class="obs-cp">★★★☆☆</span>
+          <span class="obs-price">¥6,645.0 <span style="color:#00c47a;font-size:11px">▲+5.09%</span></span>
+          <span class="obs-pri obs-p2">P2</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-event">事件触发</span></span>
+          <span class="obs-trigger">观察 Physical AI 量产订单放量信号</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">ASTS</span>
+          <span class="obs-name">AST SpaceMobile</span>
+          <span class="obs-cp">叙事股</span>
+          <span class="obs-price">$82.41 <span style="color:#ff4d4d;font-size:11px">▼-21.06%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-event">事件触发</span></span>
+          <span class="obs-trigger">BlueBird 8-10 任务（6月中旬）成功入轨+直连手机测试 → 评估学习仓入场</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">LUNR</span>
+          <span class="obs-name">Intuitive Machines</span>
+          <span class="obs-cp">政策依赖</span>
+          <span class="obs-price">$26.62 <span style="color:#ff4d4d;font-size:11px">▼-16.81%</span></span>
+          <span class="obs-pri obs-p2">P2</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-event">事件触发</span></span>
+          <span class="obs-trigger">NASA CLPS 新合同落地 + 月面任务成功着陆 → 重新评估</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">GOOG</span>
+          <span class="obs-name">Alphabet Google</span>
+          <span class="obs-cp">★★★★☆</span>
+          <span class="obs-price">$358.16 <span style="color:#ff4d4d;font-size:11px">▼-0.15%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-hit">$363.80 ✅已触发</span></span>
+          <span class="obs-trigger">跌至 $330 以下（巴菲特买价$351.81再打折）→ 评估第一步10%；或危险窗口后Q2财报Cloud增速确认 >30% → 评估建仓</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">NET</span>
+          <span class="obs-name">Cloudflare Agent网络层</span>
+          <span class="obs-cp">★★★★☆</span>
+          <span class="obs-price">$228.48 <span style="color:#ff4d4d;font-size:11px">▼-0.55%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-near">$221.45 ⚡接近</span></span>
+          <span class="obs-trigger">从历史高点回调 ≥20%，且 AI Agent 流量增长叙事未反转 → 评估第一步10%；当前历史新高$260，不追</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">ARM</span>
+          <span class="obs-name">ARM Holdings CPU架构</span>
+          <span class="obs-cp">★★★★☆</span>
+          <span class="obs-price">$380.81 <span style="color:#00c47a;font-size:11px">▲+8.68%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-near">$363.79 ⚡接近</span></span>
+          <span class="obs-trigger">从当前高点无逻辑回调 ≥15%，且 AI Agent CPU 叙事未反转 → 评估建第一步 10%；持有 NVDA/TSMC 已间接覆盖，追高不急</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">9984</span>
+          <span class="obs-name">软银集团 ARM+OpenAI控股</span>
+          <span class="obs-cp">控股折价</span>
+          <span class="obs-price">¥7,125.0 <span style="color:#00c47a;font-size:11px">▲+9.70%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-hit">¥7,712.9 ✅已触发</span></span>
+          <span class="obs-trigger">OpenAI IPO落地后回调 / ARM回调软银跟跌时折价扩大 → 评估入场；NAV折价≥20%时有套利价值</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">OKLO</span>
+          <span class="obs-name">Oklo SMR小型模块化反应堆</span>
+          <span class="obs-cp">★★☆☆☆</span>
+          <span class="obs-price">$57.49 <span style="color:#ff4d4d;font-size:11px">▼-2.61%</span></span>
+          <span class="obs-pri obs-p1">P1</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-event">事件触发</span></span>
+          <span class="obs-trigger">叙事股·无需回调信号；危险窗口后评估学习仓≤$300入场；关注 Aurora Powerhouse NRC 进展 + Meta 1.2GW合同落地</span>
+        </div>
+        <div class="obs-row">
+          <span class="obs-ticker">CEG</span>
+          <span class="obs-name">Constellation Energy 核电运营商</span>
+          <span class="obs-cp">★★★★☆</span>
+          <span class="obs-price">$253.76 <span style="color:#00c47a;font-size:11px">▲+2.22%</span></span>
+          <span class="obs-pri obs-p0">P0</span>
+          <span class="obs-entry-wrap"><span class="obs-entry obs-entry-hit">$267.17 ✅已触发</span></span>
+          <span class="obs-trigger">跌至 $260 以下（接近52W低点$242.60）→ 评估第一步10%建仓；或危险窗口后直接以市价建仓（已有稳定现金流，不必等深回调）</span>
+        </div></div>
+
+      <div class="obs-sub-title" style="margin-top:14px">🕐 待验证条件（apex-log.md 🟡）</div>
+      <div class="ver-list">
+        <div class="ver-row">
+          <span class="ver-id">V001</span>
+          <span class="ver-ticker">6324.T/6268.T</span>
+          <span class="ver-cond">6324.T 从高点回调 ≥20% 且人形机器人量产叙事未反转 → 评估建仓</span>
+          <span class="ver-date">2026-09-30</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V002</span>
+          <span class="ver-ticker">6268.T</span>
+          <span class="ver-cond">FY2026 年报减速器业务营收占比升至 30%+ → 上调优先级</span>
+          <span class="ver-date">2026-12-31</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V003</span>
+          <span class="ver-ticker">ASTS</span>
+          <span class="ver-cond">BlueBird 8-10（Falcon 9）6月中旬如期发射 → 逻辑完整，可评估学习仓入场；若推迟 → 重新评估</span>
+          <span class="ver-date">2026-06-30 <span class="obs-soon">近期</span></span>
+          <span class="ver-status">🟡 待验证 ⚡近期</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V004</span>
+          <span class="ver-ticker">商业航天赛道</span>
+          <span class="ver-cond">Starship 达到月均 10 次商业飞行且成本数据公开 → 重新评估升入主仓逻辑</span>
+          <span class="ver-date">2027-06-30</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V005</span>
+          <span class="ver-ticker">NET</span>
+          <span class="ver-cond">Q2/Q3 2026 财报 AI Agent 相关收入单独披露且增速 >50% → 上调至 P0，评估加仓</span>
+          <span class="ver-date">2026-09-30</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V006</span>
+          <span class="ver-ticker">GOOG</span>
+          <span class="ver-cond">Q2 2026 财报（7月下旬）Google Cloud 收入增速 >30% YoY → 验证 Capex 有效转化，上调评级评估建仓</span>
+          <span class="ver-date">2026-07-31</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V006</span>
+          <span class="ver-ticker">ARM</span>
+          <span class="ver-cond">FY2027 财报版税收入中服务器/AI CPU 占比首次超过移动端 → 上调至 P0，评估加仓</span>
+          <span class="ver-date">2027-03-31</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div>
+        <div class="ver-row">
+          <span class="ver-id">V006</span>
+          <span class="ver-ticker">9984.T 软银</span>
+          <span class="ver-cond">OpenAI IPO 完成后软银股价反应：若破发回调 ≥15% → 评估折价套利入场；若大涨则继续观察</span>
+          <span class="ver-date">2026-12-31</span>
+          <span class="ver-status">🟡 待验证</span>
+        </div></div>
+    </div>
+
+  <!-- AI HOT 投资信号 -->
+  
+    <div class="ah-card">
+      <div class="section-title">🔥 AI热点 · 投资信号（aihot.virxact.com）</div>
+      
+        <div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">模型发布/更新</span>
+            <span class="ah-kw">LITE</span>
+            <span class="ah-date">2026-06-14</span>
+          </div>
+          <a class="ah-title" href="https://mp.weixin.qq.com/s/LDrbtLM0wiCTJorvd5GY9w" target="_blank">智谱 GLM-5.2 全量开放，支持 1M 上下文且下周开源</a>
+          <div class="ah-summary">GLM-5.2 是智谱迄今能力最强的开源模型，支持真正可用的 1M 上下文，在长程任务中继续保持领先，并被智谱称为最强的国产 Coding 模型。今晚 5:21 起面向 GLM Coding Plan 全量用户开放（覆盖 Lite、Pro、Max、团队版）。API 将于下周上线，模型下周正式开源，遵</div>
+          <div class="ah-src">公众号：智谱（GLM）</div>
+        </div>
+        <div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">行业动态</span>
+            <span class="ah-kw">Anthropic</span>
+            <span class="ah-date">2026-06-14</span>
+          </div>
+          <a class="ah-title" href="https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai" target="_blank">Anthropic的安全警告可能适得其反——政府已撤回其最强大AI</a>
+          <div class="ah-summary">Anthropic对政府撤回其最强大AI模型表达不满，称仅基于一个狭窄的潜在越狱发现就召回已部署给数亿用户的商业模型不合理。</div>
+          <div class="ah-src">TechCrunch：AI（RSS）</div>
+        </div>
+        <div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">行业动态</span>
+            <span class="ah-kw">Anthropic</span>
+            <span class="ah-date">2026-06-14</span>
+          </div>
+          <a class="ah-title" href="https://www.bloomberg.com/news/articles/2026-06-13/global-capitalism-bets-it-all-on-ai-future-that-alarms-voters" target="_blank">Anthropic 秘密申请上市，估值 9650 亿美元</a>
+          <div class="ah-summary">Anthropic，这家估值达 9650 亿美元的 AI 巨头、史上增长最快的初创公司之一，在秘密提交 IPO 申请后，再次投下重磅炸弹。</div>
+          <div class="ah-src">Bloomberg：Technology（RSS）</div>
+        </div>
+        <div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">行业动态</span>
+            <span class="ah-kw">Anthropic</span>
+            <span class="ah-date">2026-06-14</span>
+          </div>
+          <a class="ah-title" href="https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578" target="_blank">亚马逊首席执行官与美国官员会谈引发对 Anthropic 模型的整治</a>
+          <div class="ah-summary">亚马逊 CEO 与美国官员的会谈直接导致美国政府对 Anthropic 公司的 AI 模型采取整治行动。此次事件涉及对 Anthropic 旗下大语言模型的监管升级，具体措施及模型版本细节尚未披露。</div>
+          <div class="ah-src">Hacker News 热门（buzzing.cc 中文翻译）</div>
+        </div>
+        <div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">行业动态</span>
+            <span class="ah-kw">OpenAI</span>
+            <span class="ah-date">2026-06-14</span>
+          </div>
+          <a class="ah-title" href="https://www.bloomberg.com/news/articles/2026-06-13/openai-probed-by-coalition-of-state-attorneys-general" target="_blank">OpenAI 遭多州总检察长联合调查</a>
+          <div class="ah-summary">OpenAI 正被一个由多州总检察长组成的联盟调查，该联盟已向这家人工智能公司索取涵盖广泛主题的信息。</div>
+          <div class="ah-src">Bloomberg：Technology（RSS）</div>
+        </div>
+        <div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">技巧与观点</span>
+            <span class="ah-kw">OpenAI</span>
+            <span class="ah-date">2026-06-14</span>
+          </div>
+          <a class="ah-title" href="https://www.ithome.com/0/963/834.htm" target="_blank">SemiAnalysis 洞察 Token 经济：200 美元 AI 订阅榨出 70 倍用量</a>
+          <div class="ah-summary">SemiAnalysis 购买了 Anthropic 和 OpenAI 的全部订阅方案，模拟高强度编码任务直至触及每周上限。月费 200 美元的 Claude Max 20x 方案，按 API 价格换算最高可消耗约值 8000 美元的 token；ChatGPT Pro 20x 方案对应最高约值 1</div>
+          <div class="ah-src">IT之家（RSS）</div>
+        </div>
+    </div>
+
+  <!-- 补充信息源：核能 & SEC 8-K -->
+  
+    <div class="ah-card">
+      <div class="section-title">📡 补充信息源 · 核能 &amp; 监管</div>
+      <div class="sup-section-label">⚛️ World Nuclear News</div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Mon, 01 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/iaea-says-turbine-building-damage-consistent-with-impact-of-a-drone" target="_blank">IAEA says turbine building damage 'consistent with impact of a drone'</a>
+          <div class="ah-summary">&quot;Attacks on nuclear sites are unacceptable and must stop in order to prevent the very real risk of a nuclear accident,&quot; International Atomic</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Mon, 01 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/second-hinkley-point-c-reactor-vessel-installed" target="_blank">In pictures: Second Hinkley Point C reactor vessel installed</a>
+          <div class="ah-summary">The reactor pressure vessel has been installed for the second of the two EPR reactors at the Hinkley Point C nuclear power plant under construction in</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Mon, 01 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/cameco-orano-inc-take-full-ownership-of-cigar-lake" target="_blank">Cameco, Orano take full ownership of Cigar Lake</a>
+          <div class="ah-summary"><p>Cameco and&nbsp;Orano have reached agreement to acquire Tepco&#39;s 5% participating interest in the Cigar Lake Joint Venture.</p></div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Mon, 01 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/containment-dome-installed-at-lianjiang-1" target="_blank">Containment dome installed at Lianjiang 1</a>
+          <div class="ah-summary">The outer dome of the double-layered containment building of unit 1 at the Lianjiang nuclear power plant in China&#39;s Guangdong province has been in</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Mon, 01 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/abs-introduces-shippings-first-nuclear-ready-notation" target="_blank">ABS introduces shipping's first nuclear-ready notation</a>
+          <div class="ah-summary">The American Bureau of Shipping announced the release of the ABS Nuclear-Ready Notation, an industry-first classification notation for marine and offs</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Tue, 02 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/urenco-usa-to-build-new-us-enrichment-plant" target="_blank">Urenco to build new US enrichment plant capacity</a>
+          <div class="ah-summary"><p>Urenco has announced a&nbsp;multi-billion-dollar investment to provide a near-50% increase in enrichment capacity at Urenco USA&#39;s National Enri</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Tue, 02 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/fuel-transfer-work-begins-at-fukushima-daiichi-unit-2" target="_blank">Fuel transfer work begins at Fukushima Daiichi unit 2</a>
+          <div class="ah-summary">Tokyo Electric Power Company has announced the start of the removal of fuel assemblies from the used fuel storage pool of unit 2 at the damaged Fukush</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div><div class="ah-row">
+          <div class="ah-meta">
+            <span class="ah-cat">核能</span>
+            <span class="ah-date">Tue, 02 Jun 2026</span>
+          </div>
+          <a class="ah-title" href="https://www.world-nuclear-news.org//articles/milestones-reached-at-xudabao-construction-site" target="_blank">Milestones reached at Xudabao construction site</a>
+          <div class="ah-summary">Hot functional tests have been completed at unit 3 of the Xudabao nuclear power plant in China&#39;s Liaoning Province ahead of the reactor&#39;s star</div>
+          <div class="ah-src">World Nuclear News</div>
+        </div>
+    </div>
+
+  <!-- Headline -->
+  <div class="headline">
+    <span class="headline-icon">⚡</span>美股分化，S&P 500 +0.50% · 日经225 走强 +4.70% · 日元偏弱，美元/日元 160.1
+  </div>
+
+  <!-- 今日市场主因 -->
+  
+    <div class="cat-card">
+      <div class="section-title">📰 今日市场主因&nbsp;<span style="color:#00c47a;font-size:12px;font-weight:600">S&P 500 上涨 +0.50%</span></div>
+      
+        <div class="cat-row">
+          <div class="cat-meta">
+            <span class="cat-src">marketpulse.com</span>
+          </div>
+          <a class="cat-title" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPbS13elRsZXVqNlNFdG1WZ1NNYUV3OEp2RzN3aVZSemNINVhwXzB4R3pEd1htME9kSE9vRW5VZ25yaWh5dDJldkJ5ZmhyS2Mxa2pYbUtwdTBTdUhVbUJHWm11ZnpMcmFBOWFBM0dOaHR2cVI0d29OcFh4ejE4cW5zUzhKdUJmck5wVndiTGVn?oc=5" target="_blank">科技再平衡和波动催化剂—​​—道琼斯和美国股指展望 - marketpulse.com</a>
+        </div>
+        <div class="cat-row">
+          <div class="cat-meta">
+            <span class="cat-src">The Economic Times</span>
+          </div>
+          <a class="cat-title" href="https://news.google.com/rss/articles/CBMi6AFBVV95cUxQaWtyc1YyUzZ5OG5CbWZlWEtPM1g5dkZqeXZoMnFhdmdReThEUFU1LVdfX2pCRnpPYlVBVjBlVWpDenVidVVuUENrMTRnV3BWYUF6d1NxdGZVRy1hYlAxazRNVW9yblJjekV2aC1xSjhUTHBvNENVNUhFZW10Q3RTSUZwNkNIZ2pFNU9YaE9SaEREZnBUT3JIWWZnOTFrZlRQUEZvLXgycmc4RlRfVDFKUjlIY3lnX3dVS2ZjRXhROFY3NmU1cmJ4aEJaSHNHbVVYRC1aSXVRYm8xeURZT0pYTlU3RmZLOTZ30gHuAUFVX3lxTE9rb1laTEhYdGtyYTc0RXBIb0ZjdHR4UUZscXE5V2hHQmJrNnNjcDdIaU9NaWZjeEtNN0Zwc3c1M2w4Qm1RSXFEdXRLVXZsUmRWZ2phSE9qdldPVm1sb2tEZnBGZDlZUnR1S0k3VDZvY3ZKZkhfdzZpakRTT29sbzU4MXNoS1hySkphd2xSR3FwdmFWQ29abHN2bTFCUTdUQmNKUm0yM2FFSTBXNG96eGRuMkhMSXc3SUJ3Z1NvTWZCNW9OaU40Z1ZBMFE3dHk3cXpja1B6YkJpVC15dUVVTFI2Q2wwU0ZVVHoxNTJicEE?oc=5" target="_blank">为什么今天美国股市大涨：道琼斯指数、标准普尔 500 指数和纳斯达克指数今天都大幅上涨 - 经济时报</a>
+        </div>
+        <div class="cat-row">
+          <div class="cat-meta">
+            <span class="cat-src">Moomoo</span>
+          </div>
+          <a class="cat-title" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOVHVjZmtQZ01WcThCd3hXcWhNSFRUcFpoaWlXV0tYU2Zvdk8yVFhadUJ6ZjVfc2d5c3JPZzdoamNhd0tWWnVYU1RWeWMxbXVHT2V3VmltUFp2TDQ1bTdYNGEtbWpvU0ozc1FGX3lTeU1UVzdLckVUcXhjRnZCVWIyelUxNXJ3TlREemdCd1hTUHBWT1lt?oc=5" target="_blank">美国股市长期上涨的关键催化剂即将到来！ SpaceX 和 OpenAI 等巨头正在准备采取行动，高盛 (Goldman Sachs) 押注 2026 年将是 IPO 的重要一年。 - 莫莫</a>
+        </div>
+        <div class="cat-row">
+          <div class="cat-meta">
+            <span class="cat-src">Business Insider</span>
+          </div>
+          <a class="cat-title" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYnZJSjZTbzhQbHVtYm82R09XVTJBb25CWXp3Z2Q0UTd5SXN1c1F1bDctZVhodm9VUkl2Y0s3dXhEdDlRSDdUWlNXRUdWMVlkQXlMVXEwTzdqaDN6ODdwbUdjaks2bXBqWlg1T0gyWnA1c3VBajNYY2M4T0JCM0d1WlpWemdydUs1clRUcFdKVUhNS21Td0x4VkNoaGNTM1ZRbXdZcGdqNFA?oc=5" target="_blank">冻结的经济数据可能意味着 12 月不会降息，而投资者正在反抗 - Business Insider</a>
+        </div>
+        <div class="cat-row">
+          <div class="cat-meta">
+            <span class="cat-src">The Motley Fool</span>
+          </div>
+          <a class="cat-title" href="https://news.google.com/rss/articles/CBMilgFBVV95cUxQYnlfaUdpUjJDdW4yUWxYaFBfRmYteC1TX2hPVnUxejd1cmVEM3dBOHBELVp1M0UxNUFJQzJ6ZTR1WHpGQTI3UERDdkVhNlM0SjJXTlB2RXNBUmM1eURydTVueWx5WFJPOTdGYVVpaFRuOEZPNzktbGlNVDhJUzNIcVFrS3ZEYnVVTUI4ZmpPaUJiT1lKQkE?oc=5" target="_blank">唐纳德·特朗普总统领导下的股市崩盘的可能性正在迅速上升，并且有一个不可否认的催化剂应归咎于_东方企业家</a>
+        </div>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px">来源：Google News · 点击查看原文</div>
+    </div>
+
+  <!-- 大盘指数 -->
+  <div class="row2">
+    <div class="card mb16" style="margin-bottom:0">
+      <div class="section-title">🇺🇸 美国大盘</div>
+      <div class="idx-grid">
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">标普500</span>
+            <span class="idx-en">S&P 500</span>
+          </div>
+          <div class="idx-price">7,431.5</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.50% +37点
+          </div>
+          <div class="idx-yc">年涨幅 +23.2%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">纳斯达克</span>
+            <span class="idx-en">NASDAQ</span>
+          </div>
+          <div class="idx-price">25,889</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.31% +79点
+          </div>
+          <div class="idx-yc">年涨幅 +31.4%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">道琼斯</span>
+            <span class="idx-en">DOW</span>
+          </div>
+          <div class="idx-price">51,202</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.70% +354点
+          </div>
+          <div class="idx-yc">年涨幅 +20.4%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">罗素2000</span>
+            <span class="idx-en">Russell 2K</span>
+          </div>
+          <div class="idx-price">2,944.0</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +0.79% +23点
+          </div>
+          <div class="idx-yc">年涨幅 +38.6%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇺🇸</span>
+            <span class="idx-name">VIX恐慌指数</span>
+            <span class="idx-en">VIX</span>
+          </div>
+          <div class="idx-price">17.68</div>
+          <div class="idx-chg" style="color:#ff4d4d">
+            ▼ -9.10% -1.77点· 情绪平稳
+          </div>
+          <div class="idx-yc">年涨幅 -7.5%</div>
+        </div></div>
+      <div class="data-source">数据源：Yahoo Finance · 2026-06-15 02:04 ET</div>
+    </div>
+    <div class="card" style="margin-bottom:0">
+      <div class="section-title">🇯🇵 日本大盘</div>
+      <div class="idx-grid">
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇯🇵</span>
+            <span class="idx-name">日经225</span>
+            <span class="idx-en">Nikkei 225</span>
+          </div>
+          <div class="idx-price">69,149</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +4.70% +3107点
+          </div>
+          <div class="idx-yc">年涨幅 +72.3%</div>
+        </div>
+        <div class="idx-card">
+          <div class="idx-header">
+            <span class="idx-flag">🇯🇵</span>
+            <span class="idx-name">TOPIX ETF</span>
+            <span class="idx-en">TOPIX</span>
+          </div>
+          <div class="idx-price">424</div>
+          <div class="idx-chg" style="color:#00c47a">
+            ▲ +3.14% +13点
+          </div>
+          <div class="idx-yc">年涨幅 -86.0%</div>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 汇率 & 大宗商品 -->
+  <div class="card mb16" style="margin-top:16px">
+    <div class="section-title">💱 汇率 · 债券 · 大宗商品</div>
+    <div class="fx-grid">
+        <div class="fx-row">
+          <span class="fx-icon">💱</span>
+          <span class="fx-name">美元/日元</span>
+          <span class="fx-price">160.07</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.07%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">💱</span>
+          <span class="fx-name">美元/人民币</span>
+          <span class="fx-price">6.76</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.08%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">💱</span>
+          <span class="fx-name">欧元/美元</span>
+          <span class="fx-price">1.16</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +0.41%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🏦</span>
+          <span class="fx-name">美债10Y(%)</span>
+          <span class="fx-price">4.49</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +0.54%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🏦</span>
+          <span class="fx-name">美债2Y(%)</span>
+          <span class="fx-price">3.62</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.14%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🛢️</span>
+          <span class="fx-name">原油WTI</span>
+          <span class="fx-price">80.76</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +0.27%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">🥇</span>
+          <span class="fx-name">黄金</span>
+          <span class="fx-price">4,330.0</span>
+          <span class="fx-chg" style="color:#ff4d4d">▼ -0.36%</span>
+        </div>
+        <div class="fx-row">
+          <span class="fx-icon">₿</span>
+          <span class="fx-name">比特币</span>
+          <span class="fx-price">65,801</span>
+          <span class="fx-chg" style="color:#00c47a">▲ +0.14%</span>
+        </div></div>
+  </div>
+
+  <!-- 板块 ETF -->
+  <div class="row2">
+    <div class="card">
+      <div class="section-title">🔥 美国板块 ETF</div>
+      <div class="sc-grid">
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">科技</div>
+          <div class="sc-etf">XLK</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.37%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">半导体</div>
+          <div class="sc-etf">SOXX</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.89%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">消费可选</div>
+          <div class="sc-etf">XLY</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.36%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">消费必需</div>
+          <div class="sc-etf">XLP</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.89%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">能源</div>
+          <div class="sc-etf">XLE</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.72%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">国防军工</div>
+          <div class="sc-etf">XAR</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -1.42%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">核电+铀</div>
+          <div class="sc-etf">NLR</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.08%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">机器人AI</div>
+          <div class="sc-etf">BOTZ</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.99%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#88840">
+          <div class="sc-label">数据中心</div>
+          <div class="sc-etf">VPN</div>
+          <div class="sc-pct" style="color:#888"> —</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">国防科技</div>
+          <div class="sc-etf">SHLD</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -1.44%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">中国互联</div>
+          <div class="sc-etf">KWEB</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.79%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">电网基建</div>
+          <div class="sc-etf">GRID</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -0.24%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(255,77,77,0.10);border-color:#ff4d4d40">
+          <div class="sc-label">商业航天</div>
+          <div class="sc-etf">UFO</div>
+          <div class="sc-pct" style="color:#ff4d4d">▼ -11.95%</div>
+        </div></div>
+    </div>
+    <div class="card">
+      <div class="section-title">🔥 日本板块 ETF</div>
+      <div class="sc-grid">
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">日本综合</div>
+          <div class="sc-etf">EWJ</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +0.34%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">日本对冲</div>
+          <div class="sc-etf">HEWJ</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +1.06%</div>
+        </div>
+        <div class="sc-card" style="background:rgba(0,196,122,0.10);border-color:#00c47a40">
+          <div class="sc-label">日本大盘</div>
+          <div class="sc-etf">JPXN</div>
+          <div class="sc-pct" style="color:#00c47a">▲ +2.56%</div>
+        </div></div>
+    </div>
+  </div>
+
+  <!-- 个股 Watchlist -->
+  <div class="row2" style="margin-top:16px">
+    <div class="card">
+      <div class="section-title">📈 美股 Watchlist</div>
+      
+        <div class="stock-section">
+          <div class="ss-title">AI / 科技核心</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">NVDA</td>
+              <td class="st-name"><span class="st-cn">英伟达</span><span class="st-en">NVIDIA</span></td>
+              <td class="st-price">$205.19</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.38%</td>
+              <td class="st-hl">市值 $5.0万亿，年涨幅 +42%，分析师目标价 $299（+46%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">MSFT</td>
+              <td class="st-name"><span class="st-cn">微软</span><span class="st-en">Microsoft</span></td>
+              <td class="st-price">$390.74</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.51%</td>
+              <td class="st-hl">市值 $2.9万亿，年涨幅 -18%，分析师目标价 $561（+44%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AAPL</td>
+              <td class="st-name"><span class="st-cn">苹果</span><span class="st-en">Apple</span></td>
+              <td class="st-price">$291.13</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.58%</td>
+              <td class="st-hl">市值 $4.3万亿，年涨幅 +47%，分析师目标价 $313（+7%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">META</td>
+              <td class="st-name"><span class="st-cn">Meta</span><span class="st-en">Meta</span></td>
+              <td class="st-price">$566.98</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.02%</td>
+              <td class="st-hl">市值 $1.4万亿，年涨幅 -19%，分析师目标价 $827（+46%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">GOOGL</td>
+              <td class="st-name"><span class="st-cn">谷歌</span><span class="st-en">Alphabet</span></td>
+              <td class="st-price">$359.68</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.14%</td>
+              <td class="st-hl">市值 $4.4万亿，年涨幅 +103%，分析师目标价 $433（+20%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AMZN</td>
+              <td class="st-name"><span class="st-cn">亚马逊</span><span class="st-en">Amazon</span></td>
+              <td class="st-price">$238.55</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.55%</td>
+              <td class="st-hl">市值 $2.6万亿，年涨幅 +10%，分析师目标价 $313（+31%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">半导体</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">AMD</td>
+              <td class="st-name"><span class="st-cn">超微半导体</span><span class="st-en">AMD</span></td>
+              <td class="st-price">$511.57</td>
+              <td class="st-chg" style="color:#00c47a">▲ +3.99%</td>
+              <td class="st-hl">市值 $834亿，年涨幅 +305%，营收增速 +38%</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AVGO</td>
+              <td class="st-name"><span class="st-cn">博通</span><span class="st-en">Broadcom</span></td>
+              <td class="st-price">$382.07</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.85%</td>
+              <td class="st-hl">市值 $1.8万亿，年涨幅 +52%，分析师目标价 $522（+37%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">TSM</td>
+              <td class="st-name"><span class="st-cn">台积电</span><span class="st-en">TSMC</span></td>
+              <td class="st-price">$423.93</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.46%</td>
+              <td class="st-hl">市值 $2.2万亿，年涨幅 +97%，分析师目标价 $468（+10%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">QCOM</td>
+              <td class="st-name"><span class="st-cn">高通</span><span class="st-en">Qualcomm</span></td>
+              <td class="st-price">$211.72</td>
+              <td class="st-chg" style="color:#00c47a">▲ +3.86%</td>
+              <td class="st-hl">市值 $223亿，年涨幅 +35%，分析师目标价 $180（-15%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">AMAT</td>
+              <td class="st-name"><span class="st-cn">应用材料</span><span class="st-en">AMAT</span></td>
+              <td class="st-price">$567.25</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.43%</td>
+              <td class="st-hl">市值 $450亿，年涨幅 +221%，接近52周高点</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">消费</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">TSLA</td>
+              <td class="st-name"><span class="st-cn">特斯拉</span><span class="st-en">Tesla</span></td>
+              <td class="st-price">$406.43</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.86%</td>
+              <td class="st-hl">市值 $1.5万亿，年涨幅 +23%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">COST</td>
+              <td class="st-name"><span class="st-cn">好市多</span><span class="st-en">Costco</span></td>
+              <td class="st-price">$982.35</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.51%</td>
+              <td class="st-hl">市值 $436亿，年涨幅 -0%，分析师目标价 $1082（+10%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">WMT</td>
+              <td class="st-name"><span class="st-cn">沃尔玛</span><span class="st-en">Walmart</span></td>
+              <td class="st-price">$121.04</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.89%</td>
+              <td class="st-hl">市值 $963亿，年涨幅 +28%，分析师目标价 $138（+14%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">NKE</td>
+              <td class="st-name"><span class="st-cn">耐克</span><span class="st-en">Nike</span></td>
+              <td class="st-price">$44.93</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.56%</td>
+              <td class="st-hl">市值 $67亿，年涨幅 -27%，分析师目标价 $60（+33%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">能源</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">XOM</td>
+              <td class="st-name"><span class="st-cn">埃克森美孚</span><span class="st-en">ExxonMobil</span></td>
+              <td class="st-price">$147.01</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.23%</td>
+              <td class="st-hl">市值 $609亿，年涨幅 +31%，分析师目标价 $170（+16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">CVX</td>
+              <td class="st-name"><span class="st-cn">雪佛龙</span><span class="st-en">Chevron</span></td>
+              <td class="st-price">$187.22</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.78%</td>
+              <td class="st-hl">市值 $373亿，年涨幅 +28%，分析师目标价 $216（+15%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">COP</td>
+              <td class="st-name"><span class="st-cn">康菲石油</span><span class="st-en">ConocoPhillips</span></td>
+              <td class="st-price">$116.98</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.40%</td>
+              <td class="st-hl">市值 $143亿，年涨幅 +23%，分析师目标价 $143（+22%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">国防 / 军工</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">LMT</td>
+              <td class="st-name"><span class="st-cn">洛克希德·马丁</span><span class="st-en">Lockheed</span></td>
+              <td class="st-price">$540.33</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.40%</td>
+              <td class="st-hl">市值 $125亿，年涨幅 +16%，分析师目标价 $625（+16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">RTX</td>
+              <td class="st-name"><span class="st-cn">雷神技术</span><span class="st-en">RTX</span></td>
+              <td class="st-price">$183.53</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.05%</td>
+              <td class="st-hl">市值 $247亿，年涨幅 +25%，分析师目标价 $216（+18%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">NOC</td>
+              <td class="st-name"><span class="st-cn">诺斯罗普</span><span class="st-en">Northrop</span></td>
+              <td class="st-price">$550.33</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.34%</td>
+              <td class="st-hl">市值 $78亿，年涨幅 +11%，分析师目标价 $697（+27%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">GD</td>
+              <td class="st-name"><span class="st-cn">通用动力</span><span class="st-en">Gen Dynamics</span></td>
+              <td class="st-price">$360.22</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.45%</td>
+              <td class="st-hl">市值 $97亿，年涨幅 +29%，接近52周高点</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">BA</td>
+              <td class="st-name"><span class="st-cn">波音</span><span class="st-en">Boeing</span></td>
+              <td class="st-price">$219.05</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.89%</td>
+              <td class="st-hl">市值 $173亿，年涨幅 +9%，分析师目标价 $270（+23%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">AI基建 / 电力</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">BE</td>
+              <td class="st-name"><span class="st-cn">Bloom Energy</span><span class="st-en">Bloom Energy</span></td>
+              <td class="st-price">$260.22</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.85%</td>
+              <td class="st-hl">市值 $74亿，年涨幅 +1036%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">CEG</td>
+              <td class="st-name"><span class="st-cn">星座能源</span><span class="st-en">Constellation</span></td>
+              <td class="st-price">$253.76</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.22%</td>
+              <td class="st-hl">市值 $91亿，年涨幅 -18%，分析师目标价 $368（+45%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">VRT</td>
+              <td class="st-name"><span class="st-cn">Vertiv液冷</span><span class="st-en">Vertiv</span></td>
+              <td class="st-price">$302.87</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.36%</td>
+              <td class="st-hl">市值 $116亿，年涨幅 +160%，分析师目标价 $378（+25%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">CORZ</td>
+              <td class="st-name"><span class="st-cn">Core Scientific</span><span class="st-en">Core Sci</span></td>
+              <td class="st-price">$27.60</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.10%</td>
+              <td class="st-hl">市值 $9亿，年涨幅 +128%，分析师目标价 $33（+18%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">OKLO</td>
+              <td class="st-name"><span class="st-cn">Oklo SMR微堆</span><span class="st-en">Oklo·学习仓</span></td>
+              <td class="st-price">$57.49</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -2.61%</td>
+              <td class="st-hl">市值 $10亿，年涨幅 -12%，分析师目标价 $89（+54%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">光互连 / 存储</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">LITE</td>
+              <td class="st-name"><span class="st-cn">Lumentum光模块</span><span class="st-en">Lumentum</span></td>
+              <td class="st-price">$921.56</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.92%</td>
+              <td class="st-hl">市值 $72亿，年涨幅 +974%，分析师目标价 $1111（+21%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">COHR</td>
+              <td class="st-name"><span class="st-cn">Coherent光互连</span><span class="st-en">Coherent</span></td>
+              <td class="st-price">$385.03</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.95%</td>
+              <td class="st-hl">市值 $75亿，年涨幅 +377%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">MU</td>
+              <td class="st-name"><span class="st-cn">美光HBM</span><span class="st-en">Micron</span></td>
+              <td class="st-price">$981.61</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.71%</td>
+              <td class="st-hl">市值 $1.1万亿，年涨幅 +719%，分析师目标价 $829（-16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">SNDK</td>
+              <td class="st-name"><span class="st-cn">闪迪存储</span><span class="st-en">Sandisk</span></td>
+              <td class="st-price">$1,980.1</td>
+              <td class="st-chg" style="color:#00c47a">▲ +3.45%</td>
+              <td class="st-hl">市值 $293亿，年涨幅 +4379%，接近52周高点</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">Physical AI / 无人机</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">AVAV</td>
+              <td class="st-name"><span class="st-cn">AeroVironment</span><span class="st-en">AeroVironment</span></td>
+              <td class="st-price">$170.58</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -7.08%</td>
+              <td class="st-hl">市值 $9亿，年涨幅 -9%，分析师目标价 $310（+82%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">KTOS</td>
+              <td class="st-name"><span class="st-cn">Kratos无人机</span><span class="st-en">Kratos</span></td>
+              <td class="st-price">$57.75</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -2.76%</td>
+              <td class="st-hl">市值 $11亿，年涨幅 +40%，分析师目标价 $112（+94%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">INTC</td>
+              <td class="st-name"><span class="st-cn">Intel国安</span><span class="st-en">Intel</span></td>
+              <td class="st-price">$124.57</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.11%</td>
+              <td class="st-hl">市值 $626亿，年涨幅 +501%，分析师目标价 $93（-25%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">商业航天 [学习仓]</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">RKLB</td>
+              <td class="st-name"><span class="st-cn">Rocket Lab</span><span class="st-en">RKLB★★★☆☆</span></td>
+              <td class="st-price">$102.39</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -15.73%</td>
+              <td class="st-hl">市值 $64亿，年涨幅 +286%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">ASTS</td>
+              <td class="st-name"><span class="st-cn">AST SpaceMobile</span><span class="st-en">ASTS·二元结局</span></td>
+              <td class="st-price">$82.41</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -21.06%</td>
+              <td class="st-hl">市值 $32亿，年涨幅 +97%，营收增速 +1952%</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">LUNR</td>
+              <td class="st-name"><span class="st-cn">Intuitive Machines</span><span class="st-en">LUNR·月球纯度</span></td>
+              <td class="st-price">$26.62</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -16.81%</td>
+              <td class="st-hl">市值 $4亿，年涨幅 +146%，分析师目标价 $41（+53%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+    </div>
+    <div class="card">
+      <div class="section-title">📈 日股 Watchlist</div>
+      
+        <div class="stock-section">
+          <div class="ss-title">科技 / 半导体</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6758</td>
+              <td class="st-name"><span class="st-cn">索尼</span><span class="st-en">Sony</span></td>
+              <td class="st-price">¥3,314.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.67%</td>
+              <td class="st-hl">市值 $19.5万亿，年涨幅 -12%，分析师目标价 $4657（+41%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6861</td>
+              <td class="st-name"><span class="st-cn">基恩士</span><span class="st-en">Keyence</span></td>
+              <td class="st-price">¥75,920</td>
+              <td class="st-chg" style="color:#00c47a">▲ +4.78%</td>
+              <td class="st-hl">市值 $18.4万亿，年涨幅 +25%，分析师目标价 $84475（+11%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6501</td>
+              <td class="st-name"><span class="st-cn">日立</span><span class="st-en">Hitachi</span></td>
+              <td class="st-price">¥4,740.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +1.74%</td>
+              <td class="st-hl">市值 $21.3万亿，年涨幅 +16%，分析师目标价 $5914（+25%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">8035</td>
+              <td class="st-name"><span class="st-cn">东京电子</span><span class="st-en">Tokyo Electron</span></td>
+              <td class="st-price">¥73,010</td>
+              <td class="st-chg" style="color:#00c47a">▲ +6.99%</td>
+              <td class="st-hl">市值 $33.2万亿，年涨幅 +183%，接近52周高点</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">半导体设备 / 材料</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6146</td>
+              <td class="st-name"><span class="st-cn">Disco切割</span><span class="st-en">Disco</span></td>
+              <td class="st-price">¥84,370</td>
+              <td class="st-chg" style="color:#00c47a">▲ +6.29%</td>
+              <td class="st-hl">市值 $9.2万亿，年涨幅 +131%，接近52周高点</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6857</td>
+              <td class="st-name"><span class="st-cn">爱德万测试</span><span class="st-en">Advantest</span></td>
+              <td class="st-price">¥29,070</td>
+              <td class="st-chg" style="color:#00c47a">▲ +6.48%</td>
+              <td class="st-hl">市值 $21.1万亿，年涨幅 +193%，分析师目标价 $33220（+14%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">4063</td>
+              <td class="st-name"><span class="st-cn">信越化学</span><span class="st-en">Shin-Etsu</span></td>
+              <td class="st-price">¥7,539.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.15%</td>
+              <td class="st-hl">市值 $14.0万亿，年涨幅 +62%，分析师目标价 $7958（+6%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">3436</td>
+              <td class="st-name"><span class="st-cn">SUMCO硅晶圆</span><span class="st-en">SUMCO</span></td>
+              <td class="st-price">¥4,305.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +17.66%</td>
+              <td class="st-hl">市值 $1.5万亿，年涨幅 +260%，分析师目标价 $3276（-24%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">机器人精密零部件 [观察列表]</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6324</td>
+              <td class="st-name"><span class="st-cn">Harmonic Drive谐波减速器</span><span class="st-en">HDS★★★★★</span></td>
+              <td class="st-price">¥6,820.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +4.12%</td>
+              <td class="st-hl">市值 $646亿，年涨幅 +120%，分析师目标价 $5746（-16%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6268</td>
+              <td class="st-name"><span class="st-cn">Nabtesco RV减速器</span><span class="st-en">Nabtesco★★★★</span></td>
+              <td class="st-price">¥5,063.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.94%</td>
+              <td class="st-hl">市值 $593亿，年涨幅 +104%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6506</td>
+              <td class="st-name"><span class="st-cn">安川电机伺服</span><span class="st-en">Yaskawa</span></td>
+              <td class="st-price">¥6,645.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +5.09%</td>
+              <td class="st-hl">市值 $1.7万亿，年涨幅 +96%，分析师评级：买入</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">机器人 / Physical AI</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">6954</td>
+              <td class="st-name"><span class="st-cn">发那科</span><span class="st-en">FANUC</span></td>
+              <td class="st-price">¥7,284.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +4.87%</td>
+              <td class="st-hl">市值 $6.8万亿，年涨幅 +81%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">6981</td>
+              <td class="st-name"><span class="st-cn">村田制作所</span><span class="st-en">Murata</span></td>
+              <td class="st-price">¥10,060</td>
+              <td class="st-chg" style="color:#00c47a">▲ +16.06%</td>
+              <td class="st-hl">市值 $18.3万亿，年涨幅 +311%，分析师目标价 $7959（-21%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">消费 / 汽车</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">7203</td>
+              <td class="st-name"><span class="st-cn">丰田</span><span class="st-en">Toyota</span></td>
+              <td class="st-price">¥2,908.5</td>
+              <td class="st-chg" style="color:#00c47a">▲ +4.75%</td>
+              <td class="st-hl">市值 $37.9万亿，年涨幅 +9%，分析师目标价 $3697（+27%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">7267</td>
+              <td class="st-name"><span class="st-cn">本田</span><span class="st-en">Honda</span></td>
+              <td class="st-price">¥1,462.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +3.91%</td>
+              <td class="st-hl">市值 $5.7万亿，年涨幅 -2%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">7974</td>
+              <td class="st-name"><span class="st-cn">任天堂</span><span class="st-en">Nintendo</span></td>
+              <td class="st-price">¥7,113.0</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.96%</td>
+              <td class="st-hl">市值 $8.2万亿，年涨幅 -40%，分析师目标价 $10296（+45%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9983</td>
+              <td class="st-name"><span class="st-cn">优衣库</span><span class="st-en">Fast Retailing</span></td>
+              <td class="st-price">¥80,840</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.81%</td>
+              <td class="st-hl">市值 $24.8万亿，年涨幅 +72%，接近52周高点</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">金融 / 综合</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">9984</td>
+              <td class="st-name"><span class="st-cn">软银</span><span class="st-en">SoftBank</span></td>
+              <td class="st-price">¥7,125.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +9.70%</td>
+              <td class="st-hl">市值 $40.6万亿，年涨幅 +205%，分析师评级：买入</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">8306</td>
+              <td class="st-name"><span class="st-cn">三菱UFJ</span><span class="st-en">MUFG</span></td>
+              <td class="st-price">¥3,252.0</td>
+              <td class="st-chg" style="color:#00c47a">▲ +2.85%</td>
+              <td class="st-hl">市值 $36.7万亿，年涨幅 +62%，接近52周高点</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9432</td>
+              <td class="st-name"><span class="st-cn">NTT</span><span class="st-en">NTT</span></td>
+              <td class="st-price">¥147.10</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.81%</td>
+              <td class="st-hl">市值 $12.0万亿，年涨幅 -5%，分析师目标价 $173（+17%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
+  <!-- 港股 Watchlist -->
+  <div class="card" style="margin-top:16px">
+    <div class="section-title">🇭🇰 港股 Watchlist</div>
+    <div class="row2" style="margin-bottom:0">
+      
+        <div class="stock-section">
+          <div class="ss-title">AI云 / 互联网</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">9988</td>
+              <td class="st-name"><span class="st-cn">阿里巴巴</span><span class="st-en">Alibaba</span></td>
+              <td class="st-price">HK$109.10</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.00%</td>
+              <td class="st-hl">市值 $2.1万亿，年涨幅 -2%，分析师目标价 $184（+68%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">0700</td>
+              <td class="st-name"><span class="st-cn">腾讯</span><span class="st-en">Tencent</span></td>
+              <td class="st-price">HK$460.40</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.69%</td>
+              <td class="st-hl">市值 $4.2万亿，年涨幅 -9%，分析师目标价 $709（+54%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9888</td>
+              <td class="st-name"><span class="st-cn">百度</span><span class="st-en">Baidu</span></td>
+              <td class="st-price">HK$115.20</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.35%</td>
+              <td class="st-hl">市值 $314亿，年涨幅 +35%，分析师目标价 $180（+56%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">3690</td>
+              <td class="st-name"><span class="st-cn">美团</span><span class="st-en">Meituan</span></td>
+              <td class="st-price">HK$77.75</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -0.19%</td>
+              <td class="st-hl">市值 $480亿，年涨幅 -44%，分析师目标价 $109（+40%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">半导体 / 算力</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">0981</td>
+              <td class="st-name"><span class="st-cn">中芯国际</span><span class="st-en">SMIC</span></td>
+              <td class="st-price">HK$76.20</td>
+              <td class="st-chg" style="color:#00c47a">▲ +6.35%</td>
+              <td class="st-hl">市值 $611亿，年涨幅 +79%，分析师目标价 $82（+7%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">1347</td>
+              <td class="st-name"><span class="st-cn">华虹半导体</span><span class="st-en">Hua Hong</span></td>
+              <td class="st-price">HK$153.40</td>
+              <td class="st-chg" style="color:#00c47a">▲ +10.20%</td>
+              <td class="st-hl">市值 $267亿，年涨幅 +364%，分析师目标价 $113（-26%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+        <div class="stock-section">
+          <div class="ss-title">具身智能 / 硬件</div>
+          <table class="stock-table">
+            <thead><tr>
+              <th>代码</th><th>公司</th><th>最新价</th><th>涨跌幅</th><th>亮点</th>
+            </tr></thead>
+            <tbody>
+            <tr>
+              <td class="st-ticker">1810</td>
+              <td class="st-name"><span class="st-cn">小米</span><span class="st-en">Xiaomi</span></td>
+              <td class="st-price">HK$26.30</td>
+              <td class="st-chg" style="color:#00c47a">▲ +0.38%</td>
+              <td class="st-hl">市值 $678亿，年涨幅 -52%，分析师目标价 $40（+52%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">1211</td>
+              <td class="st-name"><span class="st-cn">比亚迪</span><span class="st-en">BYD</span></td>
+              <td class="st-price">HK$84.95</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -1.85%</td>
+              <td class="st-hl">市值 $774亿，年涨幅 -33%，分析师目标价 $125（+47%空间）</td>
+            </tr>
+            <tr>
+              <td class="st-ticker">9698</td>
+              <td class="st-name"><span class="st-cn">万国数据</span><span class="st-en">GDS</span></td>
+              <td class="st-price">HK$31.14</td>
+              <td class="st-chg" style="color:#ff4d4d">▼ -4.07%</td>
+              <td class="st-hl">市值 $50亿，年涨幅 +20%，分析师目标价 $54（+72%空间）</td>
+            </tr></tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
+  <!-- 宏观事件 -->
+  <div class="card" style="margin-top:16px">
+    <div class="section-title">📅 近期宏观事件</div>
+    <div class="ev-section-label">📋 过去7天</div><div class="ev-row ev-past"><span class="ev-when">3天前</span><span class="badge-done">已发生</span><span class="ev-desc">韩国出口数据（5月）</span></div><div class="ev-row ev-past"><span class="ev-when">3天前</span><span class="badge-done">已发生</span><span class="ev-desc">SpaceX IPO预计上市（传言·官方未确认）</span></div><div class="ev-row ev-past"><span class="ev-when">4天前</span><span class="badge-done">已发生</span><span class="ev-desc">30年期美债拍卖</span></div><div class="ev-row ev-past"><span class="ev-when">4天前</span><span class="badge-done">已发生</span><span class="ev-desc">美国PPI生产者物价指数（5月）</span></div><div class="ev-row ev-past"><span class="ev-when">5天前</span><span class="badge-done">已发生</span><span class="ev-desc">中国CPI & PPI（5月）</span></div><div class="ev-row ev-past"><span class="ev-when">5天前</span><span class="badge-done">已发生</span><span class="ev-desc">美国CPI通胀数据（本月最大雷点·P0必看）</span></div><div class="ev-row ev-past"><span class="ev-when">6天前</span><span class="badge-done">已发生</span><span class="ev-desc">中国出口 & 贸易顺差（5月）</span></div><div class="ev-row ev-past"><span class="ev-when">7天前</span><span class="badge-done">已发生</span><span class="ev-desc">Apple WWDC 2026 开幕（Siri/端侧AI·AAPL+ARM）</span></div><div class="ev-section-label" style="margin-top:10px">🔔 未来14天</div><div class="ev-row"><span class="ev-when">今天</span><span class="badge-high">重要</span><span class="ev-desc">日本央行政策会议</span></div><div class="ev-row"><span class="ev-when">今天</span><span class="badge-high">重要</span><span class="ev-desc">中国工业产出 & 零售销售（5月）</span></div><div class="ev-row"><span class="ev-when">06/17</span><span class="badge-high">重要</span><span class="ev-desc">美联储FOMC利率决议（新主席Warsh首次议息·P0必看）</span></div><div class="ev-row"><span class="ev-when">06/17</span><span class="badge-med">关注</span><span class="ev-desc">美国5月零售销售数据（消费韧性验证）</span></div><div class="ev-row"><span class="ev-when">06/18</span><span class="badge-med">关注</span><span class="ev-desc">百度财报 Q1 2026</span></div><div class="ev-row"><span class="ev-when">06/18</span><span class="badge-high">重要</span><span class="ev-desc">FOMC新主席Warsh首次新闻发布会</span></div><div class="ev-row"><span class="ev-when">06/18</span><span class="badge-high">重要</span><span class="ev-desc">期权/股指期货季度到期（因6/19 Juneteenth休市前移）</span></div><div class="ev-row"><span class="ev-when">06/18</span><span class="badge-med">关注</span><span class="ev-desc">日本CPI通胀数据（5月）</span></div><div class="ev-row"><span class="ev-when">06/18</span><span class="badge-med">关注</span><span class="ev-desc">台湾出口订单（5月）</span></div><div class="ev-row"><span class="ev-when">06/19</span><span class="badge-med">关注</span><span class="ev-desc">Juneteenth联邦假日·美股休市</span></div><div class="ev-row"><span class="ev-when">06/20</span><span class="badge-high">重要</span><span class="ev-desc">中国PBOC LPR利率决议</span></div><div class="ev-row"><span class="ev-when">06/24</span><span class="badge-high">重要</span><span class="ev-desc">NVDA年度股东大会（英伟达技术路线·P1关注）</span></div><div class="ev-row"><span class="ev-when">06/25</span><span class="badge-high">重要</span><span class="ev-desc">MU财报 Q3 FY26（美光HBM）</span></div><div class="ev-row"><span class="ev-when">06/26</span><span class="badge-high">重要</span><span class="ev-desc">Russell 2000指数年度重构（小盘股异动）</span></div><div class="ev-row"><span class="ev-when">06/26</span><span class="badge-med">关注</span><span class="ev-desc">美国GDP终值 Q1</span></div><div class="ev-row"><span class="ev-when">06/26</span><span class="badge-med">关注</span><span class="ev-desc">小米财报 Q1 2026</span></div>
+  </div>
+
+</div>
+</body>
+</html>
