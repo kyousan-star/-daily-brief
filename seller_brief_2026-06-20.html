@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日晨报 2026-06-20</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101419;
+      --panel: #171d24;
+      --panel-2: #1d2630;
+      --line: #2e3a46;
+      --text: #edf2f7;
+      --muted: #9aa8b6;
+      --soft: #c9d4df;
+      --blue: #65a7ff;
+      --green: #46d39a;
+      --amber: #f2bd4b;
+      --red: #ff7777;
+      --cyan: #59d4e8;
+      --violet: #b996ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 15px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 18px 48px; }
+    header {
+      border: 1px solid var(--line);
+      background: #141a20;
+      padding: 22px;
+      border-radius: 8px;
+      margin-bottom: 18px;
+    }
+    .eyebrow { color: var(--muted); font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+    h1 { margin: 4px 0 8px; font-size: clamp(28px, 4vw, 42px); line-height: 1.15; letter-spacing: 0; }
+    .lead { color: var(--soft); max-width: 920px; margin: 0; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .filters button {
+      border: 1px solid var(--line);
+      background: #1b232c;
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+    .filters button.off { color: var(--muted); background: #11171d; border-color: #26313b; }
+    section {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      margin: 14px 0;
+      overflow: hidden;
+    }
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 16px 18px;
+      background: var(--panel-2);
+      border-bottom: 1px solid var(--line);
+    }
+    h2 { margin: 0; font-size: 20px; letter-spacing: 0; }
+    .badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .content { padding: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .rate {
+      background: #111820;
+      border: 1px solid #293541;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .rate .label { color: var(--muted); font-size: 13px; }
+    .rate .num { font-size: 34px; line-height: 1.2; font-weight: 800; margin-top: 3px; }
+    .note { color: var(--muted); font-size: 13px; margin-top: 12px; }
+    .timeline { display: grid; gap: 10px; }
+    .event, .item {
+      border-left: 3px solid var(--blue);
+      background: #121922;
+      border-radius: 6px;
+      padding: 11px 13px;
+    }
+    .date { color: var(--cyan); font-weight: 800; margin-right: 8px; }
+    .items { display: grid; gap: 10px; }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 999px;
+      margin-right: 8px;
+      vertical-align: 1px;
+      border: 1px solid transparent;
+    }
+    .official { color: #091611; background: var(--green); }
+    .reg { color: #111; background: var(--amber); }
+    .media { color: #0b1118; background: var(--cyan); }
+    .none { color: var(--soft); background: #27313c; border-color: #3a4654; }
+    .third { color: #130b1f; background: var(--violet); }
+    .danger { color: #230a0a; background: var(--red); }
+    .subhead { margin: 16px 0 8px; color: var(--soft); font-weight: 800; }
+    .sources {
+      border-top: 1px solid var(--line);
+      margin-top: 16px;
+      padding-top: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    strong { color: #fff; }
+    .hidden { display: none; }
+    @media (max-width: 760px) {
+      .wrap { padding: 16px 12px 36px; }
+      header, .content { padding: 14px; }
+      .section-head { padding: 13px 14px; align-items: flex-start; flex-direction: column; }
+      .grid { grid-template-columns: 1fr; }
+      .rate .num { font-size: 30px; }
+      .filters button { flex: 1 1 auto; min-width: 96px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Scheduled Morning Brief</div>
+      <h1>每日晨报 · 2026-06-20（周六）</h1>
+      <p class="lead">本页按当日任务口径生成。若来源没有公开、可抓取的新信息，正文明确标为“暂无明确更新”；第三方估算不会写成 Amazon 官方确认。</p>
+      <div class="filters" aria-label="板块筛选">
+        <button data-target="rates">汇率</button>
+        <button data-target="promo">大促日历</button>
+        <button data-target="ecommerce">跨境电商</button>
+        <button data-target="algo">Amazon算法研究</button>
+        <button data-target="logistics">物流预警</button>
+        <button data-target="tech">科技</button>
+      </div>
+    </header>
+
+    <section id="rates">
+      <div class="section-head"><h2>汇率</h2><span class="badge">USD / AED / SAR → CNH</span></div>
+      <div class="content">
+        <div class="grid">
+          <div class="rate"><div class="label">1 USD</div><div class="num">6.8061</div><div class="label">CNH</div></div>
+          <div class="rate"><div class="label">1 AED</div><div class="num">1.8533</div><div class="label">CNH</div></div>
+          <div class="rate"><div class="label">1 SAR</div><div class="num">1.8150</div><div class="label">CNH</div></div>
+        </div>
+        <p class="note">数据时间：2026-06-21 02:10 UTC / 北京 22:10（按预取记录直接使用）。</p>
+        <div class="sources">数据来源：fawazahmed0 currency API 预取结果。</div>
+      </div>
+    </section>
+
+    <section id="promo">
+      <div class="section-head"><h2>大促日历</h2><span class="badge">未来14天 · 最多5条</span></div>
+      <div class="content">
+        <div class="timeline">
+          <div class="event"><span class="date">2026-06-23</span><span class="media">媒体交叉验证</span> Amazon Prime Day 2026 美国站主活动预计 6月23日 12:01 a.m. PT 开始，至 6月26日结束；Amazon 零售页已显示 “Early Prime Day” 入口，但本次抓取未在 About Amazon / Amazon Ads 页面取得可引用的官方日期公告。<a href="https://www.amazon.com/primeday">Amazon Prime Day</a>、<a href="https://www.theverge.com/gadgets/945942/prime-day-2026-frequently-asked-questions">The Verge</a>、<a href="https://www.kiplinger.com/personal-finance/deals/best-amazon-prime-day-deals">Kiplinger</a></div>
+          <div class="event"><span class="date">2026-06-23</span><span class="none">暂无明确更新</span> Prime Day FBA 入仓截止日：公开检索 Amazon Seller Central / Seller University / Seller Forums / Amazon Ads 未获得未来14天内官方 FBA 入仓截止日；正文口径为 <strong>官方未公布</strong>，不采用第三方倒推日期。</div>
+          <div class="event"><span class="date">2026-07-04</span><span class="media">媒体交叉验证</span> Amazon India Prime Day 2026 据媒体报道为 7月4日至7月6日，正好进入本次 14 天窗口末端；未作为美国/中东站入仓依据。<a href="https://m.economictimes.com/news/new-updates/amazon-india-announces-prime-day-2026-sale-check-dates-offers-and-membership-discounts/articleshow/131871632.cms">Economic Times</a></div>
+          <div class="event"><span class="date">2026-06-20—07-04</span><span class="none">暂无明确更新</span> Amazon UAE / Saudi 官方卖家页面、公开 Seller Central 与 Amazon Ads 抓取范围内未发现 UAE / 沙特站未来14天新大促或 FBA 截止日公告。</div>
+        </div>
+        <div class="sources">数据来源：Amazon.com Prime Day、About Amazon、Amazon Ads、Amazon Seller Forums、Amazon UAE / Saudi 相关公开页面检索、The Verge、Kiplinger、Economic Times。</div>
+      </div>
+    </section>
+
+    <section id="ecommerce">
+      <div class="section-head"><h2>跨境电商</h2><span class="badge">Amazon政策 · 贸易监管 · 行业洞察</span></div>
+      <div class="content">
+        <div class="items">
+          <div class="item"><span class="official">官方确认</span> Seller Forums 中 Amazon 社区经理披露：自 <strong>2026-07-27</strong> 起，除 media 类目外，商品标题需控制在 <strong>75字符以内</strong>；Item Highlights 提供额外 <strong>125字符</strong>，品牌所有者在自动建议生效前有 <strong>14天</strong> 审核窗口。<a href="https://sellercentral.amazon.com/seller-forums">Seller Forums</a></div>
+          <div class="item"><span class="official">官方确认</span> Amazon 论坛发布 New Seller Central 体验：按 <strong>7个</strong> workspace 组织指标、提醒与 Action Center；这是后台操作效率更新，不是费用或合规政策变化。<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/4761b5dc-5421-42ef-91ae-a46d9aa0cc32">Seller Forums</a></div>
+          <div class="item"><span class="reg">监管/机构信息</span> 美国对华 3C/电子进口关税方面，未查到 6月20日新的 USTR / CBP / Federal Register 公开调整；近期行业报道显示 Bosch 因 2020—2024 年向 Huawei 销售含美国技术的 MEMS 传感器与软件，被描述为涉及 <strong>7200万美元</strong>交易、<strong>3600万美元</strong>罚款，提醒电子卖家继续把出口管制、受限主体筛查纳入供应链合规。<a href="https://www.tomshardware.com/tech-industry/bosch-to-pay-usd36-million-penalty-for-usd72-million-in-illicit-sales-to-huawei-german-company-sold-export-controlled-goods-and-software-to-banned-chinese-firm-between-2020-and-2024">Tom's Hardware</a></div>
+          <div class="item"><span class="none">暂无明确更新</span> Amazon UAE / Saudi 官方卖家公开页面未发现对跨境卖家有直接影响的新政策、仓储中断或站点规则变更；中东物流风险另见“物流预警”。</div>
+          <div class="item"><span class="third">行业分析</span> Similarweb Amazon Insights 最新可用 Amazon 主题文章为 Amazon SEO 指南：引用数据称 Amazon 占美国电商 <strong>37.6%</strong>，Amazon 广告成本近年上涨 <strong>48%</strong>，因此自然排名、转化率、库存与 FBA 履约速度仍是降本关键。<a href="https://www.similarweb.com/blog/ecommerce/amazon-insights/amazon-seo/">Similarweb</a></div>
+          <div class="item"><span class="third">行业分析</span> Marketplace Pulse 最新 Amazon 相关文章显示：Amazon 每活跃卖家月均流量在过去一年上升 <strong>25%</strong> 至 <strong>3,544</strong> 次访问；另有 5月7日文章称 Rufus 品牌提示后约 <strong>20%</strong> 的购物者继续围绕该品牌对话，提示广告与 AI 购物入口正在合流。<a href="https://www.marketplacepulse.com/">Marketplace Pulse</a></div>
+        </div>
+        <div class="sources">数据来源：Amazon官方（Seller Forums / Seller Central news 登录页可见线索 / About Amazon / Amazon Ads 检索）、SimilarWeb、Marketplace Pulse、USTR、CBP、Federal Register、BIS/DOJ 相关检索、Tom's Hardware 交叉验证。</div>
+      </div>
+    </section>
+
+    <section id="algo">
+      <div class="section-head"><h2>Amazon算法研究</h2><span class="badge">搜索 · 推荐 · 广告 · Rufus/COSMO</span></div>
+      <div class="content">
+        <div class="items">
+          <div class="item"><span class="official">官方确认</span> Amazon Science “Search and information retrieval” 页面列出 WSDM 2026 论文 <strong>Design and evaluation of whole-page experience optimization for e-commerce search</strong>：针对电商搜索结果页从线性列表转向复杂布局，研究不只优化点击/当日收入，也纳入长期满意度与两周收入信号；对卖家的含义是主图、价格、转化和版位互动会共同影响曝光。<a href="https://www.amazon.science/research-areas/search-and-information-retrieval">Amazon Science</a></div>
+          <div class="item"><span class="official">官方确认</span> Amazon Science 同页列出 The Web Conference 2026 论文 <strong>AgentDR</strong>：用 LLM agent 捕捉替代品/互补品关系，解决推荐系统“幻觉不存在商品”和全目录排序问题；对卖家的含义是 listing 需覆盖真实用途、配件、替代场景，方便系统理解商品关系。<a href="https://www.amazon.science/research-areas/search-and-information-retrieval">Amazon Science</a></div>
+          <div class="item"><span class="official">官方确认</span> Amazon Science 新闻页 5月27日发布 Amazon Research Awards 获奖信息，覆盖 <strong>49+</strong> 所大学、<strong>11</strong> 个国家，但近期未发现直接面向 A9/A10、竞价、Rufus/COSMO 的新官方论文发布。<a href="https://www.amazon.science/news">Amazon Science News</a></div>
+          <div class="item"><span class="third">arXiv补充</span> arXiv 近两周有电商推荐论文使用 Amazon Reviews 数据：Carbon-aware re-ranking 以 Amazon Reviews 隐式反馈评估碳足迹重排；这是第三方学术研究，不是 Amazon 官方算法变更。<a href="https://arxiv.org/abs/2606.04550">arXiv</a></div>
+          <div class="item"><span class="none">暂无明确更新</span> Amazon Ads Tech Blog / AMC Tech Blog 本次抓取返回异常，未取得 6月20日前后广告竞价或个性化推荐算法官方新稿；不据此推断广告算法变化。</div>
+        </div>
+        <div class="sources">数据来源：amazon.science、Amazon Ads Tech Blog / AMC Tech Blog 检索、arXiv、Similarweb 对 COSMO/Rufus 的行业解读。</div>
+      </div>
+    </section>
+
+    <section id="logistics">
+      <div class="section-head"><h2>物流预警</h2><span class="badge">美线优先 · 中东线补充</span></div>
+      <div class="content">
+        <div class="subhead">美线：中国 → 美国</div>
+        <div class="items">
+          <div class="item"><span class="none">暂无明确更新</span> 运价：上海航运交易所 SCFI 与宁波航运交易所本次公开抓取未取得 6月20日可引用的美西/美东新数值；因此不发布“上涨/下跌”判断。执行口径：若报价单相较上周变化低于 <strong>0%</strong> 官方确认阈值，先按货代实时报价复核，不把第三方无数字描述写成运价结论。</div>
+          <div class="item"><span class="media">媒体/行业交叉验证</span> 港口与运力：公开抓取未见洛杉矶/长滩港发布新的拥堵红色预警；维基资料显示 Port of LA 2024 年到港船舶约 <strong>1,807</strong>、Long Beach 约 <strong>2,000</strong>，但不是当日拥堵数据。当前结论为无官方异常，Prime Day 6月23日至26日会把补货安全期压缩 <strong>4天</strong>。</div>
+          <div class="item"><span class="none">暂无明确更新</span> AGL / AMD：Amazon Global Logistics 官方页面与 Seller Central 公开检索未发现 6月20日 AGL 运价、新航线/停线或 Amazon Direct 服务变更公告；如有官方邮件，应以邮件为准，当前不调整美线 AGL 预算。</div>
+        </div>
+        <div class="subhead">中东线：中国 → UAE / Saudi</div>
+        <div class="items">
+          <div class="item"><span class="danger">媒体交叉验证</span> Hormuz 风险仍直接影响 UAE/Saudi 海运：Guardian 6月19日报道称主航道约有 <strong>80枚</strong>水雷需清理，约 <strong>600艘</strong>船仍积压，正常通行可能无法很快恢复；该风险可能造成中东 FBA 入仓 ETA 延长。<a href="https://www.theguardian.com/world/2026/jun/19/normal-shipping-will-not-resume-in-strait-of-hormuz-until-mines-cleared">Guardian</a></div>
+          <div class="item"><span class="reg">监管/机构信息</span> 美国方面报道与 CENTCOM 口径称商业通行并未完全停止，6月20日有 <strong>55艘</strong>商船、超过 <strong>1700万桶</strong>石油相关货流通过；但伊朗方面再次宣称关闭海峡，说明中东线仍处于高波动状态。<a href="https://nypost.com/2026/06/20/world-news/iran-warns-strait-of-hormuz-is-closing-citing-israel-lebanon-cease-fire-breach/">NY Post</a></div>
+          <div class="item"><span class="media">媒体交叉验证</span> 航线影响：危机摘要显示 3月初主要集装箱船公司曾暂停 Hormuz / Red Sea 相关航线，绕行好望角会额外增加 <strong>数周</strong>航程；截至本次抓取，Maersk / CMA CGM / DHL 未取得可引用的 6月20日中东线全面恢复公告。</div>
+        </div>
+        <div class="sources">数据来源：上海航运交易所、宁波航运交易所、Flexport、COSCO、JOC、MARAD、UKMTO、船公司公告、Amazon Global Logistics (AGL)、Port of Los Angeles、Port of Long Beach、Guardian、NY Post。</div>
+      </div>
+    </section>
+
+    <section id="tech">
+      <div class="section-head"><h2>科技</h2><span class="badge">AI工具 · 生图生视频 · 产业动态</span></div>
+      <div class="content">
+        <div class="items">
+          <div class="item"><span class="none">暂无明确更新</span> OpenAI Blog 过去24小时未见新帖；最新可查为 6月18日企业用量分析与 spend controls、ChatGPT 健康智能更新。对卖家侧影响：企业版成本管控更细，适合把客服/Listing 生成的用量纳入预算监控。<a href="https://openai.com/news/">OpenAI Blog</a></div>
+          <div class="item"><span class="none">暂无明确更新</span> Google AI Blog 本次抓取未见 6月20日 Gemini / Veo 新官方稿；页面仍以 I/O 2026 “agentic Gemini era”、Gemini app 主动式 24/7 辅助、DiffusionGemma 等更新为主要入口。<a href="https://blog.google/innovation-and-ai/technology/ai/">Google AI Blog</a></div>
+          <div class="item"><span class="official">官方确认</span> NVIDIA Newsroom 6月18日连续发布 AI 基础设施与广告营销 AI 生态内容，包括 FERC 大负载并网、Cannes Lions AI 营销伙伴案例；未见 6月20日芯片/模型能力突发更新。<a href="https://nvidianews.nvidia.com/news">NVIDIA Newsroom</a></div>
+          <div class="item"><span class="media">媒体交叉验证</span> TechCrunch AI 过去24小时重点为 Anthropic/DeepMind 人才流动与 AI 搜索小工具：John Jumper 离开 DeepMind 加入 Anthropic 的消息在 9小时前发布；这属于产业人才与竞争动态，不是 Claude 功能官方发布。<a href="https://techcrunch.com/category/artificial-intelligence/">TechCrunch AI</a></div>
+          <div class="item"><span class="none">暂无明确更新</span> 生图/生视频：Seedance、Seedream、Kling、Sora、Veo 在本次指定来源过去24小时抓取中未出现明确官方能力升级；TechCrunch 2天前有 Snap AI 视频团队拆分报道，但已超出24小时窗口，未列为当日工具更新。</div>
+          <div class="item"><span class="none">暂无明确更新</span> The Information AI 页面本次抓取/搜索未取得可公开引用的 6月20日新摘要；本晨报仅记录“已查阅但无可用公开更新”，不扩写未能核验的付费内容。</div>
+        </div>
+        <div class="sources">数据来源：OpenAI Blog、Google AI Blog、NVIDIA Newsroom、TechCrunch AI、The Information。</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll('.filters button').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var el = document.getElementById(btn.dataset.target);
+        if (!el) return;
+        el.classList.toggle('hidden');
+        btn.classList.toggle('off', el.classList.contains('hidden'));
+      });
+    });
+  </script>
+  <script type="application/json" id="pulse-data">
+{
+  "rates": {"USD": "6.8061", "AED": "1.8533", "SAR": "1.8150"},
+  "promotions": ["06-23 — Prime Day 2026美国站媒体交叉验证为6月23日至26日，官方FBA入仓截止日未公开", "07-04 — Amazon India Prime Day媒体报道称7月4日至6日，非美国/中东站入仓依据"],
+  "top3": ["Amazon标题新规7月27日起除media外限制75字符，Item Highlights额外125字符，品牌方有14天审核窗口", "Prime Day 2026美国站媒体交叉验证为6月23日至26日，公开抓取未发现官方FBA入仓截止日", "Hormuz主航道约80枚水雷待清理、约600艘船积压，中东线ETA仍有显著延期风险"],
+  "ecommerce": ["7月27日起Amazon商品标题除media外限制75字符，Item Highlights补充125字符", "New Seller Central以7个workspace整合指标、提醒和Action Center", "美国对华3C进口规则未见6月20日新调整，但Bosch-Huawei案涉及7200万美元交易和3600万美元罚款", "Similarweb称Amazon占美国电商37.6%，广告成本近年上涨48%，自然排名重要性提高", "Marketplace Pulse称Amazon每活跃卖家月均流量一年增25%至3544次访问"],
+  "algo": ["WSDM 2026电商搜索整页优化研究强调从点击/当日收入转向长期满意度与两周收入信号", "AgentDR研究用LLM agent理解替代品和互补品关系，提示Listing需覆盖真实用途和配件场景", "近期未发现Amazon官方发布新的A9/A10、Rufus/COSMO或广告竞价算法变更"],
+  "logistics": ["美线SCFI/宁波指数未取得6月20日可引用新数值，暂无官方运价变化结论", "洛杉矶/长滩港未见当日官方拥堵红色预警，Prime Day 4天活动压缩补货安全期", "AGL/AMD未见6月20日官方运价、新航线或停线公告", "Hormuz主航道约80枚水雷待清理、约600艘船积压，中东线ETA有延期风险", "CENTCOM相关报道称55艘商船和超过1700万桶油流通过，但伊朗再称关闭海峡", "主要船公司3月曾暂停相关航线，绕行好望角可增加数周航程，6月20日未见全面恢复公告"]
+}
+  </script>
+</body>
+</html>
