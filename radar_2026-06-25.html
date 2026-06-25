@@ -7,354 +7,223 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 32px 20px; }
-
   .page { max-width: 860px; margin: 0 auto; }
 
-  /* Header */
   .header { border-bottom: 1px solid #2d3748; padding-bottom: 20px; margin-bottom: 24px; }
   .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .title { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
+  .title { font-size: 20px; font-weight: 700; color: #fff; }
   .date-badge { font-size: 12px; color: #64748b; background: #1e293b; padding: 4px 10px; border-radius: 6px; }
   .subtitle { font-size: 13px; color: #64748b; }
 
-  /* Sample quality warning */
-  .sample-alert { background: #1a1f2e; border: 1px solid #2d3748; border-left: 3px solid #f59e0b; border-radius: 8px; padding: 12px 16px; margin-bottom: 24px; display: flex; gap: 10px; align-items: flex-start; }
-  .sample-alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-  .sample-alert-text { font-size: 13px; color: #94a3b8; line-height: 1.6; }
-  .sample-alert-text strong { color: #f59e0b; }
+  .data-note { background: #1a1f2e; border: 1px solid #2d3748; border-left: 3px solid #3b82f6; border-radius: 8px; padding: 12px 16px; margin-bottom: 24px; font-size: 13px; color: #94a3b8; line-height: 1.6; }
+  .data-note strong { color: #60a5fa; }
 
-  /* Stats bar */
   .stats-bar { display: flex; gap: 12px; margin-bottom: 28px; }
   .stat-card { flex: 1; background: #1e293b; border: 1px solid #2d3748; border-radius: 10px; padding: 14px 16px; }
   .stat-value { font-size: 24px; font-weight: 700; color: #fff; line-height: 1; }
   .stat-label { font-size: 11px; color: #64748b; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
 
-  /* Signal cards */
-  .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #475569; margin-bottom: 14px; }
-  .signals { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+  .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; margin-top: 28px; }
+  .section-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: #475569; }
+  .section-line { flex: 1; height: 1px; background: #2d3748; }
+  .section-tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+  .tag-persistent { background: #1c1917; color: #ef4444; border: 1px solid #450a0a; }
+  .tag-new { background: #1c1f0a; color: #eab308; border: 1px solid #3f3a08; }
+
+  .signals { display: flex; flex-direction: column; gap: 16px; }
 
   .signal-card { background: #1e293b; border: 1px solid #2d3748; border-radius: 12px; overflow: hidden; }
-  .signal-card:hover { border-color: #3d4f6b; }
+  .signal-card.persistent { border-left: 3px solid #ef4444; }
+  .signal-card.new-signal { border-left: 3px solid #eab308; }
 
   .signal-header { padding: 16px 20px 14px; border-bottom: 1px solid #2d3748; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .signal-left { display: flex; align-items: flex-start; gap: 10px; }
+  .signal-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .dot-red { background: #ef4444; box-shadow: 0 0 6px #ef444466; }
+  .dot-yellow { background: #eab308; box-shadow: 0 0 6px #eab30866; }
   .signal-title { font-size: 16px; font-weight: 600; color: #f1f5f9; }
-  .signal-badges { display: flex; gap: 8px; flex-shrink: 0; align-items: center; }
-
-  /* Signal strength badge */
-  .strength-badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 5px; }
-  .strength-weak { background: #422006; color: #fb923c; }
-  .strength-very-weak { background: #3b0764; color: #c084fc; }
-  .strength-niche { background: #1c1917; color: #78716c; }
-
-  /* Credibility score */
-  .cred-score { display: flex; align-items: center; gap: 6px; }
-  .cred-label { font-size: 11px; color: #64748b; }
-  .cred-dots { display: flex; gap: 3px; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; }
-  .dot-fill-red { background: #ef4444; }
-  .dot-fill-yellow { background: #f59e0b; }
-  .dot-fill-green { background: #22c55e; }
-  .dot-empty { background: #2d3748; }
+  .signal-meta { display: flex; gap: 8px; align-items: center; flex-shrink: 0; flex-wrap: wrap; justify-content: flex-end; }
+  .meta-chip { font-size: 11px; color: #64748b; background: #0f172a; padding: 2px 7px; border-radius: 4px; }
+  .cred { font-size: 12px; color: #94a3b8; }
 
   .signal-body { padding: 16px 20px; display: flex; flex-direction: column; gap: 14px; }
 
-  /* Need statement */
-  .need-row { display: flex; gap: 10px; align-items: flex-start; }
-  .need-icon { font-size: 14px; flex-shrink: 0; margin-top: 2px; }
-  .need-text { font-size: 14px; color: #cbd5e1; line-height: 1.6; }
-  .need-text strong { color: #e2e8f0; }
+  .need-row { font-size: 14px; color: #cbd5e1; line-height: 1.6; }
+  .need-row strong { color: #e2e8f0; }
 
-  /* Evidence block */
-  .evidence-block { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; padding: 12px 14px; }
-  .evidence-header { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #475569; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-  .evidence-items { display: flex; flex-direction: column; gap: 8px; }
-  .evidence-item { display: flex; gap: 10px; align-items: flex-start; }
-  .evidence-meta { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-  .evidence-score { font-size: 11px; font-weight: 600; background: #1e293b; padding: 2px 6px; border-radius: 4px; color: #94a3b8; }
-  .evidence-score.high { color: #22c55e; background: #052e16; }
-  .evidence-quote { font-size: 13px; color: #94a3b8; font-style: italic; line-height: 1.5; border-left: 2px solid #334155; padding-left: 10px; }
+  .quote-block { background: #0f172a; border-left: 2px solid #334155; border-radius: 0 6px 6px 0; padding: 10px 14px; font-size: 13px; color: #94a3b8; font-style: italic; line-height: 1.6; }
 
-  /* Logic assessment */
   .logic-block { background: #0f172a; border: 1px solid #1e293b; border-radius: 8px; padding: 12px 14px; }
   .logic-header { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #475569; margin-bottom: 8px; }
-  .logic-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #1e293b; }
+  .logic-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #1e293b; }
   .logic-row:last-child { border-bottom: none; }
   .logic-dim { font-size: 12px; color: #64748b; }
   .logic-val { font-size: 12px; font-weight: 500; }
-  .logic-val.good { color: #22c55e; }
-  .logic-val.warn { color: #f59e0b; }
-  .logic-val.bad { color: #ef4444; }
+  .good { color: #22c55e; }
+  .warn { color: #f59e0b; }
+  .bad { color: #ef4444; }
 
-  /* Action row */
-  .action-row { display: flex; gap: 10px; align-items: flex-start; background: #0d1f0d; border: 1px solid #14532d; border-radius: 8px; padding: 10px 14px; }
-  .action-icon { font-size: 14px; flex-shrink: 0; }
-  .action-text { font-size: 13px; color: #86efac; line-height: 1.5; }
-  .action-row.caution { background: #1c0f0a; border-color: #78350f; }
-  .action-row.caution .action-text { color: #fcd34d; }
-  .action-row.skip { background: #1a1a1a; border-color: #27272a; }
+  .action-row { display: flex; gap: 10px; align-items: flex-start; border-radius: 8px; padding: 10px 14px; }
+  .action-row.go { background: #0d1f0d; border: 1px solid #14532d; }
+  .action-row.go .action-text { color: #86efac; }
+  .action-row.hold { background: #1c1a0a; border: 1px solid #78350f; }
+  .action-row.hold .action-text { color: #fcd34d; }
+  .action-row.skip { background: #1a1a1a; border: 1px solid #27272a; }
   .action-row.skip .action-text { color: #71717a; }
+  .action-icon { font-size: 14px; flex-shrink: 0; }
+  .action-text { font-size: 13px; line-height: 1.5; }
 
-  /* Conclusion */
-  .conclusion { background: #1e293b; border: 1px solid #2d3748; border-radius: 12px; padding: 20px; }
+  .conclusion { background: #1e293b; border: 1px solid #2d3748; border-radius: 12px; padding: 20px; margin-top: 28px; }
   .conclusion-title { font-size: 13px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
-  .conclusion-items { display: flex; flex-direction: column; gap: 8px; }
-  .conclusion-item { display: flex; gap: 10px; font-size: 13px; color: #94a3b8; line-height: 1.6; }
+  .conclusion-item { display: flex; gap: 10px; font-size: 13px; color: #94a3b8; line-height: 1.6; margin-bottom: 6px; }
   .conclusion-item::before { content: "→"; color: #475569; flex-shrink: 0; }
   .conclusion-item strong { color: #cbd5e1; }
-
-  /* Credibility legend */
-  .legend { display: flex; gap: 16px; margin-bottom: 20px; }
-  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #64748b; }
-  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
 </style>
 </head>
 <body>
 <div class="page">
 
-  <!-- Header -->
   <div class="header">
     <div class="header-top">
       <div class="title">📡 新兴未满足需求雷达</div>
       <div class="date-badge">2026-06-25</div>
     </div>
-    <div class="subtitle">Reddit 手机摄影/创作者装备品类 · 本批 JSON ~80条</div>
+    <div class="subtitle">Reddit 手机拍摄/创作者装备品类 · 累积库 123 条候选</div>
   </div>
 
-  <!-- Sample quality alert -->
-  <div class="sample-alert">
-    <div class="sample-alert-icon">⚠️</div>
-    <div class="sample-alert-text">
-      <strong>样本质量偏弱：</strong>known:false 有效装备需求帖不足 10 条，多数高分帖（score≥10）已标 known:true 排除。本期信号强度整体偏低，建议与下周数据合并后再做决策。
-    </div>
+  <div class="data-note">
+    <strong>数据来源：</strong>Reddit 创作者社区（r/ContentCreators、r/Videography、r/Vlogging 等14个子版），时间跨度 <strong>2026-03-11 至 2026-06-22</strong>。用正则筛"许愿/缺口/找不到"类发言，AI 聚类后排除已知需求（追踪/补光/稳定器/麦克风等），只看新机会。
   </div>
 
-  <!-- Stats bar -->
   <div class="stats-bar">
     <div class="stat-card">
-      <div class="stat-value">80</div>
-      <div class="stat-label">本批 JSON 总条数</div>
+      <div class="stat-value">123</div>
+      <div class="stat-label">累积候选总量</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value" style="color:#f59e0b">5</div>
-      <div class="stat-label">known:false 有效帖</div>
+      <div class="stat-value" style="color:#ef4444">2</div>
+      <div class="stat-label">持续信号</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value" style="color:#22c55e">2</div>
-      <div class="stat-label">可追踪主题</div>
+      <div class="stat-value" style="color:#eab308">1</div>
+      <div class="stat-label">新信号</div>
     </div>
     <div class="stat-card">
-      <div class="stat-value" style="color:#ef4444">1</div>
-      <div class="stat-label">噪音/PR故事</div>
+      <div class="stat-value" style="color:#475569">107</div>
+      <div class="stat-label">数据跨度（天）</div>
     </div>
   </div>
 
-  <!-- Signals -->
-  <div class="section-title">信号详情</div>
-
-  <!-- Credibility legend -->
-  <div class="legend">
-    <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>低可信</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>中可信</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#22c55e"></div>高可信</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#2d3748"></div>未达标</div>
+  <!-- 持续信号 -->
+  <div class="section-header">
+    <span class="section-tag tag-persistent">持续信号</span>
+    <span class="section-label">多次出现，需求真实且长期未被解决</span>
+    <div class="section-line"></div>
   </div>
 
   <div class="signals">
 
-    <!-- Signal 1: 超紧凑高承重支撑 -->
-    <div class="signal-card">
+    <!-- Signal 1 -->
+    <div class="signal-card persistent">
       <div class="signal-header">
-        <div class="signal-title">超紧凑高承重便携支撑系统</div>
-        <div class="signal-badges">
-          <span class="strength-badge strength-weak">弱信号</span>
-          <div class="cred-score">
-            <span class="cred-label">可信度</span>
-            <div class="cred-dots">
-              <div class="dot dot-fill-yellow"></div>
-              <div class="dot dot-fill-yellow"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-            </div>
-            <span style="font-size:11px;color:#f59e0b">2/5</span>
-          </div>
+        <div class="signal-left">
+          <div class="signal-dot dot-red"></div>
+          <div class="signal-title">超紧凑大载重三脚架/独脚架</div>
+        </div>
+        <div class="signal-meta">
+          <span class="meta-chip">4条</span>
+          <span class="meta-chip">跨度53天</span>
+          <span class="meta-chip">热度46</span>
+          <span class="cred">★★★☆☆</span>
         </div>
       </div>
       <div class="signal-body">
-        <div class="need-row">
-          <span class="need-icon">🎯</span>
-          <div class="need-text">收纳长度 <strong>&lt;12 英寸</strong>、承重 <strong>≥5lb</strong> 的独脚架/三脚架，适用于受限场景低调进入（教堂、活动现场等）</div>
-        </div>
-
-        <div class="evidence-block">
-          <div class="evidence-header">📋 原始证据</div>
-          <div class="evidence-items">
-            <div class="evidence-item">
-              <div class="evidence-meta">
-                <span class="evidence-score high">46↑</span>
-              </div>
-              <div class="evidence-quote">"Some of the places I go, I need a low profile... These hold 3.4lb, I'm not going to lie these scare the crap outta me."</div>
-            </div>
-          </div>
-        </div>
-
+        <div class="need-row">折叠 <strong>≤12英寸</strong>、承重 <strong>≥5lb（2.3kg）</strong> 的便携支撑脚架——对应无反+镜头的真实使用重量，现有同尺寸产品普遍最高 3.4lb。</div>
+        <div class="quote-block">"Looking for a monopod/tripod, under 12 inches collapsed, that holds 5lb. These hold 3.4lb, I'm not going to lie these scare the crap outta me." <br><span style="font-size:11px;color:#475569;font-style:normal">r/videography · score 46 · 53天前</span></div>
         <div class="logic-block">
-          <div class="logic-header">🔍 结论逻辑评估</div>
-          <div class="logic-row">
-            <span class="logic-dim">样本量</span>
-            <span class="logic-val bad">1 条帖（单一用户）</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">热度</span>
-            <span class="logic-val good">Score 46 ——本批 known:false 最高</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">"承重 3.5lb 是市场空白"断言</span>
-            <span class="logic-val warn">推断，未有竞品数据佐证</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">"场景准入限制驱动刚需"</span>
-            <span class="logic-val good">逻辑成立，属结构性痛点</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">市场验证</span>
-            <span class="logic-val bad">无销量/搜索数据支撑</span>
-          </div>
+          <div class="logic-header">🔍 逻辑评估</div>
+          <div class="logic-row"><span class="logic-dim">样本量</span><span class="logic-val good">4条，跨53天，多用户</span></div>
+          <div class="logic-row"><span class="logic-dim">热度</span><span class="logic-val good">最高 score 46，本批非已知需求最高分</span></div>
+          <div class="logic-row"><span class="logic-dim">"承重空白"断言</span><span class="logic-val warn">推断，需查竞品参数验证</span></div>
+          <div class="logic-row"><span class="logic-dim">场景准入驱动</span><span class="logic-val good">受限场景（教堂/活动）刚需，非偏好</span></div>
+          <div class="logic-row"><span class="logic-dim">市场数据</span><span class="logic-val bad">尚无搜索量/销量佐证</span></div>
         </div>
-
-        <div class="action-row caution">
+        <div class="action-row go">
           <span class="action-icon">⚡</span>
-          <div class="action-text">值得追踪，但结论过重。建议：用 Jungle Scout/卖家精灵 查"compact tripod high load"月搜索量，若 >3000 则升级为核心信号。下期监测加入"lightweight tripod weight capacity"关键词。</div>
+          <div class="action-text">持续信号，建议下一步：查"compact tripod high load"月搜索量，>3000 即升为核心选品方向。</div>
         </div>
       </div>
     </div>
 
-    <!-- Signal 2: 竖屏提词器 -->
-    <div class="signal-card">
+    <!-- Signal 2 -->
+    <div class="signal-card persistent">
       <div class="signal-header">
-        <div class="signal-title">竖屏内容创作提词器</div>
-        <div class="signal-badges">
-          <span class="strength-badge strength-very-weak">极弱信号</span>
-          <div class="cred-score">
-            <span class="cred-label">可信度</span>
-            <div class="cred-dots">
-              <div class="dot dot-fill-red"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-            </div>
-            <span style="font-size:11px;color:#ef4444">1/5</span>
-          </div>
+        <div class="signal-left">
+          <div class="signal-dot dot-red"></div>
+          <div class="signal-title">提词器三痛点：户外强光 · 反光 · 竖屏</div>
+        </div>
+        <div class="signal-meta">
+          <span class="meta-chip">4条</span>
+          <span class="meta-chip">跨度55天</span>
+          <span class="meta-chip">热度2</span>
+          <span class="cred">★★★☆☆</span>
         </div>
       </div>
       <div class="signal-body">
-        <div class="need-row">
-          <span class="need-icon">🎯</span>
-          <div class="need-text">适配 <strong>9:16 竖屏</strong>拍摄的提词器，满足户外强光可读 + 可挂云台行走三个子场景</div>
-        </div>
-
-        <div class="evidence-block">
-          <div class="evidence-header">📋 原始证据（3条）</div>
-          <div class="evidence-items">
-            <div class="evidence-item">
-              <div class="evidence-meta">
-                <span class="evidence-score">2↑</span>
-              </div>
-              <div class="evidence-quote">"I need something that can work for vertical as well!"</div>
-            </div>
-            <div class="evidence-item">
-              <div class="evidence-meta">
-                <span class="evidence-score">—</span>
-              </div>
-              <div class="evidence-quote">"I need a teleprompter that works outdoors in daylight."</div>
-            </div>
-          </div>
-        </div>
-
+        <div class="need-row">能在<strong>户外强光下可读</strong>、<strong>无镜头反光</strong>、支持 <strong>9:16 竖屏拍摄</strong>的提词器——Ulanzi 等主流产品三点均未解决，竖屏趋势下结构性滞后。</div>
+        <div class="quote-block">"I need a teleprompter that works outdoors in daylight. My current indoor solution doesn't appear to be working." <br><span style="font-size:11px;color:#475569;font-style:normal">r/videography · 27天前</span><br><br>"I can clearly see part of the lens being reflected through the teleprompter glass onto the final footage." <br><span style="font-size:11px;color:#475569;font-style:normal">r/videography · 28天前</span></div>
         <div class="logic-block">
-          <div class="logic-header">🔍 结论逻辑评估</div>
-          <div class="logic-row">
-            <span class="logic-dim">样本量</span>
-            <span class="logic-val bad">3 条，最高热度仅 2</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">"市场没有跟进竖屏"断言</span>
-            <span class="logic-val warn">部分属实，但 Ulanzi 等已有相关产品</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">"没发帖=需求大"逻辑</span>
-            <span class="logic-val bad">⚠️ 逻辑漏洞——沉默也可能代表无需求</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">"结构性产品滞后"判断</span>
-            <span class="logic-val warn">合理假设，但未经验证</span>
-          </div>
+          <div class="logic-header">🔍 逻辑评估</div>
+          <div class="logic-row"><span class="logic-dim">样本量</span><span class="logic-val good">4条，跨度55天，涉及不同用户/子场景</span></div>
+          <div class="logic-row"><span class="logic-dim">热度</span><span class="logic-val warn">最高 score 2，热度偏低</span></div>
+          <div class="logic-row"><span class="logic-dim">竖屏需求真实性</span><span class="logic-val good">TikTok/Reels/Shorts 主导已3年，结构性趋势</span></div>
+          <div class="logic-row"><span class="logic-dim">反光问题</span><span class="logic-val good">光学设计固有缺陷，无低价位方案</span></div>
+          <div class="logic-row"><span class="logic-dim">市场数据</span><span class="logic-val bad">未查 Amazon "vertical teleprompter" 在售数量</span></div>
         </div>
-
-        <div class="action-row caution">
+        <div class="action-row go">
           <span class="action-icon">⚡</span>
-          <div class="action-text">逻辑漏洞须修正。在得出市场空白结论前，需先核查：① Amazon搜索"vertical teleprompter"实际在售数量；② TikTok Shop 提词器品类销量。本期结论仅作假设记录，不可用于选品决策。</div>
+          <div class="action-text">持续信号。下一步：查 Amazon "vertical teleprompter" 在售数量及月销量，验证是否真空白。</div>
         </div>
       </div>
     </div>
 
-    <!-- Signal 3: 无障碍拍摄 -->
-    <div class="signal-card">
+  </div>
+
+  <!-- 新信号 -->
+  <div class="section-header">
+    <span class="section-tag tag-new">新信号</span>
+    <span class="section-label">近期出现，待后续数据验证</span>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="signals">
+
+    <!-- Signal 3 -->
+    <div class="signal-card new-signal">
       <div class="signal-header">
-        <div class="signal-title">无障碍/辅助拍摄装备</div>
-        <div class="signal-badges">
-          <span class="strength-badge strength-niche">噪音/PR素材</span>
-          <div class="cred-score">
-            <span class="cred-label">可信度</span>
-            <div class="cred-dots">
-              <div class="dot dot-fill-red"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-              <div class="dot dot-empty"></div>
-            </div>
-            <span style="font-size:11px;color:#ef4444">1/5</span>
-          </div>
+        <div class="signal-left">
+          <div class="signal-dot dot-yellow"></div>
+          <div class="signal-title">视障/无障碍产品摄影辅助套件</div>
+        </div>
+        <div class="signal-meta">
+          <span class="meta-chip">1条</span>
+          <span class="meta-chip">热度18</span>
+          <span class="cred">★★☆☆☆</span>
         </div>
       </div>
       <div class="signal-body">
-        <div class="need-row">
-          <span class="need-icon">🎯</span>
-          <div class="need-text">盲人/低视力用户进行产品摄影，需要<strong>触觉/语音引导</strong>的取景和构图辅助装置</div>
-        </div>
-
-        <div class="evidence-block">
-          <div class="evidence-header">📋 原始证据</div>
-          <div class="evidence-items">
-            <div class="evidence-item">
-              <div class="evidence-meta">
-                <span class="evidence-score">18↑</span>
-              </div>
-              <div class="evidence-quote">"I'm a fully blind 3D designer... I'm currently rebuilding my website where I'll be selling products."</div>
-            </div>
-          </div>
-        </div>
-
+        <div class="need-row">全盲创作者独立完成产品摄影所需辅助装备——<strong>声音引导水平仪</strong>、<strong>触觉对焦尺</strong>、<strong>语音触发快门架</strong>，现有摄影器材几乎无此类设计。</div>
+        <div class="quote-block">"I'm a fully blind 3D designer… I'm currently rebuilding my website where I'll be selling products… Can you share your best advice on accessible product photography?" <br><span style="font-size:11px;color:#475569;font-style:normal">r/videography · score 18 · 5天前</span></div>
         <div class="logic-block">
-          <div class="logic-header">🔍 结论逻辑评估</div>
-          <div class="logic-row">
-            <span class="logic-dim">样本量</span>
-            <span class="logic-val bad">1 条（单一用户，独特需求）</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">市场规模</span>
-            <span class="logic-val bad">极小，作者自评也是"不适合主线选品"</span>
-          </div>
-          <div class="logic-row">
-            <span class="logic-dim">商业价值</span>
-            <span class="logic-val warn">PR/品牌差异化 story，非选品机会</span>
-          </div>
+          <div class="logic-header">🔍 逻辑评估</div>
+          <div class="logic-row"><span class="logic-dim">样本量</span><span class="logic-val bad">1条，单一用户</span></div>
+          <div class="logic-row"><span class="logic-dim">热度</span><span class="logic-val warn">score 18，社区共鸣尚可</span></div>
+          <div class="logic-row"><span class="logic-dim">市场规模</span><span class="logic-val bad">极小，视障创作者群体有限</span></div>
+          <div class="logic-row"><span class="logic-dim">差异化价值</span><span class="logic-val good">0竞争，PR/品牌故事潜力强</span></div>
         </div>
-
         <div class="action-row skip">
           <span class="action-icon">⏭</span>
-          <div class="action-text">排除选品考量。若有品牌内容需求，可作为 CSR/无障碍故事素材保留，不进入下周监测词。</div>
+          <div class="action-text">排除主线选品。可作为品牌差异化 PR 故事备选，不进下期监测词。</div>
         </div>
       </div>
     </div>
@@ -363,13 +232,11 @@
 
   <!-- Conclusion -->
   <div class="conclusion">
-    <div class="conclusion-title">本周结论 & 下步行动</div>
-    <div class="conclusion-items">
-      <div class="conclusion-item"><strong>可追踪信号 2 个</strong>：超紧凑高承重支撑（需验证）+ 竖屏提词器（需修正逻辑后验证）</div>
-      <div class="conclusion-item"><strong>本期不可直接用于选品决策</strong>——样本量不足，两个主要信号均有待市场数据验证</div>
-      <div class="conclusion-item">下期新增子版：r/Vlogging、r/iPhoneography；专项监测词：<code style="background:#1e293b;padding:2px 6px;border-radius:4px;font-size:12px">teleprompter + vertical</code>、<code style="background:#1e293b;padding:2px 6px;border-radius:4px;font-size:12px">compact tripod weight</code></div>
-      <div class="conclusion-item">建议<strong>与下周数据合并</strong>后再做 Go/No-Go 判断</div>
-    </div>
+    <div class="conclusion-title">下步行动</div>
+    <div class="conclusion-item"><strong>信号①</strong> 查"compact tripod high load"搜索量，>3000 升为核心选品方向</div>
+    <div class="conclusion-item"><strong>信号②</strong> 查 Amazon "vertical teleprompter" 在售数量及月销量，验证市场空白</div>
+    <div class="conclusion-item"><strong>信号③</strong> 暂不进主线选品，作品牌PR素材备用</div>
+    <div class="conclusion-item">下期新增子版：r/Vlogging、r/iPhoneography；专项词：<code style="background:#1e293b;padding:1px 5px;border-radius:3px;font-size:12px">teleprompter + vertical</code>、<code style="background:#1e293b;padding:1px 5px;border-radius:3px;font-size:12px">compact tripod weight</code></div>
   </div>
 
 </div>
