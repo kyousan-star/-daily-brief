@@ -26,8 +26,9 @@ main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;gr
 .next{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:10px;margin-bottom:10px;color:#344054}.meta{font-size:12px;color:var(--muted)}a{color:#174ea6;text-decoration:none;font-weight:800}
 .detail-nav{background:#102033;border-radius:10px;padding:18px;margin-top:22px;color:white;border:1px solid #0b1726}
 .detail-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:14px}.detail-head h2{margin:0;font-size:23px}.detail-head p{margin:0;color:#cbd5e1;max-width:760px}
-.links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.link-card{display:block;background:white;border:2px solid #b7c8dc;border-radius:10px;padding:16px;min-height:158px;color:var(--ink);box-shadow:0 10px 22px rgba(15,31,51,.16);transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.link-card{display:block;background:white;border:2px solid #b7c8dc;border-radius:10px;padding:16px;min-height:158px;color:var(--ink);box-shadow:0 10px 22px rgba(15,31,51,.16);transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
 .link-card:hover{transform:translateY(-2px);border-color:#60a5fa;box-shadow:0 14px 28px rgba(15,31,51,.22)}.link-card b{display:block;margin:6px 0 6px;font-size:20px;color:#111827}.link-card p{margin:0 0 13px;color:#475467;font-weight:500}.link-card .label{display:inline-flex;border-radius:999px;background:#eaf1ff;color:#1d4ed8;padding:4px 9px;font-size:12px;font-weight:900}.link-card .cta{display:inline-flex;align-items:center;justify-content:center;background:#174ea6;color:white;border-radius:7px;padding:9px 12px;font-size:15px;font-weight:900}.link-card.green .label{background:#d9f8ef;color:#0f766e}.link-card.green .cta{background:#0f766e}.link-card.amber .label{background:#fff4dc;color:#92400e}.link-card.amber .cta{background:#92400e}
+.internal-link{margin-top:13px;color:#cbd5e1;font-size:14px}.internal-link a{color:#bfdbfe;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:960px){main{padding:18px}.kpis,.decision-grid,.brand-grid,.links{grid-template-columns:1fr}.detail-head{display:block}.detail-head p{margin-top:6px}}
 </style>
 </head>
@@ -179,7 +180,7 @@ main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;gr
   <section class="detail-nav">
     <div class="detail-head">
       <h2>继续查看详情</h2>
-      <p>本页是总览。下面三张卡片都可以点击，分别进入打法拆解、我方动作和完整入口。</p>
+      <p>本页是总览。新同事只需要继续看下面两个详情：先看竞手打法，再看我方动作。</p>
     </div>
     <div class="links">
       <a class="link-card green" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_tactics_latest.html" target="_blank">
@@ -194,13 +195,8 @@ main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;gr
         <p>看短视频脚本、Listing/FAQ、KOL brief 和联盟/UGC 达人动作线。</p>
         <span class="cta">点击打开执行方案 →</span>
       </a>
-      <a class="link-card" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_index_latest.html" target="_blank">
-        <span class="label">完整入口</span>
-        <b>全项目导航</b>
-        <p>需要看路线图、验证页、截图证据和底层数据时，从这里进入。</p>
-        <span class="cta">点击打开完整入口 →</span>
-      </a>
     </div>
+    <div class="internal-link">需要追溯路线图、验证页和底层数据时，再打开 <a href="https://kyousan-star.github.io/-daily-brief/offsite_brand_index_latest.html" target="_blank">内部完整导航</a>。</div>
   </section>
 </main>
 </body>

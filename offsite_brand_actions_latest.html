@@ -7,10 +7,11 @@
 <style>
 :root{--bg:#f2f5f7;--ink:#17202a;--muted:#667085;--line:#d7e0ea;--panel:#fff;--navy:#102033;--green:#0f766e;--green-soft:#e6f6f2;--blue:#2563eb;--blue-soft:#eaf1ff;--amber:#b76e00;--amber-soft:#fff4dc;--red:#b42318;--red-soft:#fff1f0}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC",sans-serif;line-height:1.55}header{background:var(--navy);color:white;padding:30px 34px;border-bottom:5px solid var(--green)}h1{margin:0 0 8px;font-size:30px}header p{margin:0;color:#cbd5e1;max-width:1120px}main{max-width:1440px;margin:0 auto;padding:24px 32px 46px}h2{margin:0 0 12px;font-size:24px}h3{margin:0}a{color:#174ea6;text-decoration:none;font-weight:800}
+.backbar{display:flex;justify-content:space-between;gap:12px;align-items:center;background:white;border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-bottom:16px}.backbar span{color:#475467;font-weight:650}.backbar a{display:inline-flex;background:#174ea6;color:white;border-radius:7px;padding:8px 11px}
 .headline{background:#eef6ff;border-left:5px solid var(--blue);border-radius:8px;padding:16px;margin-bottom:16px}.headline b{font-size:18px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.kpi{background:white;border:1px solid var(--line);border-radius:8px;padding:15px;border-top:4px solid #8aa4bf}.kpi span{display:block;color:var(--muted);font-size:13px}.kpi strong{font-size:28px}
 .section{margin-top:20px}.script-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.script-card{background:white;border:1px solid var(--line);border-radius:8px;overflow:hidden}.script-head{display:flex;align-items:center;gap:10px;background:var(--green-soft);border-bottom:1px solid #cbe8df;padding:13px 15px}.script-head span{border-radius:999px;background:white;color:var(--green);padding:4px 9px;font-size:12px;font-weight:800}.script-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px}.script-grid div{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:10px}b{display:block;margin-bottom:4px}p{margin:0;color:#475467}.evidence,.avoid{padding:0 12px 10px}.avoid{color:#7a271a}
-.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:1120px}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}thead th{background:#f8fafc;color:#344054;font-size:13px}tr:last-child td{border-bottom:0}.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:white;border:1px solid var(--line);border-radius:8px;padding:16px}.panel ul{margin:0;padding-left:20px}.panel li{margin:7px 0}.links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}.link{background:white;border:1px solid var(--line);border-radius:8px;padding:14px}
-@media(max-width:980px){main{padding:18px}.kpis,.script-list,.script-grid,.decision-grid,.links{grid-template-columns:1fr}}
+.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:1120px}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}thead th{background:#f8fafc;color:#344054;font-size:13px}tr:last-child td{border-bottom:0}.decision-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:white;border:1px solid var(--line);border-radius:8px;padding:16px}.panel ul{margin:0;padding-left:20px}.panel li{margin:7px 0}.note{color:#667085;font-size:13px;margin-top:16px}
+@media(max-width:980px){main{padding:18px}.kpis,.script-list,.script-grid,.decision-grid{grid-template-columns:1fr}.backbar{display:block}.backbar a{margin-top:8px}}
 </style>
 </head>
 <body>
@@ -19,6 +20,7 @@
   <p>基于 yAyusi / Yeaki 的可拆打法证据和用户问题，不把它们当成功样本，而是转成短视频、Listing/A+、FAQ/QA、KOL brief，以及联盟客/UGC 达人动作线。</p>
 </header>
 <main>
+  <div class="backbar"><span>当前位置：总览 → 我方动作方案</span><a href="https://kyousan-star.github.io/-daily-brief/offsite_brand_monitor_latest.html">返回总览</a></div>
   <div class="headline"><b>先做结论：</b>这不是只做自有内容，而是复制“联盟客/UGC 长尾分发 + Amazon 承接”的机制。自有内容先小规模测试“一个人拍摄不跑出画面”“remote/live 兼容答疑”“第一次打开支架教程”；渠道侧同步搭建达人池、寄样激励、链接归因和评论区 SOP。</div>
   <div class="kpis">
     <div class="kpi"><span>短视频脚本</span><strong>6</strong></div>
@@ -146,12 +148,7 @@
     <div class="table-wrap"><table><thead><tr><th>Brief 模块</th><th>要求</th><th>为什么</th></tr></thead><tbody><tr><td>Creator profile</td><td>优先找 solo creator、live seller、product demo、beauty/fitness/home creator，不只找泛 Amazon Finds 账号。</td><td>产品卖点需要真实移动、直播、单人拍摄场景，不是静态开箱。</td></tr><tr><td>Must-show scenes</td><td>至少展示 3 个场景：人移动跟拍、坐姿/站姿高度、灯光前后对比、遥控/开播前测试。</td><td>证据显示用户关心的是实际拍摄是否省事、remote 是否可用、如何站稳。</td></tr><tr><td>Caption formula</td><td>品牌/产品类型 + auto face tracking + 360 rotation + with light + remote + Amazon Finds + 使用场景。</td><td>yAyusi 的可见 TikTok 证据主要靠搜索型关键词和 Amazon Finds 语境。</td></tr><tr><td>Disclosure and link</td><td>必须记录最终 Amazon ASIN、affiliate tag、coupon/price、披露词；视频链接不等于承接 ASIN。</td><td>竞品视频存在标题品牌和最终 ASIN 不一致的问题。</td></tr><tr><td>Comment handling</td><td>提前准备 5 条回复：link、remote compatibility、setup steps、tracking issue、phone compatibility。</td><td>P0 截图里已经出现索链、remote、setup 三类评论问题。</td></tr></tbody></table></div>
   </section>
 
-  <section class="links">
-    <div class="link"><b>统一入口</b><br><a href="../index.html">回首页</a></div>
-    <div class="link"><b>短视频 CSV</b><br><a href="our_video_script_plan_2026-W26.csv">打开</a></div>
-    <div class="link"><b>FAQ CSV</b><br><a href="our_faq_qa_plan_2026-W26.csv">打开</a></div>
-    <div class="link"><b>截图证据页</b><br><a href="../07_完整监控/P0手动截图证据_yAyusi_Yeaki_2026-W26.html">打开</a></div>
-  </section>
+  <p class="note">底层 CSV 和截图证据保留在本地项目中；本页只展示执行决策需要看的内容，避免阅读路径分叉。</p>
 </main>
 </body>
 </html>
