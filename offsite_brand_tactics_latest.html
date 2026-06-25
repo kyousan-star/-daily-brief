@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>竞手站外打法借鉴 2026-W26</title>
+<style>
+:root{
+  --bg:#f3f6f8; --ink:#17202a; --muted:#667085; --line:#d9e1ea; --panel:#ffffff;
+  --navy:#102033; --teal:#0f766e; --teal-soft:#e7f7f4; --blue:#2563eb; --blue-soft:#eaf1ff;
+  --amber:#b76e00; --amber-soft:#fff5df; --gray:#64748b; --gray-soft:#eef2f7; --red:#b42318; --red-soft:#fff1f0;
+}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC",sans-serif;line-height:1.55}
+header{background:var(--navy);color:white;padding:28px 34px;border-bottom:5px solid #3aa6a0}h1{margin:0 0 8px;font-size:28px}header p{margin:0;color:#cbd5e1}
+main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.kpi,.brand-story{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px}.kpi{border-top:4px solid #8aa4bf}.kpi span{color:var(--muted);font-size:13px}.kpi strong{display:block;font-size:28px}
+.callout{background:#eef6ff;border-left:5px solid var(--blue);border-radius:6px;padding:13px 15px;margin:0 0 18px}
+.tablewrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:8px;margin-bottom:22px}table{border-collapse:collapse;width:100%;min-width:900px}
+th,td{border-bottom:1px solid var(--line);padding:12px 10px;vertical-align:top;text-align:center}th{background:#f8fafc;text-align:left}td.left{text-align:left}
+.badge{display:inline-block;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:700;margin-left:8px;white-space:nowrap}.good{background:#d9f8ef;color:#0f766e}.warn{background:var(--amber-soft);color:#92400e}
+.yt{background:#dbeafe;color:#1d4ed8;margin-left:0}.tt{background:#ffe4e6;color:#be123c;margin-left:0}.views{color:var(--muted);font-size:12px;margin-left:8px}
+.brand-story{margin-bottom:18px;position:relative;overflow:hidden}.brand-story:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--accent)}
+.theme-teal{--accent:var(--teal);--soft:var(--teal-soft);--accent-ink:#0f5f59}
+.theme-blue{--accent:var(--blue);--soft:var(--blue-soft);--accent-ink:#1d4ed8}
+.theme-amber{--accent:var(--amber);--soft:var(--amber-soft);--accent-ink:#92400e}
+.theme-gray{--accent:var(--gray);--soft:var(--gray-soft);--accent-ink:#475569}
+.story-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;background:var(--soft);border:1px solid color-mix(in srgb, var(--accent) 22%, white);border-radius:8px;padding:14px;margin-bottom:14px}
+h2{font-size:24px;margin:0 0 6px;color:var(--accent-ink)}h3{font-size:17px;margin:16px 0 10px;color:#344054}.verdict{font-size:17px;margin:0;color:#344054;font-weight:650}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}.story-block{background:#fbfdff;border:1px solid #e5edf5;border-top:3px solid var(--accent);border-radius:8px;padding:12px}
+.list-block{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:12px}.list-block:first-child{background:#f3fbf8;border-color:#c9eadf}.list-block.risk{background:var(--red-soft);border-color:#ffd1cc;color:#7a271a}
+.story-block strong,.list-block strong{display:block;margin-bottom:5px;color:#243547}.story-block p{margin:0;color:#475467}.two-col{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;margin-bottom:8px}
+ul{margin:6px 0 0;padding-left:20px}li{margin:4px 0}.risk{color:#8a4b00}
+.evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(260px,1fr));gap:12px}.evidence{border:1px solid var(--line);border-radius:8px;padding:14px;background:#fff;border-top:4px solid var(--accent)}
+.e-label{font-weight:800;font-size:16px;margin:9px 0 6px;color:#1f2937}.evidence p{font-size:14px;color:#344054;margin:0 0 8px}.meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+details{font-size:12px;color:var(--muted);margin:8px 0}summary{cursor:pointer;font-weight:700}a{color:#174ea6;text-decoration:none;font-weight:700}.more{background:var(--soft);border:1px solid color-mix(in srgb, var(--accent) 20%, white);border-radius:8px;padding:10px 12px;margin-top:12px}
+@media(max-width:900px){main{padding:18px}.kpis,.story-grid,.two-col,.evidence-grid{grid-template-columns:1fr}.story-head{display:block}}
+</style>
+</head>
+<body>
+<header><h1>竞手站外打法借鉴</h1><p>证据从“平铺卡片”改成“品牌故事线”：判断、主渠道、值得学、风险边界、代表证据。</p></header>
+<main>
+<div class="kpis">
+  <div class="kpi"><span>二轮 YouTube 候选</span><strong>29</strong></div>
+  <div class="kpi"><span>高相关 YouTube</span><strong>17</strong></div>
+  <div class="kpi"><span>TikTok caption 核验</span><strong>4</strong></div>
+  <div class="kpi"><span>打法可拆样本</span><strong>2</strong></div>
+</div>
+<p class="callout"><b>客观口径：</b>不要把“证据链完整”“热度最高”“最值得借鉴”混成一个结论。yAyusi 目前仍是最值得先拆的样本，因为它有 YouTube demo、TikTok Amazon Finds、索链评论和 Amazon 承接；但它不是已验证的全场成功样本。Yeaki 的价值在 creator kit 话术和用户问题，不在表现强度。TONEOF / SENSYNE / EUCOS 只说明历史热视频更高，不能直接替代当前学习对象。</p>
+<div class="tablewrap"><table><thead><tr><th>品牌</th><th>YouTube高相关</th><th>TikTok已核验</th><th>打法类型</th><th>一句话 takeaway</th></tr></thead><tbody><tr><th>yAyusi<span class="badge good">打法可拆样本</span></th><td>4</td><td>2</td><td>Amazon affiliate + Amazon Finds + review demo</td><td class="left">优先学“痛点 hook + 功能演示 + Amazon 承接”，同时继续验证热度是否足够。</td></tr><tr><th>Yeaki<span class="badge warn">弱互动打法样本</span></th><td>9</td><td>2</td><td>UGC/Amazon Finds + paid/affiliate link + Amazon Shopping</td><td class="left">可学 creator kit 表达和用户问题，但不能学它的投放强度。</td></tr><tr><th>YUANRAN<span class="badge warn">观察对象</span></th><td>2</td><td>0</td><td>弱 YouTube review / product overview</td><td class="left">先观察，不作为打法样本。</td></tr><tr><th>DMYWB<span class="badge warn">观察对象</span></th><td>2</td><td>0</td><td>ASIN 定向后出现弱相关 YouTube 内容</td><td class="left">暂不计入有效站外打法。</td></tr></tbody></table></div>
+
+    <section class="brand-story theme-teal">
+      <div class="story-head">
+        <div>
+          <h2>yAyusi</h2>
+          <p class="verdict">Amazon affiliate + Amazon Finds 的功能演示型打法可以拆；在当前可核验证据里，yAyusi 的链路完整度和可借鉴价值最高。</p>
+        </div>
+        <span class="badge good">打法可拆样本</span>
+      </div>
+      <div class="story-grid">
+        <div class="story-block"><strong>主渠道</strong><p>YouTube 有 4 条高相关内容，最高约 16K views；TikTok 手动截图有索链评论，但热度只算中等。</p></div>
+        <div class="story-block"><strong>一句话 takeaway</strong><p>优先学“痛点 hook + 功能演示 + Amazon 承接”，同时继续验证热度是否足够。</p></div>
+      </div>
+      <div class="two-col">
+        <div class="list-block"><strong>值得学</strong><ul><li>把 auto tracking 拍成“一个人拍摄”的解决方案，而不是只讲参数。</li><li>标题和 caption 直接铺核心关键词：yAyusi、ES-B180、face tracking、tripod。</li><li>用 Amazon Finds / affiliate 链路做低成本种草承接。</li></ul></div>
+        <div class="list-block risk"><strong>风险边界</strong><ul><li>视频偏旧且热度不够强，不能作为成功投放样本。</li><li>多条 YouTube 内容可能是同一 affiliate 长尾分发，不代表品牌官方主动投放。</li></ul></div>
+      </div>
+      <h3>代表证据</h3>
+      <div class="evidence-grid">
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">16080 views</span></div>
+      <div class="e-label">最高播放 YouTube</div>
+      <p>完整演示 360 跟踪、带灯、无需 App，是 yAyusi 最清楚的功能演示资产。</p>
+      <div class="meta">amazon_affiliate · product_demo</div>
+      <details><summary>原始标题/抓取说明</summary><p>yAyusi Extendable Auto Face Tracking Tripod 360° Rotation with Light, No App, 70.9&quot; Motion Sensor</p></details>
+      <a href="https://www.youtube.com/watch?v=myPYfwE98ts" target="_blank">打开证据</a>
+    </div>
+    
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">546 views</span></div>
+      <div class="e-label">最好 hook</div>
+      <p>把卖点包装成解决 static shots 痛点，最适合改成我方脚本。</p>
+      <div class="meta">amazon_affiliate · product_demo</div>
+      <details><summary>原始标题/抓取说明</summary><p>Struggling w/ Static Shots? Discover the yAyusi 360° Auto Face Tracking Tripod – Ultimate Companion!</p></details>
+      <a href="https://www.youtube.com/watch?v=FtU3aKrB-kE" target="_blank">打开证据</a>
+    </div>
+    
+    <div class="evidence">
+      <div class="e-top"><span class="badge tt">TikTok</span><span class="views">Medium</span></div>
+      <div class="e-label">TikTok Amazon Finds</div>
+      <p>caption 直接写产品名和 #amazonfind，说明承接思路偏 Amazon 发现型种草。</p>
+      <div class="meta">organic_or_affiliate_unknown · amazon_finds_demo</div>
+      <details><summary>原始标题/抓取说明</summary><p>oEmbed confirms Country Mile; caption says yAyusi Auto Face Tracking Tripod 360 Rotation with Light and #amazonfind.</p></details>
+      <a href="https://www.tiktok.com/@countrymile_/video/7470390177295355143" target="_blank">打开证据</a>
+    </div>
+    </div>
+      <details class="more"><summary>更多证据（3 条）</summary><ul><li><a href="https://www.youtube.com/watch?v=ImPS0ZSm14s" target="_blank">YouTube · 4295 views · yAyusi Extendable Auto Face Tracking Tripod 360°</a></li><li><a href="https://www.youtube.com/watch?v=9da-MXTcVLM" target="_blank">YouTube · 1393 views · yAyusi Extendable Auto Face Tracking Tripod 360°</a></li><li><a href="https://www.tiktok.com/@anita_love310/video/7416137814884027679" target="_blank">TikTok · Medium · 关键词铺设</a></li></ul></details>
+    </section>
+    
+    <section class="brand-story theme-blue">
+      <div class="story-head">
+        <div>
+          <h2>Yeaki</h2>
+          <p class="verdict">UGC/Amazon Finds + paid/affiliate link + Amazon Shopping 的表达可拆，但互动表现偏弱。</p>
+        </div>
+        <span class="badge warn">弱互动打法样本</span>
+      </div>
+      <div class="story-grid">
+        <div class="story-block"><strong>主渠道</strong><p>YouTube 有高相关内容；TikTok 手动截图仅 2 likes / 0 comments / 1 save / 1 share，不能算热度样本。</p></div>
+        <div class="story-block"><strong>一句话 takeaway</strong><p>可学 creator kit 表达和用户问题，但不能学它的投放强度。</p></div>
+      </div>
+      <div class="two-col">
+        <div class="list-block"><strong>值得学</strong><ul><li>把 tripod 包装成 content creator 工具，而不是单纯手机支架。</li><li>UGC 文案覆盖 360 face tracking、可充电遥控、手机兼容、ring light 兼容。</li><li>用 same-day delivery / @Amazon / Amazon Finds 强化购买便利。</li></ul></div>
+        <div class="list-block risk"><strong>风险边界</strong><ul><li>当前 TikTok 互动弱，不能证明 Yeaki 站外做得好。</li><li>Amazon Shopping 内容不能算品牌社媒创意。</li><li>部分 YouTube 内容像自动化产品概览，需区分真实达人和自动生成内容。</li></ul></div>
+      </div>
+      <h3>代表证据</h3>
+      <div class="evidence-grid">
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">1949 views</span></div>
+      <div class="e-label">最好对比 hook</div>
+      <p>用“为什么它比其他 tripod 更好”做标题，比普通产品概览更有学习价值。</p>
+      <div class="meta">amazon_affiliate · comparison_or_best</div>
+      <details><summary>原始标题/抓取说明</summary><p>Why The Yeaki Beats Every Other Phone Tripod</p></details>
+      <a href="https://www.youtube.com/watch?v=EygdIJGe-E8" target="_blank">打开证据</a>
+    </div>
+    
+    <div class="evidence">
+      <div class="e-top"><span class="badge tt">TikTok</span><span class="views">Medium</span></div>
+      <div class="e-label">最好 UGC 文案</div>
+      <p>content creator + 360 跟踪 + 可充电遥控 + 手机兼容 + ring light 兼容，信息密度高。</p>
+      <div class="meta">organic_ugc · ugc_review</div>
+      <details><summary>原始标题/抓取说明</summary><p>oEmbed confirms Yeaki 71 Auto Face Tracking Tripod; caption highlights content creators, 360 face tracking, rechargeable remote, Galaxy S25 Ultra, ring light compatibility, #amazonfinds and #ugc.</p></details>
+      <a href="https://www.tiktok.com/@trippinwtrish/video/7518805726425369887" target="_blank">打开证据</a>
+    </div>
+    
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">573 views</span></div>
+      <div class="e-label">paid link 线索</div>
+      <p>有 #ad / paid link 线索，可能更接近主动合作，需要进一步确认披露和 ASIN。</p>
+      <div class="meta">paid_or_affiliate · comparison_or_best</div>
+      <details><summary>原始标题/抓取说明</summary><p>📷 Yeaki Vlogging Kit for iPhone/Android | Best Beginner Vlogging Kit 📷</p></details>
+      <a href="https://www.youtube.com/watch?v=dz6pzMJatME" target="_blank">打开证据</a>
+    </div>
+    </div>
+      <details class="more"><summary>更多证据（5 条）</summary><ul><li><a href="https://www.youtube.com/watch?v=CUjZA_Dz27I" target="_blank">YouTube · 313 views · REVIEW (2026): Yeaki Vlogging Kit for iPhone/And</a></li><li><a href="https://www.youtube.com/watch?v=RVkjVbX5cMg" target="_blank">YouTube · 305 views · Yeaki Vlogging Kit: The Ultimate iPhone/Android </a></li><li><a href="https://www.youtube.com/watch?v=LleizmTCfg8" target="_blank">YouTube · 77 views · Overview: Yeaki Vlogging Kit: AI Face Tracking, </a></li><li><a href="https://www.youtube.com/watch?v=Gx4GoRnkkIA" target="_blank">YouTube · 20 views · ハンズフリー撮影と自動顔追跡機能搭載😄📱 71インチスマート三脚レビュー</a></li><li><a href="https://www.tiktok.com/@4my7angels/video/7593867491445640503" target="_blank">TikTok · Medium · Amazon 购买便利</a></li></ul></details>
+    </section>
+    
+    <section class="brand-story theme-amber">
+      <div class="story-head">
+        <div>
+          <h2>YUANRAN</h2>
+          <p class="verdict">ASIN 定向后能找到弱 YouTube review / product overview，但不足以判断重点渠道。</p>
+        </div>
+        <span class="badge warn">观察对象</span>
+      </div>
+      <div class="story-grid">
+        <div class="story-block"><strong>主渠道</strong><p>YouTube 高相关 2 条，播放很低；暂未核验 TikTok。</p></div>
+        <div class="story-block"><strong>一句话 takeaway</strong><p>先观察，不作为打法样本。</p></div>
+      </div>
+      <div class="two-col">
+        <div class="list-block"><strong>值得学</strong><ul><li>可观察 pros/cons review 的结构。</li><li>暂不值得直接模仿渠道打法。</li></ul></div>
+        <div class="list-block risk"><strong>风险边界</strong><ul><li>品牌明确视频少且低播放。</li><li>当前站外存在感可能弱于 Amazon 站内销量表现。</li></ul></div>
+      </div>
+      <h3>代表证据</h3>
+      <div class="evidence-grid">
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">58 views</span></div>
+      <div class="e-label">弱 review 证据</div>
+      <p>YUANRAN 有 pros/cons review，但播放低，只适合观察结构。</p>
+      <div class="meta">organic_or_unknown · pros_cons_review</div>
+      <details><summary>原始标题/抓取说明</summary><p>YUANRAN Content Creator Vlogging Kit With Face Tracking Tripod Review - Pros &amp; Cons - content</p></details>
+      <a href="https://www.youtube.com/watch?v=ySh9uIsoONE" target="_blank">打开证据</a>
+    </div>
+    
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">7 views</span></div>
+      <div class="e-label">低播放概览</div>
+      <p>ASIN 定向才找到低播放概览内容，不能证明重点渠道。</p>
+      <div class="meta">organic_or_unknown · product_demo</div>
+      <details><summary>原始标题/抓取说明</summary><p>YUANRAN Vlogging Kit: Your Ultimate TikTok &amp; YouTube Powerhouse!</p></details>
+      <a href="https://www.youtube.com/watch?v=Azv_Dn_ETuw" target="_blank">打开证据</a>
+    </div>
+    </div>
+      
+    </section>
+    
+    <section class="brand-story theme-gray">
+      <div class="story-head">
+        <div>
+          <h2>DMYWB</h2>
+          <p class="verdict">品牌词泛搜弱，ASIN 搜索才出现低播放内容，站外铺设可能很浅。</p>
+        </div>
+        <span class="badge warn">观察对象</span>
+      </div>
+      <div class="story-grid">
+        <div class="story-block"><strong>主渠道</strong><p>YouTube 高相关 2 条但播放极低；暂未核验 TikTok。</p></div>
+        <div class="story-block"><strong>一句话 takeaway</strong><p>暂不计入有效站外打法。</p></div>
+      </div>
+      <div class="two-col">
+        <div class="list-block"><strong>值得学</strong><ul><li>可反查产品概览是否覆盖核心卖点。</li><li>不建议作为内容打法学习对象。</li></ul></div>
+        <div class="list-block risk"><strong>风险边界</strong><ul><li>相关内容可能是泛产品概览或搜索噪音。</li><li>缺少明确社媒铺设证据。</li></ul></div>
+      </div>
+      <h3>代表证据</h3>
+      <div class="evidence-grid">
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">4 views</span></div>
+      <div class="e-label">弱产品概览</div>
+      <p>DMYWB ASIN 定向后出现低播放内容，不构成打法样本。</p>
+      <div class="meta">organic_or_unknown · product_demo</div>
+      <details><summary>原始标题/抓取说明</summary><p>`DMYWB Vlogging Kit: The Ultimate Auto Face Tracking Creator Powerhouse!</p></details>
+      <a href="https://www.youtube.com/watch?v=_5WebBsVuWI" target="_blank">打开证据</a>
+    </div>
+    
+    <div class="evidence">
+      <div class="e-top"><span class="badge yt">YouTube</span><span class="views">14 views</span></div>
+      <div class="e-label">疑似泛产品内容</div>
+      <p>品牌露出不强，更像搜索噪音或泛产品概览。</p>
+      <div class="meta">organic_or_unknown · comparison_or_best</div>
+      <details><summary>原始标题/抓取说明</summary><p>Vlogging Kit, No APP 63” Auto Face Tracking Tripod for iPhone with Light, Microphones</p></details>
+      <a href="https://www.youtube.com/watch?v=ZsuhYQ6vjuk" target="_blank">打开证据</a>
+    </div>
+    </div>
+      
+    </section>
+    
+</main>
+</body>
+</html>
