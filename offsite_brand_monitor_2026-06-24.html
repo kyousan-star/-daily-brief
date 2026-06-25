@@ -23,8 +23,12 @@ main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;gr
 .brand-grid{display:grid;grid-template-columns:repeat(3,minmax(260px,1fr));gap:12px;padding:14px}.brand-card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px;min-height:220px}
 .brand-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}h3{margin:0;font-size:20px}.badge{display:inline-flex;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:800;white-space:nowrap}.badge.good{background:#d9f8ef;color:var(--green)}.badge.blue{background:var(--blue-soft);color:#1d4ed8}.badge.warn{background:var(--amber-soft);color:#92400e}
 .tactic{font-weight:650;color:#344054;min-height:48px;margin:0 0 10px}.channel-strip{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.pill{display:inline-flex;gap:4px;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:700}.pill.confirmed{background:#d9f8ef;color:var(--green)}.pill.seed{background:var(--amber-soft);color:#92400e}.pill.empty{background:#eef2f7;color:#64748b}
-.next{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:10px;margin-bottom:10px;color:#344054}.meta{font-size:12px;color:var(--muted)}.links{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.link-card{background:white;border:1px solid var(--line);border-radius:8px;padding:14px}.link-card b{display:block;margin-bottom:5px}a{color:#174ea6;text-decoration:none;font-weight:800}
-@media(max-width:960px){main{padding:18px}.kpis,.decision-grid,.brand-grid,.links{grid-template-columns:1fr}}
+.next{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:10px;margin-bottom:10px;color:#344054}.meta{font-size:12px;color:var(--muted)}a{color:#174ea6;text-decoration:none;font-weight:800}
+.detail-nav{background:#102033;border-radius:10px;padding:18px;margin-top:22px;color:white;border:1px solid #0b1726}
+.detail-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:14px}.detail-head h2{margin:0;font-size:23px}.detail-head p{margin:0;color:#cbd5e1;max-width:760px}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.link-card{display:block;background:white;border:2px solid #b7c8dc;border-radius:10px;padding:16px;min-height:158px;color:var(--ink);box-shadow:0 10px 22px rgba(15,31,51,.16);transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.link-card:hover{transform:translateY(-2px);border-color:#60a5fa;box-shadow:0 14px 28px rgba(15,31,51,.22)}.link-card b{display:block;margin:6px 0 6px;font-size:20px;color:#111827}.link-card p{margin:0 0 13px;color:#475467;font-weight:500}.link-card .label{display:inline-flex;border-radius:999px;background:#eaf1ff;color:#1d4ed8;padding:4px 9px;font-size:12px;font-weight:900}.link-card .cta{display:inline-flex;align-items:center;justify-content:center;background:#174ea6;color:white;border-radius:7px;padding:9px 12px;font-size:15px;font-weight:900}.link-card.green .label{background:#d9f8ef;color:#0f766e}.link-card.green .cta{background:#0f766e}.link-card.amber .label{background:#fff4dc;color:#92400e}.link-card.amber .cta{background:#92400e}
+@media(max-width:960px){main{padding:18px}.kpis,.decision-grid,.brand-grid,.links{grid-template-columns:1fr}.detail-head{display:block}.detail-head p{margin-top:6px}}
 </style>
 </head>
 <body>
@@ -172,10 +176,31 @@ main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;gr
     </div>
     </section>
     
-  <section class="links">
-    <div class="link-card"><b>下一层：打法故事线</b><a href="竞手站外打法借鉴_2026-W26.html">打开打法页</a></div>
-    <div class="link-card"><b>最终层：我方动作</b><a href="../08_我方内容方案/我方内容执行方案_2026-W26.html">打开执行方案</a></div>
-    <div class="link-card"><b>统一入口</b><a href="../index.html">回到首页</a></div>
+  <section class="detail-nav">
+    <div class="detail-head">
+      <h2>继续查看详情</h2>
+      <p>本页是总览。下面三张卡片都可以点击，分别进入打法拆解、我方动作和完整入口。</p>
+    </div>
+    <div class="links">
+      <a class="link-card green" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_tactics_latest.html" target="_blank">
+        <span class="label">下一层</span>
+        <b>打法故事线</b>
+        <p>看 yAyusi / Yeaki 的证据链、内容形式、风险边界和可拆打法。</p>
+        <span class="cta">点击打开打法页 →</span>
+      </a>
+      <a class="link-card amber" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_actions_latest.html" target="_blank">
+        <span class="label">最终层</span>
+        <b>我方动作方案</b>
+        <p>看短视频脚本、Listing/FAQ、KOL brief 和联盟/UGC 达人动作线。</p>
+        <span class="cta">点击打开执行方案 →</span>
+      </a>
+      <a class="link-card" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_index_latest.html" target="_blank">
+        <span class="label">完整入口</span>
+        <b>全项目导航</b>
+        <p>需要看路线图、验证页、截图证据和底层数据时，从这里进入。</p>
+        <span class="cta">点击打开完整入口 →</span>
+      </a>
+    </div>
   </section>
 </main>
 </body>
