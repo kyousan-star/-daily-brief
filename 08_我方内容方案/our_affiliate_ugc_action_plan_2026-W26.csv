@@ -1,0 +1,6 @@
+﻿action_module,what_to_do,operating_detail,success_metric,evidence_logic
+达人池定义,建立 Amazon Finds / product demo / solo creator 三类达人清单，而不是只找泛红人。,优先筛选 1K-50K 粉、过往发过 Amazon Finds/家居小工具/拍摄工具、评论区有人问 link 的账号。,每周新增 20 个候选，筛出 5 个可触达达人。,竞手可见站外证据主要来自 affiliate / UGC 长尾，不是品牌官方大号。
+样品与激励,用低门槛样品 + 明确佣金/折扣码机制，换取真实使用场景内容。,Brief 要求必须拍人移动跟拍、开灯前后、remote/live 边界、setup 步骤；不接受只拍产品转圈。,每 10 个寄样拿到 3 条可用短视频，至少 1 条有评论互动。,yAyusi 的价值在完整链路：内容展示 + Amazon 承接 + 评论索链。
+链接与归因,每个达人必须使用独立 Amazon attribution / coupon / affiliate tag，避免只看播放量。,记录 creator、平台、视频 URL、短链、最终 ASIN、coupon、点击、加购、销量。,每条内容能回溯到 ASIN 和点击/转化，不再只凭标题品牌判断。,竞手视频出现标题品牌与最终 ASIN 不一致，说明归因必须单独管理。
+评论区 SOP,预设 5 类评论回复：link、remote/live、how to open、stability、phone compatibility。,达人发布后 24-72 小时内推动置顶评论和高频问题回复，把自然评论转成二次内容素材。,每条内容至少完成 1 条置顶评论，沉淀 3 个可复用 QA。,现有最硬的借鉴点来自用户评论，不是来自播放量本身。
+周度复盘,把达人内容当渠道实验复盘：不是看单条爆不爆，而是看内容角度和承接效率。,按 hook、场景、达人类型、评论问题、点击/转化做周对比，淘汰低互动且无评论问题的角度。,每周保留 2 个有效 hook，淘汰 2 个低效角度。,竞手整体互动不高，所以我方不应一上来放量，应先跑小样本验证。

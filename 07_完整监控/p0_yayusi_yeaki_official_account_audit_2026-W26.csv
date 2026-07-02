@@ -1,0 +1,13 @@
+﻿brand,channel,verified_status,basis,next_action
+yAyusi,YouTube,未发现品牌官方账号证据,当前强证据来自 review/affiliate/Shopping 类内容，不是品牌自营频道。,用品牌词 + official / store / tripod 复核频道和频道 About 页。
+yAyusi,TikTok,未发现品牌官方账号证据,当前证据来自 creator/UGC/Amazon Finds 视频，不是品牌自营账号。,打开 TikTok 搜索页和视频作者主页，确认是否有官方号、profile link、商品橱窗。
+yAyusi,Instagram,本轮未验证,本地证据库没有强证据；终端网络受限，不能完成外部复核。,Chrome 搜索 site:instagram.com + 品牌词，确认是否有官方号或达人内容。
+yAyusi,Pinterest,本轮未验证,本地证据库没有强证据；终端网络受限，不能完成外部复核。,Chrome 搜索 site:pinterest.com + 品牌词，确认是否有产品 pin/导购页。
+yAyusi,Facebook,本轮未验证,本地证据库没有强证据；终端网络受限，不能完成外部复核。,Chrome 搜索 site:facebook.com + 品牌词，确认品牌页、达人帖、群组帖。
+yAyusi,Reddit,本轮未验证,本地证据库没有近 90 天 Reddit 强证据。,搜索 Reddit 近 90 天 brand + ASIN + tripod/vlogging kit，优先抓真实用户反馈。
+Yeaki,YouTube,未发现品牌官方账号证据,当前强证据来自 review/affiliate/Shopping 类内容，不是品牌自营频道。,用品牌词 + official / store / tripod 复核频道和频道 About 页。
+Yeaki,TikTok,未发现品牌官方账号证据,当前证据来自 creator/UGC/Amazon Finds 视频，不是品牌自营账号。,打开 TikTok 搜索页和视频作者主页，确认是否有官方号、profile link、商品橱窗。
+Yeaki,Instagram,本轮未验证,本地证据库没有强证据；终端网络受限，不能完成外部复核。,Chrome 搜索 site:instagram.com + 品牌词，确认是否有官方号或达人内容。
+Yeaki,Pinterest,本轮未验证,本地证据库没有强证据；终端网络受限，不能完成外部复核。,Chrome 搜索 site:pinterest.com + 品牌词，确认是否有产品 pin/导购页。
+Yeaki,Facebook,本轮未验证,本地证据库没有强证据；终端网络受限，不能完成外部复核。,Chrome 搜索 site:facebook.com + 品牌词，确认品牌页、达人帖、群组帖。
+Yeaki,Reddit,本轮未验证,本地证据库没有近 90 天 Reddit 强证据。,搜索 Reddit 近 90 天 brand + ASIN + tripod/vlogging kit，优先抓真实用户反馈。

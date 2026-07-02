@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>竞手品牌站外营销 Overview 2026-W26</title>
+<style>
+:root{
+  --bg:#f3f6f8;--ink:#17202a;--muted:#667085;--line:#d9e1ea;--navy:#102033;
+  --green:#0f766e;--green-soft:#e7f7f4;--blue:#2563eb;--blue-soft:#eaf1ff;
+  --amber:#b76e00;--amber-soft:#fff5df;--red:#b42318;--red-soft:#fff1f0;--panel:#fff;
+}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC",sans-serif;line-height:1.55}
+header{background:var(--navy);color:white;padding:30px 34px;border-bottom:5px solid var(--green)}h1{margin:0 0 8px;font-size:30px}header p{margin:0;color:#cbd5e1;max-width:1080px}
+main{max-width:1360px;margin:0 auto;padding:24px 32px 44px}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.kpi{background:white;border:1px solid var(--line);border-top:4px solid #8aa4bf;border-radius:8px;padding:15px}.kpi span{display:block;color:var(--muted);font-size:13px}.kpi strong{display:block;font-size:28px}
+.headline{background:#eef6ff;border-left:5px solid var(--blue);border-radius:8px;padding:15px 16px;margin-bottom:18px}.headline b{font-size:18px}
+.decision-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.decision{background:white;border:1px solid var(--line);border-radius:8px;padding:14px}.decision b{display:block;margin-bottom:5px}
+.decision.green{background:var(--green-soft);border-color:#bfe7df}.decision.blue{background:var(--blue-soft);border-color:#cbdcff}.decision.amber{background:var(--amber-soft);border-color:#ffe0a3}.decision.red{background:var(--red-soft);border-color:#ffd1cc}
+.legend{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.legend span{display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700}.legend .confirmed{background:#d9f8ef;color:var(--green)}.legend .seed{background:var(--amber-soft);color:#92400e}.legend .empty{background:#eef2f7;color:#64748b}
+.group{background:white;border:1px solid var(--line);border-radius:8px;margin-bottom:18px;overflow:hidden}.group-head{padding:15px 18px;border-bottom:1px solid var(--line)}.group-head h2{margin:0 0 4px;font-size:22px}.group-head p{margin:0;color:#475467}
+.group.green .group-head{background:var(--green-soft)}.group.green h2{color:var(--green)}.group.blue .group-head{background:var(--blue-soft)}.group.blue h2{color:#1d4ed8}.group.amber .group-head{background:var(--amber-soft)}.group.amber h2{color:#92400e}
+.brand-grid{display:grid;grid-template-columns:repeat(3,minmax(260px,1fr));gap:12px;padding:14px}.brand-card{border:1px solid var(--line);border-radius:8px;background:#fff;padding:14px;min-height:220px}
+.brand-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}h3{margin:0;font-size:20px}.badge{display:inline-flex;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:800;white-space:nowrap}.badge.good{background:#d9f8ef;color:var(--green)}.badge.blue{background:var(--blue-soft);color:#1d4ed8}.badge.warn{background:var(--amber-soft);color:#92400e}
+.tactic{font-weight:650;color:#344054;min-height:48px;margin:0 0 10px}.channel-strip{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.pill{display:inline-flex;gap:4px;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:700}.pill.confirmed{background:#d9f8ef;color:var(--green)}.pill.seed{background:var(--amber-soft);color:#92400e}.pill.empty{background:#eef2f7;color:#64748b}
+.next{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:10px;margin-bottom:10px;color:#344054}.meta{font-size:12px;color:var(--muted)}a{color:#174ea6;text-decoration:none;font-weight:800}
+.detail-nav{background:#102033;border-radius:10px;padding:18px;margin-top:22px;color:white;border:1px solid #0b1726}
+.detail-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:14px}.detail-head h2{margin:0;font-size:23px}.detail-head p{margin:0;color:#cbd5e1;max-width:760px}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.link-card{display:block;background:white;border:2px solid #b7c8dc;border-radius:10px;padding:16px;min-height:158px;color:var(--ink);box-shadow:0 10px 22px rgba(15,31,51,.16);transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+.link-card:hover{transform:translateY(-2px);border-color:#60a5fa;box-shadow:0 14px 28px rgba(15,31,51,.22)}.link-card b{display:block;margin:6px 0 6px;font-size:20px;color:#111827}.link-card p{margin:0 0 13px;color:#475467;font-weight:500}.link-card .label{display:inline-flex;border-radius:999px;background:#eaf1ff;color:#1d4ed8;padding:4px 9px;font-size:12px;font-weight:900}.link-card .cta{display:inline-flex;align-items:center;justify-content:center;background:#174ea6;color:white;border-radius:7px;padding:9px 12px;font-size:15px;font-weight:900}.link-card.green .label{background:#d9f8ef;color:#0f766e}.link-card.green .cta{background:#0f766e}.link-card.amber .label{background:#fff4dc;color:#92400e}.link-card.amber .cta{background:#92400e}
+.internal-link{margin-top:13px;color:#cbd5e1;font-size:14px}.internal-link a{color:#bfdbfe;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:960px){main{padding:18px}.kpis,.decision-grid,.brand-grid,.links{grid-template-columns:1fr}.detail-head{display:block}.detail-head p{margin-top:6px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>竞手品牌站外营销 Overview</h1>
+  <p>从数据仪表盘改为经营决策页：先判断谁只是打法可拆、谁需要复核、谁暂缓，再进入打法和行动页。</p>
+</header>
+<main>
+  <div class="kpis">
+    <div class="kpi"><span>品牌池</span><strong>29</strong></div>
+    <div class="kpi"><span>打法可拆</span><strong>2</strong></div>
+    <div class="kpi"><span>下一批复核</span><strong>4</strong></div>
+    <div class="kpi"><span>首轮强证据</span><strong>15</strong></div>
+  </div>
+  <div class="headline"><b>本周 4 句结论：</b> 1. yAyusi 是当前证据链最完整、最适合先拆打法的样本，但还不能证明它是全场最成功品牌。2. Yeaki 对 creator kit 话术和用户问题有价值，但互动偏弱，不应作为表现样本。3. TONEOF / SENSYNE / EUCOS 只有历史热度优势，不能直接替代 yAyusi，需要复核当前有效性。4. YUANRAN / DMYWB 站外证据弱，暂不进入素材复盘。</div>
+  <div class="decision-grid">
+    <div class="decision blue"><b>2026-W27 新增品牌</b>未确认新增或退出，品牌池仍为 29 个。</div>
+    <div class="decision green"><b>新增站外证据</b>3 条 YouTube 旧视频刷新到当前高层指标，但增量很小。</div>
+    <div class="decision amber"><b>抓取限制</b>TikTok oEmbed 不返回互动数、评论和商品卡；Yeaki 对比视频本轮未返回。</div>
+    <div class="decision red"><b>本周动作</b>不放量，只继续小样本达人/UGC 和独立归因验证。</div>
+  </div>
+  <div class="decision-grid">
+    <div class="decision green"><b>先拆谁</b>yAyusi、Yeaki</div>
+    <div class="decision blue"><b>重点渠道</b>YouTube + TikTok</div>
+    <div class="decision amber"><b>当前证据口径</b>已核验 / 旧线索 / 未发现分开看</div>
+    <div class="decision red"><b>风险</b>Affiliate 不等于品牌主动投放</div>
+  </div>
+  <div class="legend">
+    <span class="confirmed">绿色：已核验</span>
+    <span class="seed">黄色：旧线索</span>
+    <span class="empty">灰色：未发现</span>
+  </div>
+  
+    <section class="group green">
+      <div class="group-head">
+        <h2>打法可拆</h2>
+        <p>证据链较完整，能拆内容结构；但不是已验证的站外成功样本。</p>
+      </div>
+      <div class="brand-grid">
+    <article class="brand-card">
+      <div class="brand-title"><h3>yAyusi</h3><span class="badge good">打法可拆</span></div>
+      <p class="tactic">Amazon affiliate / Amazon Finds / review demo</p>
+      <div class="channel-strip"><span class="pill confirmed">YouTube <b>8</b></span><span class="pill confirmed">TikTok <b>2</b></span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>拆痛点 hook、功能演示、Amazon 承接；不按成功样本放量。</div>
+      <div class="meta">3 ASIN · 旧线索 23</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>Yeaki</h3><span class="badge warn">弱互动</span></div>
+      <p class="tactic">UGC / paid link / Amazon Shopping 混合</p>
+      <div class="channel-strip"><span class="pill confirmed">YouTube <b>14</b></span><span class="pill confirmed">TikTok <b>2</b></span><span class="pill seed">Reddit <b>1</b></span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>只拆 creator 场景话术和用户问题，不学习投放强度。</div>
+      <div class="meta">7 ASIN · 旧线索 23</div>
+    </article>
+    </div>
+    </section>
+    
+    <section class="group blue">
+      <div class="group-head">
+        <h2>下一批复核</h2>
+        <p>旧项目线索较多，但还需要按新版证据口径重新开页核验。</p>
+      </div>
+      <div class="brand-grid">
+    <article class="brand-card">
+      <div class="brand-title"><h3>EUCOS</h3><span class="badge blue">待复核</span></div>
+      <p class="tactic">历史线索偏 affiliate review / 横评 / Reddit 口碑</p>
+      <div class="channel-strip"><span class="pill seed">YouTube <b>7</b></span><span class="pill seed">TikTok <b>6</b></span><span class="pill seed">Reddit <b>9</b></span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>按 Top 视频和 Reddit 近 90 天复核。</div>
+      <div class="meta">1 ASIN · 旧线索 25</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>SENSYNE</h3><span class="badge blue">待复核</span></div>
+      <p class="tactic">历史线索偏 setup / Amazon review / deal</p>
+      <div class="channel-strip"><span class="pill seed">YouTube <b>6</b></span><span class="pill seed">TikTok <b>12</b></span><span class="pill seed">Reddit <b>4</b></span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>复核 setup/how-to 是否仍有当前声量。</div>
+      <div class="meta">1 ASIN · 旧线索 24</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>TONEOF</h3><span class="badge blue">待复核</span></div>
+      <p class="tactic">历史线索偏横评、快速开合、Amazon Finds</p>
+      <div class="channel-strip"><span class="pill seed">YouTube <b>5</b></span><span class="pill seed">TikTok <b>9</b></span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>优先核验横评和旧爆款是否仍有效。</div>
+      <div class="meta">1 ASIN · 旧线索 18</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>Vimose</h3><span class="badge blue">待复核</span></div>
+      <p class="tactic">历史线索偏多 SKU review / Amazon 承接</p>
+      <div class="channel-strip"><span class="pill seed">YouTube <b>5</b></span><span class="pill seed">TikTok <b>7</b></span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>用 ASIN 定向确认是否导当前核心款。</div>
+      <div class="meta">2 ASIN · 旧线索 15</div>
+    </article>
+    </div>
+    </section>
+    
+    <section class="group amber">
+      <div class="group-head">
+        <h2>观察暂缓</h2>
+        <p>价格/ASIN 层面值得看，但当前站外证据弱或噪音高。</p>
+      </div>
+      <div class="brand-grid">
+    <article class="brand-card">
+      <div class="brand-title"><h3>YUANRAN</h3><span class="badge warn">观察</span></div>
+      <p class="tactic">低播放 product overview / review</p>
+      <div class="channel-strip"><span class="pill confirmed">YouTube <b>3</b></span><span class="pill empty">TikTok</span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>暂不当作打法样本。</div>
+      <div class="meta">4 ASIN · 旧线索 0</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>DMYWB</h3><span class="badge warn">观察</span></div>
+      <p class="tactic">ASIN 搜索才出现低播放内容</p>
+      <div class="channel-strip"><span class="pill confirmed">YouTube <b>2</b></span><span class="pill empty">TikTok</span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>继续观察，不进入素材复盘。</div>
+      <div class="meta">1 ASIN · 旧线索 0</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>BRDOOGU</h3><span class="badge warn">观察</span></div>
+      <p class="tactic">暂无稳定判断</p>
+      <div class="channel-strip"><span class="pill empty">YouTube</span><span class="pill empty">TikTok</span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>后续按 ASIN 定向复核。</div>
+      <div class="meta">2 ASIN · 旧线索 0</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>USKEYVISION</h3><span class="badge warn">观察</span></div>
+      <p class="tactic">暂无稳定判断</p>
+      <div class="channel-strip"><span class="pill empty">YouTube</span><span class="pill empty">TikTok</span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>后续按 ASIN 定向复核。</div>
+      <div class="meta">5 ASIN · 旧线索 0</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>Zarcaco</h3><span class="badge warn">观察</span></div>
+      <p class="tactic">暂无稳定判断</p>
+      <div class="channel-strip"><span class="pill empty">YouTube</span><span class="pill empty">TikTok</span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>后续按 ASIN 定向复核。</div>
+      <div class="meta">1 ASIN · 旧线索 0</div>
+    </article>
+    
+    <article class="brand-card">
+      <div class="brand-title"><h3>Ivbmir</h3><span class="badge warn">观察</span></div>
+      <p class="tactic">暂无稳定判断</p>
+      <div class="channel-strip"><span class="pill empty">YouTube</span><span class="pill empty">TikTok</span><span class="pill empty">Reddit</span><span class="pill empty">Instagram</span><span class="pill empty">Pinterest</span><span class="pill empty">Facebook</span></div>
+      <div class="next"><b>下一步：</b>后续按 ASIN 定向复核。</div>
+      <div class="meta">1 ASIN · 旧线索 0</div>
+    </article>
+    </div>
+    </section>
+    
+  <section class="detail-nav">
+    <div class="detail-head">
+      <h2>继续查看详情</h2>
+      <p>本页是总览。新同事只需要继续看下面两个详情：先看竞手打法，再看我方动作。</p>
+    </div>
+    <div class="links">
+      <a class="link-card green" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_tactics_latest.html" target="_blank">
+        <span class="label">下一层</span>
+        <b>打法故事线</b>
+        <p>看 yAyusi / Yeaki 的证据链、内容形式、风险边界和可拆打法。</p>
+        <span class="cta">点击打开打法页 →</span>
+      </a>
+      <a class="link-card amber" href="https://kyousan-star.github.io/-daily-brief/offsite_brand_actions_latest.html" target="_blank">
+        <span class="label">最终层</span>
+        <b>我方动作方案</b>
+        <p>看短视频脚本、Listing/FAQ、KOL brief 和联盟/UGC 达人动作线。</p>
+        <span class="cta">点击打开执行方案 →</span>
+      </a>
+    </div>
+    <div class="internal-link">需要追溯路线图、验证页和底层数据时，再打开 <a href="https://kyousan-star.github.io/-daily-brief/offsite_brand_index_latest.html" target="_blank">内部完整导航</a>。</div>
+  </section>
+</main>
+</body>
+</html>

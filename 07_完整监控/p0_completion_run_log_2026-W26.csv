@@ -1,0 +1,5 @@
+﻿step,target,status,result,impact,next_action
+TikTok 原页补互动,4 条 P0 TikTok 视频,blocked,浏览器安全策略禁止打开 tiktok.com；不能继续尝试绕路。,无法自动补 views、likes、comments、商品卡、profile link。,需要用户在允许的 Chrome/TikTok 环境手动打开，或提供截图/导出结果后再入库。
+YouTube 评论抽样,yAyusi Top video / Yeaki comparison video,blocked,浏览器安全策略禁止打开 youtube.com；终端 yt-dlp 同时 DNS 解析失败。,无法本轮新增评论原文，只能沿用已有 views/likes/comment_count。,后续需要浏览器允许 YouTube 或手动导出评论；当前不写评论情绪结论。
+官方账号盘点,TikTok / YouTube / Instagram / Pinterest / Facebook / Reddit,partial,本地旧项目没有发现 yAyusi/Yeaki 官方账号强证据；当前可确认内容主要来自 creator/affiliate/Amazon Finds。,可以先判定“不是官方自营为主”，但不能证明官方账号不存在。,下轮用可访问浏览器逐平台搜索并截图归档。
+旧项目复用,2026-W19 TikTok/Reddit/Instagram 扩展记录,completed,已导入 yAyusi/Yeaki TikTok 短视频、TikTok Shop、TikTok Shop review、Reddit stats。,补强了 TikTok 分发面、Shop/VOC 风险和 Reddit 空白判断。,把这些作为历史强线索，不当作实时指标；下轮逐条刷新。

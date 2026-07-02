@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 yAyusi / Yeaki 完整监控补齐</title>
+<style>
+:root{--bg:#f2f5f7;--ink:#17202a;--muted:#667085;--line:#d7e0ea;--panel:#fff;--navy:#102033;--green:#0f766e;--green-soft:#e6f6f2;--blue:#2563eb;--blue-soft:#eaf1ff;--amber:#b76e00;--amber-soft:#fff4dc;--red:#b42318;--red-soft:#fff1f0;--gray:#64748b;--gray-soft:#eef2f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC",sans-serif;line-height:1.55}header{background:var(--navy);color:white;padding:30px 34px;border-bottom:5px solid var(--green)}h1{margin:0 0 8px;font-size:30px}header p{margin:0;color:#cbd5e1;max-width:1120px}main{max-width:1400px;margin:0 auto;padding:24px 32px 46px}h2{margin:0 0 6px;font-size:24px}h3{margin:0 0 8px;font-size:18px}a{color:#174ea6;text-decoration:none;font-weight:800}
+.headline{background:#eef6ff;border-left:5px solid var(--blue);border-radius:8px;padding:16px;margin-bottom:16px}.headline b{font-size:18px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:15px}.card span{display:block;color:var(--muted);font-size:13px}.card strong{font-size:28px}.card.green{background:var(--green-soft);border-color:#bfe7df}.card.amber{background:var(--amber-soft);border-color:#ffe0a3}.card.red{background:var(--red-soft);border-color:#ffd1cc}
+.brand{background:white;border:1px solid var(--line);border-radius:8px;margin-bottom:18px;overflow:hidden}.brand-head{display:flex;justify-content:space-between;gap:16px;padding:18px;border-bottom:1px solid var(--line);background:#f8fafc}.brand-head p{margin:0;color:#344054;max-width:850px}.mini-kpis{display:flex;gap:10px}.mini-kpis div{background:white;border:1px solid var(--line);border-radius:8px;padding:9px 12px;min-width:82px;text-align:center}.mini-kpis span{display:block;color:var(--muted);font-size:12px}.mini-kpis b{font-size:22px}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:14px}.evidence{border:1px solid var(--line);border-radius:8px;padding:14px;background:white}.evidence.risk{background:#fffdf7}.top{display:flex;justify-content:space-between;gap:10px;margin-bottom:8px;color:#667085;font-size:13px;font-weight:700}.badge{display:inline-flex;border-radius:999px;padding:3px 9px;font-size:12px;font-weight:800}.badge.yt{background:var(--blue-soft);color:#1d4ed8}.badge.tt{background:#ffe2e5;color:#b42318}.signal{margin:0 0 12px;color:#344054;font-weight:650}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.grid div{background:#f8fafc;border:1px solid #e5edf5;border-radius:8px;padding:10px}.grid b{display:block;margin-bottom:4px}.grid p{margin:0;color:#475467}
+.section{margin-top:18px}.section h2{margin-bottom:12px}.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:1050px}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}thead th{background:#f8fafc;color:#344054;font-size:13px}tr:last-child td,tr:last-child th{border-bottom:0}.left{color:#344054}.status{display:inline-flex;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:800;white-space:nowrap}.status.notfound{background:var(--amber-soft);color:#92400e}.status.todo{background:var(--gray-soft);color:#64748b}
+.next{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.next .card b{display:block;margin-bottom:6px}.links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media(max-width:980px){main{padding:18px}.cards,.evidence-grid,.grid,.next,.links{grid-template-columns:1fr}.brand-head{display:block}.mini-kpis{margin-top:12px}}
+</style>
+</head>
+<body>
+<header>
+  <h1>P0 完整监控补齐：yAyusi / Yeaki</h1>
+  <p>这页只处理两个 P0 品牌：哪些已经能作为我方内容启发，哪些还不能算完整监控，下一步具体补什么证据。</p>
+</header>
+<main>
+  <div class="headline"><b>一句话判断：</b>两个品牌都已经有可学习打法，但还没有完整 picture。当前强项在 YouTube/ TikTok 的 affiliate、Amazon Finds、UGC 内容；弱项是官方账号归因、TikTok 原页互动、评论反馈和六平台覆盖。</div>
+  <div class="cards">
+    <div class="card green"><span>P0 品牌</span><strong>2</strong></div>
+    <div class="card green"><span>已整理证据</span><strong>8</strong></div>
+    <div class="card amber"><span>官方账号待核验</span><strong>12</strong></div>
+    <div class="card red"><span>高优先级缺口</span><strong>4</strong></div>
+  </div>
+  
+    <section class="brand">
+      <div class="brand-head">
+        <div>
+          <h2>yAyusi</h2>
+          <p>已能学习“痛点 hook + 自动跟拍功能演示 + Amazon 承接”，但官方账号和 TikTok 原页互动仍缺。</p>
+        </div>
+        <div class="mini-kpis">
+          <div><span>YouTube</span><b>2</b></div>
+          <div><span>TikTok</span><b>2</b></div>
+          <div><span>强证据</span><b>2</b></div>
+        </div>
+      </div>
+      <div class="evidence-grid">
+    <article class="evidence ">
+      <div class="top"><span class="badge yt">YouTube</span><span>已形成强证据</span></div>
+      <h3>feature_demo</h3>
+      <p class="signal">16085 views / 233 likes / 35 comments；Amazon Associate disclosure；短链最终导向 B0D3V3H1KY，tag=geaux-20。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>最高播放功能演示资产；核心卖点是 auto face tracking + with light + no app + 360 rotation。</p></div>
+        <div><b>剩余缺口</b><p>未抽评论语义；未确认是否品牌赠品/主动合作；未确认同款是否有官方账号二次分发。</p></div>
+        <div><b>我方启发</b><p>我方脚本可以先做“无需 App、一个人拍摄也能跟住”的完整功能演示。</p></div>
+        <div><b>下一动作</b><p>抽 20 条评论做 VOC；记录评论中是否问价格、兼容性、跟踪稳定性、灯光效果。</p></div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=myPYfwE98ts" target="_blank">打开证据</a>
+    </article>
+    
+    <article class="evidence risk">
+      <div class="top"><span class="badge yt">YouTube</span><span>已形成强证据但有归因风险</span></div>
+      <h3>painpoint_solution</h3>
+      <p class="signal">546 views / 2 likes / 1 comment；#ad + product_provided；短链最终导向 B0DF515JHH，tag=bestbuysrevie-20。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>痛点 hook 清楚：static shots / 人走出画面 / 需要自动跟拍。</p></div>
+        <div><b>剩余缺口</b><p>最终 ASIN 与标题品牌不一致，需要避免把这条当作纯 yAyusi 转化证据。</p></div>
+        <div><b>我方启发</b><p>可直接改成我方短视频开头：拍着拍着人不在画面里，再切自动跟踪解决。</p></div>
+        <div><b>下一动作</b><p>把这条作为脚本样本，不作为品牌投放规模样本；后续复查落地 ASIN 是否变化。</p></div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=FtU3aKrB-kE" target="_blank">打开证据</a>
+    </article>
+    
+    <article class="evidence risk">
+      <div class="top"><span class="badge tt">TikTok</span><span>caption 已确认，原页指标待补</span></div>
+      <h3>short_video_hashtag_demo</h3>
+      <p class="signal">oEmbed 已确认作者 Anita；caption 包含 #yayusi、ES-B180、#facetracking、#tripod；旧搜索片段显示 38 likes。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>TikTok 关键词铺设存在，适合搜索发现。</p></div>
+        <div><b>剩余缺口</b><p>未抓到当前 views/likes/comments；未确认商品卡/挂车；未确认 profile link；未确认评论反馈。</p></div>
+        <div><b>我方启发</b><p>caption 要同时铺品牌词、型号词、功能词，不要只写泛化 hashtag。</p></div>
+        <div><b>下一动作</b><p>用 Chrome 打开原页，补互动数、商品卡、评论截图和 profile link。</p></div>
+      </div>
+      <a href="https://www.tiktok.com/@anita_love310/video/7416137814884027679" target="_blank">打开证据</a>
+    </article>
+    
+    <article class="evidence risk">
+      <div class="top"><span class="badge tt">TikTok</span><span>caption 已确认，原页指标待补</span></div>
+      <h3>amazon_finds_demo</h3>
+      <p class="signal">oEmbed 已确认作者 Country Mile；caption 写 yAyusi Auto Face Tracking Tripod 360 Rotation with Light 和 #amazonfind；旧搜索片段显示 1801 likes。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>Amazon Finds 语境明确，说明 yAyusi 可进入发现型种草内容。</p></div>
+        <div><b>剩余缺口</b><p>未抓到当前 views/comments；未确认是否挂 Amazon 商品卡；未确认评论购买意图。</p></div>
+        <div><b>我方启发</b><p>我方可测试 Amazon Finds 式 caption：产品名 + 360 tracking + with light + Amazon 发现语境。</p></div>
+        <div><b>下一动作</b><p>优先打开这条，因为旧片段 likes 较高，最可能有评论反馈。</p></div>
+      </div>
+      <a href="https://www.tiktok.com/@countrymile_/video/7470390177295355143" target="_blank">打开证据</a>
+    </article>
+    </div>
+    </section>
+    
+  
+    <section class="brand">
+      <div class="brand-head">
+        <div>
+          <h2>Yeaki</h2>
+          <p>已能学习“creator starter kit + 对比型标题 + UGC caption”，但真实达人属性和 TikTok 评论仍缺。</p>
+        </div>
+        <div class="mini-kpis">
+          <div><span>YouTube</span><b>2</b></div>
+          <div><span>TikTok</span><b>2</b></div>
+          <div><span>强证据</span><b>2</b></div>
+        </div>
+      </div>
+      <div class="evidence-grid">
+    <article class="evidence ">
+      <div class="top"><span class="badge yt">YouTube</span><span>已形成强证据</span></div>
+      <h3>comparison_hook</h3>
+      <p class="signal">1949 views / 19 likes / 2 comments；commission disclosure；短链最终导向 B0DHGPJ78K，tag=bitemybunvideo-20。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>标题用 Why The Yeaki Beats Every Other Phone Tripod，属于对比/胜出型 hook。</p></div>
+        <div><b>剩余缺口</b><p>评论量少，用户反馈不足；未确认是否品牌合作，只能判定 affiliate/commission。</p></div>
+        <div><b>我方启发</b><p>我方可做 basic tripod vs auto tracking tripod，避免只做普通开箱。</p></div>
+        <div><b>下一动作</b><p>抽评论；拆视频里用于“beats”的对比维度。</p></div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=EygdIJGe-E8" target="_blank">打开证据</a>
+    </article>
+    
+    <article class="evidence ">
+      <div class="top"><span class="badge yt">YouTube</span><span>已形成强证据</span></div>
+      <h3>beginner_vlogging_kit</h3>
+      <p class="signal">575 views / 3 likes；#ad + paid link + Amazon affiliate；短链最终导向 B0DWJH4BHS，tag=worldid-20。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>把 Yeaki 包装成 Best Beginner Vlogging Kit，能服务新手创作者定位。</p></div>
+        <div><b>剩余缺口</b><p>未抓到评论；需区分真实达人内容和自动化产品概览。</p></div>
+        <div><b>我方启发</b><p>Listing/A+ 可以从 tripod 升级为 beginner creator starter kit。</p></div>
+        <div><b>下一动作</b><p>核验频道内容质量，判断是否值得找同类 review 账号。</p></div>
+      </div>
+      <a href="https://www.youtube.com/watch?v=dz6pzMJatME" target="_blank">打开证据</a>
+    </article>
+    
+    <article class="evidence risk">
+      <div class="top"><span class="badge tt">TikTok</span><span>caption 已确认，原页指标待补</span></div>
+      <h3>ugc_review</h3>
+      <p class="signal">oEmbed 已确认 Yeaki 71 Auto Face Tracking Tripod；caption 覆盖 content creators、360 face tracking、rechargeable remote、Galaxy S25 Ultra、ring light compatibility、#amazonfinds、#ugc。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>Yeaki 的 UGC 文案信息密度高，能把产品讲成 creator 工具。</p></div>
+        <div><b>剩余缺口</b><p>未抓到当前互动数、评论、商品卡；未确认是否 paid partnership。</p></div>
+        <div><b>我方启发</b><p>我方 brief 可要求达人必须同时覆盖人群、核心功能、兼容设备、配件兼容和 Amazon Finds。</p></div>
+        <div><b>下一动作</b><p>用 Chrome 打开原页，截取 caption、互动、评论和是否挂车。</p></div>
+      </div>
+      <a href="https://www.tiktok.com/@trippinwtrish/video/7518805726425369887" target="_blank">打开证据</a>
+    </article>
+    
+    <article class="evidence risk">
+      <div class="top"><span class="badge tt">TikTok</span><span>caption 已确认，原页指标待补</span></div>
+      <h3>amazon_finds_unboxing</h3>
+      <p class="signal">oEmbed 已确认 Yeaki 71、360 rotating face tracking、ring lights、@Amazon、#amazonfind；旧搜索片段显示 29 likes。</p>
+      <div class="grid">
+        <div><b>已确认价值</b><p>把 same-day / Amazon 购买便利和功能词绑在一起。</p></div>
+        <div><b>剩余缺口</b><p>未抓到当前互动数、评论、商品卡；旧笔记中的 paid 线索待原页确认。</p></div>
+        <div><b>我方启发</b><p>低成本 caption 可强调 Amazon 购买便利，但需配合清晰功能演示。</p></div>
+        <div><b>下一动作</b><p>确认 paid/affiliate 属性；若互动低，只作为 caption 样本不作为投放样本。</p></div>
+      </div>
+      <a href="https://www.tiktok.com/@4my7angels/video/7593867491445640503" target="_blank">打开证据</a>
+    </article>
+    </div>
+    </section>
+    
+  <section class="section">
+    <h2>官方账号与跨平台覆盖状态</h2>
+    
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>品牌</th><th>渠道</th><th>官方账号状态</th><th>依据</th><th>下一步</th></tr></thead>
+        <tbody><tr><th>yAyusi</th><td>YouTube</td><td><span class="status notfound">未发现品牌官方账号证据</span></td><td class="left">当前强证据来自 review/affiliate/Shopping 类内容，不是品牌自营频道。</td><td class="left">用品牌词 + official / store / tripod 复核频道和频道 About 页。</td></tr><tr><th>yAyusi</th><td>TikTok</td><td><span class="status notfound">未发现品牌官方账号证据</span></td><td class="left">当前证据来自 creator/UGC/Amazon Finds 视频，不是品牌自营账号。</td><td class="left">打开 TikTok 搜索页和视频作者主页，确认是否有官方号、profile link、商品橱窗。</td></tr><tr><th>yAyusi</th><td>Instagram</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有强证据；终端网络受限，不能完成外部复核。</td><td class="left">Chrome 搜索 site:instagram.com + 品牌词，确认是否有官方号或达人内容。</td></tr><tr><th>yAyusi</th><td>Pinterest</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有强证据；终端网络受限，不能完成外部复核。</td><td class="left">Chrome 搜索 site:pinterest.com + 品牌词，确认是否有产品 pin/导购页。</td></tr><tr><th>yAyusi</th><td>Facebook</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有强证据；终端网络受限，不能完成外部复核。</td><td class="left">Chrome 搜索 site:facebook.com + 品牌词，确认品牌页、达人帖、群组帖。</td></tr><tr><th>yAyusi</th><td>Reddit</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有近 90 天 Reddit 强证据。</td><td class="left">搜索 Reddit 近 90 天 brand + ASIN + tripod/vlogging kit，优先抓真实用户反馈。</td></tr><tr><th>Yeaki</th><td>YouTube</td><td><span class="status notfound">未发现品牌官方账号证据</span></td><td class="left">当前强证据来自 review/affiliate/Shopping 类内容，不是品牌自营频道。</td><td class="left">用品牌词 + official / store / tripod 复核频道和频道 About 页。</td></tr><tr><th>Yeaki</th><td>TikTok</td><td><span class="status notfound">未发现品牌官方账号证据</span></td><td class="left">当前证据来自 creator/UGC/Amazon Finds 视频，不是品牌自营账号。</td><td class="left">打开 TikTok 搜索页和视频作者主页，确认是否有官方号、profile link、商品橱窗。</td></tr><tr><th>Yeaki</th><td>Instagram</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有强证据；终端网络受限，不能完成外部复核。</td><td class="left">Chrome 搜索 site:instagram.com + 品牌词，确认是否有官方号或达人内容。</td></tr><tr><th>Yeaki</th><td>Pinterest</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有强证据；终端网络受限，不能完成外部复核。</td><td class="left">Chrome 搜索 site:pinterest.com + 品牌词，确认是否有产品 pin/导购页。</td></tr><tr><th>Yeaki</th><td>Facebook</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有强证据；终端网络受限，不能完成外部复核。</td><td class="left">Chrome 搜索 site:facebook.com + 品牌词，确认品牌页、达人帖、群组帖。</td></tr><tr><th>Yeaki</th><td>Reddit</td><td><span class="status todo">本轮未验证</span></td><td class="left">本地证据库没有近 90 天 Reddit 强证据。</td><td class="left">搜索 Reddit 近 90 天 brand + ASIN + tripod/vlogging kit，优先抓真实用户反馈。</td></tr></tbody>
+      </table>
+    </div>
+    
+  </section>
+  <section class="section">
+    <h2>下一步只做这 3 件</h2>
+    <div class="next">
+      <div class="card green"><b>1. TikTok 原页补互动</b>四条 TikTok 先补 views、likes、comments、商品卡/挂车、profile link。</div>
+      <div class="card green"><b>2. 评论反馈抽样</b>优先 yAyusi 最高播放 YouTube 和 Country Mile TikTok，判断真实用户关心点。</div>
+      <div class="card green"><b>3. 官方账号盘点</b>六个平台确认是否品牌自营；没有官方号就继续按达人/联盟/UGC 归因。</div>
+    </div>
+  </section>
+  <section class="links">
+    <div class="card"><b>完整路线图</b><a href="完整监控路线图_2026-W26.html">打开</a></div>
+    <div class="card"><b>P0 实跑结果</b><a href="P0实跑结果_yAyusi_Yeaki_2026-W26.html">打开</a></div>
+    <div class="card"><b>P0 证据 CSV</b><a href="p0_yayusi_yeaki_evidence_gap_2026-W26.csv">打开</a></div>
+    <div class="card"><b>官方账号 CSV</b><a href="p0_yayusi_yeaki_official_account_audit_2026-W26.csv">打开</a></div>
+    <div class="card"><b>统一入口</b><a href="../index.html">回首页</a></div>
+  </section>
+</main>
+</body>
+</html>

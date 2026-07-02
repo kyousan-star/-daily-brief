@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>P0 实跑结果 yAyusi / Yeaki</title>
+<style>
+:root{--bg:#f2f5f7;--ink:#17202a;--muted:#667085;--line:#d7e0ea;--panel:#fff;--navy:#102033;--green:#0f766e;--green-soft:#e6f6f2;--blue:#2563eb;--blue-soft:#eaf1ff;--amber:#b76e00;--amber-soft:#fff4dc;--red:#b42318;--red-soft:#fff1f0;--gray:#64748b;--gray-soft:#eef2f7}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC",sans-serif;line-height:1.55}header{background:var(--navy);color:white;padding:30px 34px;border-bottom:5px solid var(--green)}h1{margin:0 0 8px;font-size:30px}header p{margin:0;color:#cbd5e1;max-width:1120px}main{max-width:1400px;margin:0 auto;padding:24px 32px 46px}h2{margin:0 0 12px;font-size:22px}a{color:#174ea6;text-decoration:none;font-weight:800}
+.headline{background:#eef6ff;border-left:5px solid var(--blue);border-radius:8px;padding:16px;margin-bottom:16px}.headline b{font-size:18px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}.card{background:white;border:1px solid var(--line);border-radius:8px;padding:15px}.card span{display:block;color:var(--muted);font-size:13px}.card strong{font-size:28px}.card p{margin:5px 0 0;color:#475467}.card.green{background:var(--green-soft);border-color:#bfe7df}.card.amber{background:var(--amber-soft);border-color:#ffe0a3}.card.red{background:var(--red-soft);border-color:#ffd1cc}
+.section{margin-top:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{background:white;border:1px solid var(--line);border-radius:8px;padding:16px}.panel ul{margin:0;padding-left:20px}.panel li{margin:7px 0}
+.table-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:1120px}th,td{border-bottom:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}thead th{background:#f8fafc;color:#344054;font-size:13px}tr:last-child td,tr:last-child th{border-bottom:0}.left{color:#344054}.status{display:inline-flex;border-radius:999px;padding:3px 8px;font-size:12px;font-weight:800;white-space:nowrap}.status.red{background:var(--red-soft);color:var(--red)}.status.amber{background:var(--amber-soft);color:#92400e}.status.green{background:#d9f8ef;color:var(--green)}.links{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+@media(max-width:980px){main{padding:18px}.cards,.grid,.links{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>P0 实跑结果：yAyusi / Yeaki</h1>
+  <p>本页记录 2026-W26 继续补全 P0 的实际结果：哪些跑通、哪些被平台/浏览器限制、哪些历史线索可复用。</p>
+</header>
+<main>
+  <div class="headline"><b>结论：</b>完整监控可以继续推进，但本轮自动化没有拿到 TikTok/YouTube 原页互动和评论。真正新增价值来自 5 月旧项目复用：yAyusi 有 TikTok Shop 评价风险，Yeaki 有更清楚的 creator kit / ASIN 归因线索。</div>
+  <div class="cards">
+    <div class="card green"><span>复用历史证据</span><strong>28</strong><p>TikTok 短视频、Shop、VOC、Reddit stats。</p></div>
+    <div class="card green"><span>yAyusi 记录</span><strong>19</strong><p>含 TikTok Shop 评价风险。</p></div>
+    <div class="card green"><span>Yeaki 记录</span><strong>9</strong><p>含 creator kit 和 ASIN 归因。</p></div>
+    <div class="card red"><span>本轮原页抓取</span><strong>受限</strong><p>TikTok/YouTube 当前原页未能自动抓取。</p></div>
+  </div>
+
+  <section class="section grid">
+    <div class="panel">
+      <h2>现在更完整了什么</h2>
+      <ul>
+        <li>yAyusi 不只是 2 条 TikTok caption：旧项目显示至少 12 条相关 TikTok 短内容线索，主轴是 auto face tracking、Amazon Finds、affiliate。</li>
+        <li>yAyusi 有 TikTok Shop VOC：39 sold、4.0 rating、7 reviews；风险集中在 remote pairing、stability、tracking failure、setup learning curve。</li>
+        <li>Yeaki 不只是 YouTube：TikTok 线索覆盖 71 inch auto tracking、content creator kit、Amazon Finds；另有 B0DHGPJ78K ASIN 归因线索。</li>
+        <li>Reddit 对 yAyusi/Yeaki 仍不强：当前不能作为两个 P0 的主反馈来源。</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>仍然没有完整的部分</h2>
+      <ul>
+        <li>没有本周实时 TikTok views/likes/comments。</li>
+        <li>没有 TikTok 商品卡/挂车和 profile link 实时确认。</li>
+        <li>没有 YouTube 评论原文抽样。</li>
+        <li>没有 Instagram/Facebook/Pinterest 官方账号当前截图证据。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>本轮执行日志</h2>
+    
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>步骤</th><th>对象</th><th>状态</th><th>结果</th><th>下一动作</th></tr></thead>
+        <tbody><tr><th>TikTok 原页补互动</th><td>4 条 P0 TikTok 视频</td><td><span class="status red">blocked</span></td><td class="left">浏览器安全策略禁止打开 tiktok.com；不能继续尝试绕路。</td><td class="left">需要用户在允许的 Chrome/TikTok 环境手动打开，或提供截图/导出结果后再入库。</td></tr><tr><th>YouTube 评论抽样</th><td>yAyusi Top video / Yeaki comparison video</td><td><span class="status red">blocked</span></td><td class="left">浏览器安全策略禁止打开 youtube.com；终端 yt-dlp 同时 DNS 解析失败。</td><td class="left">后续需要浏览器允许 YouTube 或手动导出评论；当前不写评论情绪结论。</td></tr><tr><th>官方账号盘点</th><td>TikTok / YouTube / Instagram / Pinterest / Facebook / Reddit</td><td><span class="status amber">partial</span></td><td class="left">本地旧项目没有发现 yAyusi/Yeaki 官方账号强证据；当前可确认内容主要来自 creator/affiliate/Amazon Finds。</td><td class="left">下轮用可访问浏览器逐平台搜索并截图归档。</td></tr><tr><th>旧项目复用</th><td>2026-W19 TikTok/Reddit/Instagram 扩展记录</td><td><span class="status green">completed</span></td><td class="left">已导入 yAyusi/Yeaki TikTok 短视频、TikTok Shop、TikTok Shop review、Reddit stats。</td><td class="left">把这些作为历史强线索，不当作实时指标；下轮逐条刷新。</td></tr></tbody>
+      </table>
+    </div>
+    
+  </section>
+
+  <section class="section">
+    <h2>最有价值的补充证据</h2>
+    
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>品牌</th><th>证据类型</th><th>可见指标/状态</th><th>内容/反馈信号</th><th>对我方价值</th></tr></thead>
+        <tbody><tr><th>Yeaki</th><td>TikTok short video/search snippet</td><td class="left">not visible in accessibility tree</td><td class="left">Click on Amazon link below to place order; Yeaki 71 inch Auto Face Tracking Tripod; Amazon dp/B0DHGPJ78K/?tag=ngo20-20.</td><td class="left">适合做 Amazon Finds / affiliate caption 和导购链路样本。</td></tr><tr><th>yAyusi</th><td>TikTok Shop review/PDP</td><td class="left">39 sold; 4.0 rating; 7 reviews</td><td class="left">Remote pairing / remote reliability：Verified purchase review says the buyer is obsessed but cannot get the Bluetooth remote to work.</td><td class="left">这是 P0 最有价值的用户反馈线索：要把 remote、stability、tracking、setup 教程写进内容和 QA。</td></tr><tr><th>yAyusi</th><td>TikTok Shop review/PDP</td><td class="left">39 sold; 4.0 rating; 7 reviews</td><td class="left">Stability / tracking failure：Verified purchase review says it is light for travel but easy to fall over and face tracking/rotation does not work.</td><td class="left">这是 P0 最有价值的用户反馈线索：要把 remote、stability、tracking、setup 教程写进内容和 QA。</td></tr><tr><th>yAyusi</th><td>TikTok Shop review/PDP</td><td class="left">39 sold; 4.0 rating; 7 reviews</td><td class="left">Learning curve / setup education：Verified purchase review says the buyer is still learning how to use facial recognition and asks for ideas.</td><td class="left">这是 P0 最有价值的用户反馈线索：要把 remote、stability、tracking、setup 教程写进内容和 QA。</td></tr></tbody>
+      </table>
+    </div>
+    
+  </section>
+
+  <section class="section grid">
+    <div class="panel">
+      <h2>对 yAyusi 的新判断</h2>
+      <ul>
+        <li>不是单条爆款，而是 Amazon Finds / affiliate / TikTok Shop 弱闭环共同构成的站外面。</li>
+        <li>可学点：真实跟拍场景、无需 App、ES-B180 型号词、价格/亚马逊导购。</li>
+        <li>必须补的内容：remote pairing、稳定性、tracking failure、setup 教程，否则只学演示会放大售后风险。</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h2>对 Yeaki 的新判断</h2>
+      <ul>
+        <li>Yeaki 的主线更像 creator starter kit 和 71 inch auto tracking testimonial，互动弱于 yAyusi。</li>
+        <li>可学点：creator 人群、Galaxy/phone 兼容、ring light 兼容、remote 可充电、starter kit 组合表达。</li>
+        <li>下一步重点不是继续堆弱达人，而是找更强达人做“新手开播一套够不够”的场景测试。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="links">
+    <div class="card"><b>统一入口</b><br><a href="../index.html">回首页</a></div>
+    <div class="card"><b>截图证据页</b><br><a href="P0手动截图证据_yAyusi_Yeaki_2026-W26.html">打开</a></div>
+    <div class="card"><b>复用证据 CSV</b><br><a href="p0_tiktok_legacy_expansion_2026-W26.csv">打开</a></div>
+    <div class="card"><b>执行日志 CSV</b><br><a href="p0_completion_run_log_2026-W26.csv">打开</a></div>
+  </section>
+</main>
+</body>
+</html>
