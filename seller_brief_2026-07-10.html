@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日晨报 · 2026-07-10</title>
+  <style>
+    :root{
+      --bg:#0b0f14;--panel:#111820;--panel2:#151f29;--line:#263342;--text:#edf3f8;
+      --muted:#94a6b8;--soft:#c6d3df;--green:#34d399;--yellow:#fbbf24;--red:#fb7185;
+      --blue:#60a5fa;--cyan:#22d3ee;--violet:#a78bfa;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif;line-height:1.62}
+    a{color:#93c5fd;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 48px}
+    header{border:1px solid var(--line);background:linear-gradient(180deg,#121923,#0f151d);border-radius:8px;padding:22px;margin-bottom:18px}
+    h1{margin:0 0 8px;font-size:30px;letter-spacing:0}
+    .sub{color:var(--muted);font-size:14px}
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+    .filters button{background:#172232;color:var(--soft);border:1px solid #314155;border-radius:6px;padding:8px 12px;cursor:pointer;font-weight:650}
+    .filters button.off{opacity:.45}
+    section{border:1px solid var(--line);background:var(--panel);border-radius:8px;margin:14px 0;overflow:hidden}
+    .section-head{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:14px 16px;background:var(--panel2)}
+    .section-head h2{font-size:18px;margin:0}
+    .badge{font-size:12px;border:1px solid #3d4f63;background:#0e1520;color:#b8c8d8;border-radius:999px;padding:4px 9px;white-space:nowrap}
+    .content{padding:16px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .rate{background:#0d141d;border:1px solid #253446;border-radius:8px;padding:16px}
+    .rate .code{color:var(--muted);font-size:13px}
+    .rate .num{font-size:34px;font-weight:800;margin:4px 0;color:#f8fafc}
+    .rate .pair{font-size:13px;color:#9fb1c4}
+    ul{margin:0;padding-left:20px}
+    li{margin:10px 0}
+    .timeline{display:grid;gap:10px}
+    .event{border-left:3px solid var(--blue);background:#0d141d;border-radius:6px;padding:10px 12px}
+    .date{font-weight:800;color:#e5f0ff}
+    .tag{font-size:12px;font-weight:750;border-radius:4px;padding:2px 6px;margin-right:6px;background:#1b2a37;color:#d5e5f5;border:1px solid #31465a}
+    .official{color:var(--green)}.agency{color:var(--cyan)}.media{color:var(--yellow)}.none{color:var(--muted)}
+    .numhi{font-weight:800;color:#fff}
+    .group-title{margin:14px 0 8px;color:#dce8f5;font-weight:800;border-left:3px solid var(--cyan);padding-left:8px}
+    .sources{border-top:1px solid var(--line);margin-top:14px;padding-top:10px;color:var(--muted);font-size:12px}
+    .topline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+    .topcard{background:#0d141d;border:1px solid #26384a;border-radius:8px;padding:12px;color:#dce7f2}
+    .topcard strong{color:#fff}
+    @media (max-width:760px){.grid,.topline{grid-template-columns:1fr}h1{font-size:24px}.wrap{padding:16px 12px 32px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>每日晨报 · 2026-07-10（周五）</h1>
+      <div class="sub">跨境经营快照：汇率、促销日历、平台政策、算法研究、物流预警、AI与科技动态。来源按官方/监管/机构/媒体分层标注。</div>
+      <div class="filters" aria-label="板块筛选">
+        <button data-target="rates">汇率</button>
+        <button data-target="promotions">大促日历</button>
+        <button data-target="ecommerce">跨境电商</button>
+        <button data-target="algo">Amazon算法研究</button>
+        <button data-target="logistics">物流预警</button>
+        <button data-target="tech">科技</button>
+      </div>
+      <div class="topline">
+        <div class="topcard"><strong>Top 1</strong><br>Seller Forums 14小时前提醒 INFORM Act：高销量卖家需完成年度认证，未完成可能停用账号。</div>
+        <div class="topcard"><strong>Top 2</strong><br>Flexport 7月2日报告：TPEB美线运价继续上涨，7月运力达到三年高位，旺季备货仍需留安全垫。</div>
+        <div class="topcard"><strong>Top 3</strong><br>Marketplace Pulse：Amazon.com前1万卖家中中国卖家占<span class="numhi">55.9%</span>，美国卖家仍掌握<span class="numhi">65.3%</span> GMV。</div>
+      </div>
+    </header>
+
+    <section id="rates" data-section>
+      <div class="section-head"><h2>汇率</h2><span class="badge">官方脚本预取</span></div>
+      <div class="content">
+        <div class="grid">
+          <div class="rate"><div class="code">USD / CNH</div><div class="num">6.7822</div><div class="pair">1 USD = 6.7822 CNH</div></div>
+          <div class="rate"><div class="code">AED / CNH</div><div class="num">1.8468</div><div class="pair">1 AED = 1.8468 CNH</div></div>
+          <div class="rate"><div class="code">SAR / CNH</div><div class="num">1.8086</div><div class="pair">1 SAR = 1.8086 CNH</div></div>
+        </div>
+        <div class="sources">数据来源：fawazahmed0 currency API 脚本预取；数据时间：2026-07-11 02:10 UTC / 北京 22:10。</div>
+      </div>
+    </section>
+
+    <section id="promotions" data-section>
+      <div class="section-head"><h2>大促日历</h2><span class="badge">未来14天</span></div>
+      <div class="content">
+        <div class="timeline">
+          <div class="event"><span class="date">2026-07-10 至 2026-07-23</span> — <span class="tag none">暂无明确更新</span>About Amazon、Amazon Ads、Seller Forums、Amazon UAE/Saudi 可公开页面未显示新的美国站官方大促或 FBA 入仓截止日；FBA 入仓截止日口径为<span class="numhi">官方未公布</span>。</div>
+          <div class="event"><span class="date">2026-07-10 至 2026-07-13</span> — <span class="tag media">媒体/行业交叉验证</span>澳洲媒体称 Amazon Australia Prime Day 仍在进行至7月13日；非美国/中东官方卖家截止日，不能作为 FBA 备货规则。</div>
+          <div class="event"><span class="date">2026-07-18 至 2026-08-09</span> — <span class="tag media">零售竞争事件</span>Nordstrom Anniversary Sale 将于7月18日开始，对服饰/美容类广告流量有竞争参考；非 Amazon 官方活动。</div>
+        </div>
+        <div class="sources">数据来源：<a href="https://www.aboutamazon.com/">About Amazon</a>、<a href="https://advertising.amazon.com/resources/whats-new">Amazon Ads What's New</a>、<a href="https://sellercentral.amazon.com/seller-forums/">Amazon Seller Forums</a>、Amazon UAE/Saudi公开入口、Tom's Guide、Good Housekeeping。</div>
+      </div>
+    </section>
+
+    <section id="ecommerce" data-section>
+      <div class="section-head"><h2>跨境电商</h2><span class="badge">Amazon · 监管 · 行业</span></div>
+      <div class="content">
+        <ul>
+          <li><span class="tag official">官方确认</span><a href="https://sellercentral.amazon.com/seller-forums/">Amazon Seller Forums</a> 14小时前发布 INFORM Consumers Act 提醒：高销量第三方卖家阈值为<span class="numhi">12个月内200笔交易且5,000美元销售额</span>，需保持身份、地址、银行、邮箱、电话、税号信息可验证并完成年度认证；未完成可能导致账号停用。</li>
+          <li><span class="tag official">官方确认</span><a href="https://advertising.amazon.com/resources/whats-new">Amazon Ads What's New</a> 已专门查阅；页面显示 Campaign Manager beta、Ads Agent、Creative Agent 等入口，但公开静态页没有列出7月10日可确认的新报表/广告功能发布，广告产品变更暂按“暂无明确更新”。</li>
+          <li><span class="tag agency">监管/机构信息</span><a href="https://ustr.gov/">USTR</a> 首页最新新闻集中于7月2日 Section 301 强迫劳动相关听证；<a href="https://www.whitehouse.gov/news/">White House</a> 7月9日更新为商用飞机/发动机进口调整。未查到7月10日对中国3C电子跨境卖家直接生效的新进口税率或清关规则。</li>
+          <li><span class="tag media">行业交叉验证</span><a href="https://www.similarweb.com/blog/ecommerce/retail-insights/winning-the-digital-shelf/">Similarweb</a> 7月7日文章强调“数字货架”由搜索、内容、库存、评分、品牌一致性和数据使用共同决定；引用美国电商Q1 2026占零售<span class="numhi">16.9%</span>、同比增长<span class="numhi">9.8%</span>，并提示断货会压制搜索排名。</li>
+          <li><span class="tag media">行业交叉验证</span><a href="https://www.marketplacepulse.com/articles/china-won-amazons-top-10000-america-kept-its-top-100">Marketplace Pulse</a> 7月9日文章显示 Amazon.com 前1万卖家中中国卖家从2020年7月<span class="numhi">42.5%</span>升至<span class="numhi">55.9%</span>，美国卖家降至<span class="numhi">40.5%</span>；但美国卖家仍贡献该群体<span class="numhi">65.3%</span> GMV、Top 100 GMV的<span class="numhi">93.2%</span>。</li>
+          <li><span class="tag none">暂无明确更新</span>Amazon UAE / Saudi 公开卖家入口未查到7月10日对入仓、佣金、广告或配送有直接影响的新公告；如有 Seller Central 站内邮件则不在公开网页范围内。</li>
+        </ul>
+        <div class="sources">数据来源：Amazon官方（Seller Forums、Amazon Ads、About Amazon）、USTR、CBP新闻入口、Federal Register访问入口、White House、BIS入口、SimilarWeb、Marketplace Pulse、AP/TechCrunch/The Information交叉查看。</div>
+      </div>
+    </section>
+
+    <section id="algo" data-section>
+      <div class="section-head"><h2>Amazon算法研究</h2><span class="badge">论文与技术研究</span></div>
+      <div class="content">
+        <ul>
+          <li><span class="tag none">暂无近期发布</span><a href="https://www.amazon.science/news">Amazon Science News</a> 最新可见条目为7月1日碳强度追踪，未见7月10日前后新的搜索排序、推荐系统、广告竞价或 Rufus/COSMO 直接相关论文发布。</li>
+          <li><span class="tag official">官方研究动向</span>Amazon Science 页面仍将 Machine learning、Search and information retrieval、Operations research and optimization 作为研究分类；页面显示 Machine learning 相关<span class="numhi">233</span>条、Search and information retrieval <span class="numhi">19</span>条，但近期公开新闻不等于算法上线公告。</li>
+          <li><span class="tag agency">arXiv补充</span><a href="https://arxiv.org/abs/2604.07312">Intertemporal Demand Allocation for Inventory Control in Online Marketplaces</a>（2026-04）研究平台如何通过需求分配影响卖家库存与履约选择；对卖家的启发是库存稳定性和履约方式可能间接影响平台分流。</li>
+          <li><span class="tag agency">arXiv补充</span><a href="https://arxiv.org/abs/2512.00370">Multi-Task Temporal Fusion Transformer for Joint Sales and Inventory Forecasting in Amazon E-Commerce Supply Chain</a>（2025-11）报告销售MAPE降低<span class="numhi">12.7%</span>、库存MAPE降低<span class="numhi">12.4%</span>；属于第三方/作者研究，不代表 Amazon 官方算法变更。</li>
+        </ul>
+        <div class="sources">数据来源：<a href="https://www.amazon.science/news">amazon.science</a>、<a href="https://www.amazon.science/research-areas/machine-learning">Amazon Science Machine Learning</a>、Amazon Ads Tech Blog/技术入口、<a href="https://arxiv.org/">arXiv</a>。</div>
+      </div>
+    </section>
+
+    <section id="logistics" data-section>
+      <div class="section-head"><h2>物流预警</h2><span class="badge">美线 → 中东线</span></div>
+      <div class="content">
+        <div class="group-title">美线：中国 → 美国</div>
+        <ul>
+          <li><span class="tag agency">机构信息</span><a href="https://www.flexport.com/global-logistics-update/">Flexport</a> 7月2日物流更新称 TPEB 运价继续上涨，7月跨太平洋东行运力升至<span class="numhi">三年高位</span>；6月25日更新已提示 TPEB 运价连续第<span class="numhi">6</span>周上涨约<span class="numhi">10%</span>。对 FBA 补货：近期海运报价波动仍需保留缓冲。</li>
+          <li><span class="tag agency">监管/机构信息</span><a href="https://en.sse.net.cn/indices/scfinew.jsp">上海航运交易所 SCFI</a> 页面已查阅，可公开页显示 SCFI 指标字段但未在静态页暴露当日具体美西/美东数字；因此不硬填官方指数，正文以 Flexport 可见数字作为机构交叉信号。</li>
+          <li><span class="tag official">官方确认</span><a href="https://sellercentral.amazon.com/seller-forums/">Seller Forums</a> 近7天有个别 FBA 接收慢、计数误差讨论，包括“接收超过<span class="numhi">2周</span>库存未更新”等个案；未见 Amazon 官方确认美国 FBA 全网爆仓、封仓或 AGL/AMD 停线公告。AGL公开入口无可确认新运价公告。</li>
+        </ul>
+        <div class="group-title">中东线：中国 → UAE / 沙特</div>
+        <ul>
+          <li><span class="tag agency">监管/机构信息</span><a href="https://www.maritime.dot.gov/msci-advisories">MARAD</a>、<a href="https://www.ukmto.org/recent-incidents">UKMTO</a> 已查阅；未见7月10日公开信息显示霍尔木兹海峡关闭、UAE/沙特入港中断、Amazon UAE/Saudi FBA仓停运。</li>
+          <li><span class="tag official">船公司公告</span><a href="https://www.maersk.com/news/category/advisories">Maersk advisories</a>、COSCO公开新闻入口已查阅；未见对中国至UAE/沙特航线明确新增“停航/改道/保险费大涨X%”公告。当前业务口径为<span class="numhi">暂无明确中断</span>。</li>
+          <li><span class="tag none">暂无明确更新</span>Reuters/AP 航运相关公开检索未形成可交叉验证的“货进不了阿联酋/沙特、延期X天、FBA仓中断”结论；不把地区冲突消息包装成物流影响。</li>
+        </ul>
+        <div class="sources">数据来源：上海航运交易所、Flexport、COSCO、JOC检索、MARAD、UKMTO、船公司公告、Amazon Global Logistics (AGL)公开入口、Amazon Seller Forums、洛杉矶港/长滩港统计入口。</div>
+      </div>
+    </section>
+
+    <section id="tech" data-section>
+      <div class="section-head"><h2>科技</h2><span class="badge">过去24h</span></div>
+      <div class="content">
+        <ul>
+          <li><span class="tag official">官方确认</span><a href="https://openai.com/index/gpt-5-6/">OpenAI</a> 7月9日发布 GPT-5.6 系列：Sol、Terra、Luna，强调更高性能/成本比；官方称 Sol 在 Agents' Last Exam 得分<span class="numhi">53.6</span>，较 Claude Fable 5 高<span class="numhi">13.1</span>分，并引入 max/ultra 多智能体推理设置。</li>
+          <li><span class="tag official">官方确认</span><a href="https://openai.com/index/chatgpt-for-your-most-ambitious-work/">OpenAI</a> 同日发布 ChatGPT Work：可跨 Slack、Google Drive、Microsoft 365 等应用生成表格、幻灯片、文档和 Sites；官方称 Codex 每周用户超过<span class="numhi">500万</span>，其中超过<span class="numhi">100万</span>用于非软件工作。</li>
+          <li><span class="tag official">官方确认</span><a href="https://blog.google/innovation-and-ai/products/gemini-app/personal-intelligence-nano-banana-us-expansion/">Google AI Blog</a> 扩展 Gemini 个性化生图：美国符合条件用户可免费连接 Gmail、Google Photos、YouTube、Search 等上下文，让 Nano Banana 生成更贴合个人风格的图片；明确为 opt-in。</li>
+          <li><span class="tag official">官方确认</span><a href="https://nvidianews.nvidia.com/">NVIDIA Newsroom</a> 7月9日最新可见动态为 GeForce NOW Toronto RTX 5080 server；7月8日提到 Nemotron 在 LangChain Deep Agents Harness 上获得领先表现，AI基础设施和推理生态继续快速迭代。</li>
+          <li><span class="tag media">媒体交叉验证</span><a href="https://techcrunch.com/category/artificial-intelligence/">TechCrunch AI</a> 过去24小时报道 OpenAI GPT-5.6、Meta AI功能争议、Hugging Face CEO对开源AI观点、Google AI广告披露等；可作为产业动态交叉验证。</li>
+          <li><span class="tag media">媒体交叉验证</span><a href="https://www.theinformation.com/">The Information</a> 首页显示 Apple/OpenAI诉讼、OpenAI Stargate 数据中心开发商、Cursor Claude Cowork竞品、Meta Muse Spark 1.1等 AI 商业动态；部分内容需订阅，正文仅采用首页可见事实。</li>
+          <li><span class="tag official">生图/生成式工具</span><a href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">Google DiffusionGemma</a>（6月10日）仍是近期重要模型更新：26B MoE、推理激活<span class="numhi">3.8B</span>参数，官方称在专用GPU上最高<span class="numhi">4x</span>文本生成速度；Sora/Veo/Kling/Seedance/Seedream 过去24h未查到官方重大更新。</li>
+        </ul>
+        <div class="sources">数据来源：<a href="https://openai.com/news/">OpenAI Blog</a>、<a href="https://blog.google/innovation-and-ai/technology/ai/">Google AI Blog</a>、<a href="https://nvidianews.nvidia.com/">NVIDIA Newsroom</a>、<a href="https://techcrunch.com/category/artificial-intelligence/">TechCrunch AI</a>、<a href="https://www.theinformation.com/">The Information</a>。</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll('.filters button').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        var id = btn.getAttribute('data-target');
+        var sec = document.getElementById(id);
+        var hidden = sec.style.display === 'none';
+        sec.style.display = hidden ? '' : 'none';
+        btn.classList.toggle('off', !hidden);
+      });
+    });
+  </script>
+  <script type="application/json" id="pulse-data">
+{
+  "rates": {"USD": "6.7822", "AED": "1.8468", "SAR": "1.8086"},
+  "promotions": ["07-10 — 未来14天暂无美国站官方大促；FBA入仓截止日官方未公布", "07-13 — 第三方媒体称Amazon Australia Prime Day持续至7月13日，非美国/中东FBA规则", "07-18 — Nordstrom Anniversary Sale开始，属零售竞争事件而非Amazon官方活动"],
+  "top3": ["Amazon Seller Forums提醒INFORM Act：高销量卖家阈值为12个月200笔且5,000美元，未完成认证可能停用账号", "Flexport称TPEB运价连续第6周约10%上涨且7月运力达三年高位，美线补货需留缓冲", "Marketplace Pulse称Amazon.com前1万卖家中国卖家占55.9%，美国卖家仍贡献65.3% GMV"],
+  "ecommerce": ["INFORM Act认证提醒：高销量卖家12个月200笔且5,000美元需保持资料可验证", "Amazon Ads What's New未见7月10日可确认的新报表或功能发布", "USTR/White House未见7月10日对中国3C电子跨境卖家直接生效的新规则", "Similarweb称美国电商Q1 2026占零售16.9%且同比增长9.8%，断货会压制搜索排名", "Marketplace Pulse称中国卖家占Amazon.com前1万卖家55.9%，美国卖家掌握65.3% GMV"],
+  "algo": ["Amazon Science近期未发布搜索/推荐/广告/Rufus直接相关新论文", "arXiv在线市场库存需求分配研究提示平台分流可能影响卖家库存与履约选择", "销售库存联合预测TFT研究称销售MAPE降12.7%、库存MAPE降12.4%，非Amazon官方算法公告"],
+  "logistics": ["美线：Flexport称TPEB运价连续第6周约10%上涨，7月运力达三年高位", "美线：上海航运交易所SCFI页面已查但静态页未暴露当日美线具体数字", "美线：Seller Forums个案称FBA接收超过2周未更新，但无官方全网爆仓确认", "中东线：MARAD/UKMTO未见7月10日霍尔木兹关闭或UAE/沙特入港中断", "中东线：Maersk/COSCO公开入口未见中国至UAE/沙特新增停航或改道公告"]
+}
+  </script>
+</body>
+</html>
