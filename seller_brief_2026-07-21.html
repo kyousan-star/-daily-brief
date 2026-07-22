@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日晨报 2026-07-21</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f14;
+      --panel: #121923;
+      --panel-2: #172130;
+      --line: #2a3647;
+      --text: #e8eef7;
+      --muted: #9aa8bb;
+      --blue: #60a5fa;
+      --green: #42d392;
+      --amber: #f6c85f;
+      --red: #ff7b7b;
+      --cyan: #67e8f9;
+      --violet: #c084fc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 18px 44px; }
+    header {
+      border: 1px solid var(--line);
+      background: #101722;
+      border-radius: 8px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    .eyebrow { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    h1 { margin: 4px 0 10px; font-size: 28px; line-height: 1.25; letter-spacing: 0; }
+    .summary { color: var(--muted); margin: 0; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    button.filter {
+      border: 1px solid var(--line);
+      background: #182232;
+      color: var(--text);
+      border-radius: 6px;
+      padding: 7px 10px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    button.filter.off { color: var(--muted); background: #0f151f; border-color: #202b3b; }
+    .grid { display: grid; gap: 16px; }
+    section.card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--panel-2);
+    }
+    h2 { margin: 0; font-size: 18px; letter-spacing: 0; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      padding: 3px 9px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .content { padding: 15px 16px 16px; }
+    .rates { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .rate {
+      border: 1px solid var(--line);
+      background: #0f1621;
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .rate .code { color: var(--muted); font-size: 13px; }
+    .rate .num { font-size: 32px; font-weight: 800; line-height: 1.1; margin-top: 3px; }
+    .timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .timeline li, .item {
+      border-left: 3px solid var(--blue);
+      background: #0f1621;
+      padding: 10px 12px;
+      border-radius: 0 7px 7px 0;
+    }
+    .timeline strong { color: var(--amber); }
+    .items { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+    .item b, .numkey { color: #ffffff; font-weight: 800; }
+    .item .label {
+      color: #061018;
+      background: var(--green);
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin-right: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .item .label.inst { background: var(--blue); color: #061018; }
+    .item .label.media { background: var(--amber); color: #17110a; }
+    .item .label.none { background: #45566d; color: #e8eef7; }
+    .group-title {
+      color: var(--cyan);
+      font-size: 14px;
+      font-weight: 800;
+      margin: 14px 0 8px;
+    }
+    .group-title:first-child { margin-top: 0; }
+    .sources {
+      margin-top: 13px;
+      padding-top: 10px;
+      border-top: 1px dashed #334156;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .sources span { color: #cbd5e1; }
+    .muted { color: var(--muted); }
+    .note { color: var(--muted); font-size: 12px; margin-top: 8px; }
+    @media (max-width: 720px) {
+      .wrap { padding: 18px 12px 32px; }
+      header { padding: 16px; }
+      h1 { font-size: 22px; }
+      .rates { grid-template-columns: 1fr; }
+      .card-head { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Scheduled Morning Brief</div>
+      <h1>每日晨报｜2026-07-21 周二</h1>
+      <p class="summary">口径：优先官方、监管和一手来源；行业媒体用于交叉验证。未发现可核验新增信息的项目，正文明确写为“暂无明确更新”。</p>
+      <div class="filters" aria-label="板块筛选">
+        <button class="filter" data-target="rates">汇率</button>
+        <button class="filter" data-target="promotions">大促日历</button>
+        <button class="filter" data-target="ecommerce">跨境电商</button>
+        <button class="filter" data-target="algo">Amazon算法研究</button>
+        <button class="filter" data-target="logistics">物流预警</button>
+        <button class="filter" data-target="tech">科技</button>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" id="rates" data-section="rates">
+        <div class="card-head">
+          <h2>汇率</h2>
+          <span class="badge">预取 API 数据</span>
+        </div>
+        <div class="content">
+          <div class="rates">
+            <div class="rate"><div class="code">1 USD = CNH</div><div class="num">6.7695</div></div>
+            <div class="rate"><div class="code">1 AED = CNH</div><div class="num">1.8433</div></div>
+            <div class="rate"><div class="code">1 SAR = CNH</div><div class="num">1.8052</div></div>
+          </div>
+          <div class="note">数据时间：2026-07-22 02:11 UTC / 北京 22:11。按任务预取数据直接使用，未再访问 XE。</div>
+          <div class="sources">数据来源：<span>fawazahmed0 currency API 预取结果</span></div>
+        </div>
+      </section>
+
+      <section class="card" id="promotions" data-section="promotions">
+        <div class="card-head">
+          <h2>大促日历</h2>
+          <span class="badge">未来 14 天｜2026-07-21 起</span>
+        </div>
+        <div class="content">
+          <ul class="timeline">
+            <li><strong>2026-07-21</strong>：<span class="muted">官方确认</span> Prime Day 2026 已于 <b>2026-06-23 至 2026-06-26</b> 结束；About Amazon、Seller Forums、Amazon UAE/Saudi 未见未来 14 天内新的 Amazon 官方大促开始日。<a href="https://www.aboutamazon.com/news/retail/amazon-prime-day-june-2026">About Amazon</a></li>
+            <li><strong>2026-07-21</strong>：<span class="muted">官方确认</span> Seller Forums 公告显示 Prime Big Deal Days deal submission window 已从 <b>2026-07-08</b> 开放至 <b>2026-09-08</b>，Black Friday/Cyber Monday deal submission window 至 <b>2026-10-20</b>；这是提报窗口，不是活动开卖日。<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/3e31fbb7-04e0-4ed4-873e-f74b1052e2ff">Seller Forums</a></li>
+            <li><strong>2026-07-21 至 2026-08-04</strong>：<span class="muted">官方确认</span> 未来 14 天内官方未公布新的 FBA 入仓截止日；已公布的 Prime Big Deal Days 入仓截止为 <b>2026-09-02</b> AWD、<b>2026-09-09</b> minimal splits、<b>2026-09-16</b> Amazon-optimized splits，均不在本 14 天窗口内。<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/3e31fbb7-04e0-4ed4-873e-f74b1052e2ff">来源</a></li>
+            <li><strong>2026-08-01</strong>：<span class="muted">监管/机构信息</span> 暂无 Amazon 官方大促节点；Seller Forums 历史 playbook 提到 2025 年 8 月 1 日可查看 11 月 Capacity Monitor，但 2026 Holiday 官方帖已改为直接给出 9-10 月入仓截止，不把 8 月 1 日写作 2026 官方截止日。</li>
+          </ul>
+          <div class="sources">数据来源：<span>About Amazon、Amazon Ads、Amazon Seller Central / Seller Forums、Amazon UAE、Amazon Saudi</span></div>
+        </div>
+      </section>
+
+      <section class="card" id="ecommerce" data-section="ecommerce">
+        <div class="card-head">
+          <h2>跨境电商</h2>
+          <span class="badge">Amazon 官方 · 监管 · 行业交叉验证</span>
+        </div>
+        <div class="content">
+          <ul class="items">
+            <li class="item"><span class="label">官方确认</span><b>2026 假日活动费用和入仓截止已发布</b>：Prime Big Deal Days 与 BFCM 提报窗口已开放；Best Deals、Lightning Deals、Prime Exclusive Price Discounts 费用维持 Prime Day 口径，即 <b>$100</b> upfront fee + <b>1.5%</b> promotional sales，变量费封顶 <b>$5,000</b>；Holiday peak fulfillment fees 为 <b>2026-10-15 至 2027-01-14</b>，平均 <b>$0.32/件</b>，并叠加 <b>3.5%</b> fuel/logistics surcharge。<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/3e31fbb7-04e0-4ed4-873e-f74b1052e2ff">来源</a></li>
+            <li class="item"><span class="label">官方确认</span><b>Featured Offer 资格门槛变化</b>：Amazon 7 月开始逐步移除 Featured Offer 的卖家资格预筛选，全球站点将在 <b>2026 年底</b>完成；排名仍基于价格、配送速度、绩效等客户体验信号，不保证获得 Featured Offer。<a href="https://sellercentral.amazon.com/seller-forums/discussions?categories%5B%5D=amzn1.spce.category.8b1ad9d2&dateRange=threeMonths&replies=repliesAll&sortBy=lastActivityTime">Seller Forums Announcements</a></li>
+            <li class="item"><span class="label">官方确认</span><b>账号安全/登录方式变更</b>：已单独检索 passkey、two-factor、login requirement change，并访问 Seller Forums Announcements；Amazon 公告称从 <b>2026 年 7 月</b>向所有 Seller Central 账号扩展 passkey，部分账号会在 <b>2026 年晚些时候</b>要求使用。<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/8cc9ea8c-6e1c-4c32-812c-28de469f3df4">来源</a></li>
+            <li class="item"><span class="label">官方确认</span><b>重大费用政策复查</b>：复查 “fuel and logistics-related surcharge 2026 update/latest rates” 后，当前官方费率仍为美国/加拿大 FBA、Remote Fulfillment 自 <b>2026-04-17</b> 起 <b>3.5%</b>，美国 FBA 平均约 <b>$0.17/件</b>；Holiday 2026 帖确认该 3.5% 仍会叠加到假日 peak fulfillment fees 上，未见取消或降档。<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/7cbc0233-ee5b-4359-978a-dee7cad5c6f4">Fuel surcharge</a> · <a href="https://sellercentral.amazon.com/seller-forums/discussions/t/3e31fbb7-04e0-4ed4-873e-f74b1052e2ff">Holiday update</a></li>
+            <li class="item"><span class="label inst">监管/机构信息</span><b>美国进口/3C 合规</b>：CBP 当前说明显示，中国低值包裹不再享受 <b>$800</b> de minimis 免税待遇；进口人需支付适用税费并完成申报。USTR 7 月 20 日最新动态主要涉及加拿大/巴西，不是中国 3C 新规；Section 301 中国四年复查页面仍处于 <b>2026-05-06</b> 启动第二轮复查后的状态。<a href="https://www.help.cbp.gov/s/article/Article-1915?language=en_US">CBP</a> · <a href="https://ustr.gov/federal-register-notices">USTR notices</a> · <a href="https://ustr.gov/trade-topics/enforcement/section-301-investigations/section-301-china-technology-transfer/china-section-301-tariff-actions-and-exclusion-process/four-year-review">Section 301</a></li>
+            <li class="item"><span class="label">官方确认</span><b>Amazon Ads 产品更新</b>：Amazon Ads “What’s new” 专页今日未见 7 月 21 日新条目；近期可执行更新包括 Sponsored Brands Brand Gallery、AI-powered Sponsored Brands collections，以及 REC 从 7 月起把 AI-generated shopping prompts 扩展到站外展示广告，Amazon 称站内与 Sponsored Brands prompts 互动后购买的客户中 <b>7/10</b> 为新客。<a href="https://advertising.amazon.com/resources/whats-new">What's new</a> · <a href="https://advertising.amazon.com/library/news/creative-tools-rec">REC</a></li>
+            <li class="item"><span class="label none">暂无明确更新</span><b>Amazon UAE/沙特</b>：实际查阅 Amazon UAE、Saudi 卖家入口及相关 Seller Forums；未见 7 月 21 日 UAE/沙特站点新的官方大促、FBA 仓运营中断或配送暂停公告。中东 removal fee 暂不收取的论坛帖仍属既有政策，未见当天细则更新。<a href="https://sell.amazon.ae/">UAE</a> · <a href="https://sell.amazon.sa/">Saudi</a></li>
+            <li class="item"><span class="label media">媒体/行业交叉验证</span><b>SimilarWeb</b>：实际访问 Similarweb Blog/Insights；7 月 20 日最新文章偏 AI 搜索问题发现，非 Amazon 专文。Ecommerce/Amazon Insights 最新可用 Amazon 相关内容仍是数字货架、Retail Intelligence 和 Amazon SEO 常青文章，今天不作为事实政策来源。<a href="https://www.similarweb.com/blog/">Blog</a> · <a href="https://www.similarweb.com/blog/ecommerce/">Ecommerce</a></li>
+            <li class="item"><span class="label media">媒体/行业交叉验证</span><b>Marketplace Pulse</b>：7 月 16 日文章称 Amazon AI 推荐经常越过传统搜索排名；7 月 9 日文章显示中国卖家占 Amazon.com Top 10,000 的 <b>55.9%</b>，美国卖家占 <b>40.5%</b>，说明卖家结构和 AI 推荐都在改变站内流量竞争。<a href="https://www.marketplacepulse.com/">最新列表</a> · <a href="https://www.marketplacepulse.com/articles/china-won-amazons-top-10000-america-kept-its-top-100">Top 10,000</a></li>
+          </ul>
+          <div class="sources">数据来源：<span>Amazon官方、Amazon Seller Forums、Amazon Ads、Amazon UAE/Saudi、CBP、USTR、Federal Register/BIS/USITC 检索、SimilarWeb、Marketplace Pulse</span></div>
+        </div>
+      </section>
+
+      <section class="card" id="algo" data-section="algo">
+        <div class="card-head">
+          <h2>Amazon算法研究</h2>
+          <span class="badge">搜索 · 推荐 · 广告模型</span>
+        </div>
+        <div class="content">
+          <ul class="items">
+            <li class="item"><span class="label">官方确认</span><b>冷启动搜索排序</b>：Amazon Science 2026 论文 “Behavioral feature boosting via substitute relationships for e-commerce search” 用替代品关系聚合点击、加购、购买、评分等行为信号，解决新品行为数据不足导致的搜索可见度问题；卖家侧含义是新品更依赖相似品类行为邻域和准确属性匹配。<a href="https://www.amazon.science/publications/behavioral-feature-boosting-via-substitute-relationships-for-e-commerce-search">论文</a></li>
+            <li class="item"><span class="label">官方确认</span><b>推荐系统评估</b>：Amazon Science SIGIR 2026 “SAER” 用 LLM 作为 judge，对推荐算法候选做 pointwise filtering 和 pairwise comparison，目标是减少 nDCG 等离线指标与真实客户偏好的偏差；AI 推荐不只看传统自然排名。<a href="https://www.amazon.science/research-areas/search-and-information-retrieval?0000016e-8ca2-d8c3-a56e-febb74410001-page=2">Amazon Science</a></li>
+            <li class="item"><span class="label">官方确认</span><b>搜索结果抑制</b>：CoCo “Conformal confidence suppression” 研究提出在特定上下文抑制可能无关、误导或冗余内容；对 listing 的启示是高置信匹配、清晰属性和低歧义内容比单纯增加关键词堆叠更重要。<a href="https://www.amazon.science/research-areas/search-and-information-retrieval?0000016e-8ca2-d8c3-a56e-febb74410001-page=2">Amazon Science</a></li>
+            <li class="item"><span class="label">官方确认</span><b>广告算法方向</b>：Amazon Ads 技术说明 signal-based marketing 在 Safari/Firefox/iOS 等传统标识受限环境下，使 Amazon DSP addressability 提升 <b>20%-30%</b>；广告系统将更多依赖购物、流媒体、上下文和 RTB 信号。<a href="https://advertising.amazon.com/library/guides/signal-based-marketing">Amazon Ads Tech Blog</a></li>
+            <li class="item"><span class="label none">暂无明确更新</span><b>arXiv</b>：检索 Amazon 作者 + e-commerce/search/recommendation/advertising 关键词，未发现 7 月 21 日可确认的新发 Amazon 电商搜索、推荐或竞价论文；今日不把第三方未核实论文当作 Amazon 官方研究发布。</li>
+          </ul>
+          <div class="sources">数据来源：<span>amazon.science、Amazon Ads Tech Blog、arXiv</span></div>
+        </div>
+      </section>
+
+      <section class="card" id="logistics" data-section="logistics">
+        <div class="card-head">
+          <h2>物流预警</h2>
+          <span class="badge">物流预警</span>
+        </div>
+        <div class="content">
+          <div class="group-title">美线：中国 → 美国</div>
+          <ul class="items">
+            <li class="item"><span class="label inst">监管/机构信息</span><b>运价仍在高位，东岸涨幅更快</b>：上海航运交易所 2026-07-17 CCFI 显示综合指数 <b>1910.67</b>、周涨 <b>2.0%</b>；美西 <b>1559.94</b>、周涨 <b>1.4%</b>，美东 <b>1778.34</b>、周涨 <b>8.9%</b>。Flexport 7 月 16 日交叉验证称 Asia-USWC 现货较 5 月中旬约 <b>+120%</b>，Asia-USEC 约 <b>+85%</b>，TPEB 本周 blank sailing 仅 <b>0.4%</b>。<a href="https://www.sse.net.cn/index/singleIndex?indexType=ccfi">SSE CCFI</a> · <a href="https://www.flexport.com/global-logistics-update/july-16-2026-glu-newsletter/">Flexport</a></li>
+            <li class="item"><span class="label">官方确认</span><b>船公司附加费继续抬升美线成本</b>：COSCO 7 月 15 日美国线 GRI 为 <b>$1,600/20'</b>、<b>$2,000/40'</b>、<b>$2,250/40HC</b>；MSC 7 月 20 日宣布 Asia 至 USEC/US Gulf 经 Panama Canal 货物自 <b>2026-08-19</b> 起加收 <b>$100/TEU</b> PCS。<a href="https://world.lines.coscoshipping.com/na/en/news/businessnews/1/2">COSCO</a> · <a href="https://www.msc.com/en/newsroom/customer-advisories/2026/july/pcs-trade-asia-to-usec-and-us-gulf-coast">MSC</a></li>
+            <li class="item"><span class="label">官方确认</span><b>港口与 AGL</b>：洛杉矶港 6 月处理 <b>1,002,734 TEU</b>，同比 <b>+12%</b>，官方称无船舶积压或货物延误；长滩港 6 月 <b>779,331 TEU</b>、同比 <b>+10.6%</b>。Amazon Global Logistics 官方页仍显示中国/越南至美国 FBA/AWD 服务和新 FBA 卖家 <b>8%</b> base ocean freight 折扣，今日未见公开 AGL/AMD 新运价或停线公告。<a href="https://portoflosangeles.org/references/2026-news-releases/news_071526_june_cargo">LA Port</a> · <a href="https://www.porttechnology.org/port-of-long-beach-posts-third-busiest-june-on-record/">Long Beach</a> · <a href="https://sell.amazon.com/programs/amazon-global-logistics">AGL</a></li>
+          </ul>
+          <div class="group-title">中东线：中国 → 阿联酋/沙特</div>
+          <ul class="items">
+            <li class="item"><span class="label inst">监管/机构信息</span><b>红海/亚丁湾风险仍有效</b>：MARAD advisory 2026-006 对 Red Sea、Bab el Mandeb、Gulf of Aden 等区域仍为 Active，有效期 <b>2026-03-26 至 2026-09-22</b>，并记录 2023-2025 年超过 <b>100</b> 起 Houthi 商船攻击；Flexport 仍建议相关绕航按 <b>10-14 天</b>额外航程做缓冲。<a href="https://www.maritime.dot.gov/msci/2026-006-red-sea-bab-el-mandeb-strait-gulf-aden-arabian-sea-and-somali-basin-houthi-attacks">MARAD</a> · <a href="https://www.flexport.com/global-logistics-update/july-16-2026-glu-newsletter/">Flexport</a></li>
+            <li class="item"><span class="label media">媒体交叉验证</span><b>Bab el-Mandeb 对沙特相关货流构成新增风险</b>：AP 7 月 21 日报道 Houthi 宣称关闭 Bab el-Mandeb 给 Saudi-linked shipping，称已迫使 <b>6</b> 艘船改道但未获独立确认；该海峡通常承载约 <b>12%</b> 全球贸易和 <b>1/4</b> 全球集装箱贸易，绕好望角会增加 <b>1-2 周</b>航程。<a href="https://apnews.com/article/yemen-saudi-houthis-attack-shipping-red-sea-4e25fbdad821762e478173e6308884fb">AP</a></li>
+            <li class="item"><span class="label none">暂无明确更新</span><b>Amazon UAE/沙特 FBA 仓</b>：查阅 Amazon UAE/Saudi 卖家入口、Seller Forums 与船公司公告，未见 UAE/沙特 FBA 仓被袭、封仓、配送暂停或官方入库中断确认；按公开来源口径，今日可确认的 Amazon 仓网中断公告为 <b>0</b> 条，当前风险主要在海运保险、绕航和船期缓冲。<a href="https://sell.amazon.ae/">Amazon UAE</a> · <a href="https://sell.amazon.sa/">Amazon Saudi</a></li>
+          </ul>
+          <div class="sources">数据来源：<span>上海航运交易所、宁波航运交易所、Flexport、COSCO、JOC、MARAD、UKMTO、船公司公告、Amazon Global Logistics (AGL)、Port of Los Angeles、Port of Long Beach</span></div>
+        </div>
+      </section>
+
+      <section class="card" id="tech" data-section="tech">
+        <div class="card-head">
+          <h2>科技</h2>
+          <span class="badge">过去 24h 重点</span>
+        </div>
+        <div class="content">
+          <ul class="items">
+            <li class="item"><span class="label">官方确认</span><b>OpenAI 官方</b>：OpenAI Newsroom 7 月 21 日发布董事会任命 David Vélez 与 Robin Vince；过去 24 小时未见 ChatGPT/Sora 新产品公告，近期产品更新仍是 <b>GPT-5.6</b>、ChatGPT work update 与 GPT-Live。<a href="https://openai.com/news/company-announcements/">OpenAI Newsroom</a></li>
+            <li class="item"><span class="label media">媒体/行业交叉验证</span><b>ChatGPT 竞争压力</b>：The Information 报道 Sam Altman 宣布 “code red” 集中资源改进 ChatGPT，并推迟广告等项目；TechCrunch 同期报道 OpenAI 首款硬件据称为可移动无屏音箱，以及 OpenAI 回应 Apple trade secret lawsuit。<a href="https://www.theinformation.com/articles/openai-ceo-declares-code-red-combat-threats-chatgpt-delays-ads-effort/">The Information</a> · <a href="https://techcrunch.com/2026/07/">TechCrunch</a></li>
+            <li class="item"><span class="label none">暂无明确更新</span><b>Google AI/Gemini 官方</b>：Google AI Blog 今日未见过去 24 小时核心 Gemini/Veo 新产品发布；最新可核验官方汇总仍是 6 月 AI updates，包含 Gemini 3.5 Flash computer use、Nano Banana 2 Lite、Gemini Omni Flash API preview、Gemini 3.5 Live Translate 等。<a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/">Google AI Blog</a></li>
+            <li class="item"><span class="label">官方确认</span><b>NVIDIA</b>：NVIDIA Newsroom 7 月 20 日 SIGGRAPH 相关更新继续发酵，Agent Toolkit 扩展 Omniverse libraries，用于让 AI agents 构建 simulation-ready worlds；对 3D、视频、广告资产生产管线有工具层影响。<a href="https://nvidianews.nvidia.com/news/nvidia-ope%3D?page=1">NVIDIA Newsroom</a></li>
+            <li class="item"><span class="label media">媒体/行业交叉验证</span><b>Claude/Gemini/AI 行业</b>：TechCrunch 过去 24 小时覆盖 Anthropic 广告争议、Apple 向 iOS 27 public beta 开放新 Siri AI、Google 遭遇新的 AI training lawsuit、DeepMind CEO 呼吁独立 frontier AI 标准机构；均属行业信号，非 Amazon 运营事实。<a href="https://techcrunch.com/2026/07/">TechCrunch AI</a></li>
+            <li class="item"><span class="label none">暂无明确更新</span><b>生图/生视频工具</b>：逐项检索 Seedance、Seedream、Kling、Sora、Veo 相关更新，重点官方源未见 7 月 21 日新能力发布；可用背景更新仍是 Google Veo 3.1 支持 9:16、1080p/4K upscale，Kling 3.0 强调原生音频、多镜头、口型同步和 <b>15 秒</b>连续输出，今日不包装为新发布。<a href="https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/">Veo</a> · <a href="https://kling.ai/blog/kling-video-3-0-ai-director-features-guide">Kling</a></li>
+          </ul>
+          <div class="sources">数据来源：<span>OpenAI Blog、Google AI Blog、NVIDIA Newsroom、TechCrunch AI、The Information、Kling AI、Google Veo</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    document.querySelectorAll('.filter').forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = document.querySelector('[data-section="' + button.dataset.target + '"]');
+        if (!target) return;
+        const hidden = target.style.display === 'none';
+        target.style.display = hidden ? '' : 'none';
+        button.classList.toggle('off', !hidden);
+      });
+    });
+  </script>
+  <script type="application/json" id="pulse-data">
+{
+  "rates": {"USD": "6.7695", "AED": "1.8433", "SAR": "1.8052"},
+  "promotions": ["07-21 — 暂无未来14天内新的 Amazon 官方大促开始日；Prime Day 2026 已于06-26结束", "07-21 — Prime Big Deal Days提报窗口已开放至09-08，BFCM提报窗口至10-20", "07-21 — 未来14天官方未公布新的FBA入仓截止日；PBBD入仓截止最早为09-02 AWD", "08-01 — 未确认2026官方大促或FBA截止日，不写作官方节点"],
+  "top3": ["2026 Holiday官方帖确认PBBD/BFCM费用为$100 upfront fee + 1.5%销售额且封顶$5,000，Holiday peak fulfillment fees平均$0.32/件并叠加3.5%附加费", "Seller Central passkey自2026年7月扩展至所有账号，部分账号将在2026年晚些时候要求使用", "美线CCFI 07-17美东周涨8.9%，Flexport称Asia-USWC现货较5月中旬约+120%、Asia-USEC约+85%"],
+  "ecommerce": ["2026 Holiday官方帖确认PBBD/BFCM提报窗口已开，促销费为$100 + 1.5%且封顶$5,000", "Featured Offer卖家资格预筛选7月开始移除，2026年底全球完成但排序规则不变", "账号安全变更：Seller Central passkey自2026年7月扩展，部分账号晚些时候要求使用", "FBA/MCF燃油与物流附加费复查仍为3.5%，美国FBA平均约$0.17/件且会叠加Holiday peak fees", "CBP现行口径下中国低值包裹不再享受$800 de minimis免税", "Amazon UAE/沙特暂无7月21日新的官方大促、FBA仓中断或配送暂停公告"],
+  "algo": ["BFS用替代品关系为新品聚合点击/加购/购买信号，提升冷启动搜索可见度", "SAER用LLM评估推荐算法候选，说明AI推荐可能弱化传统自然排名单一指标", "CoCo通过置信度抑制无关或冗余搜索结果，强调高置信匹配优先于关键词堆叠"],
+  "logistics": ["美线：SSE CCFI 07-17综合1910.67周涨2.0%，美西1559.94周涨1.4%，美东1778.34周涨8.9%", "美线：Flexport称Asia-USWC现货较5月中旬约+120%，Asia-USEC约+85%，TPEB blank sailing本周0.4%", "美线：COSCO 7月15日美国线GRI为$1,600/20'、$2,000/40'、$2,250/40HC", "美线：MSC将自08-19对Asia至USEC/US Gulf经Panama Canal货物加收$100/TEU PCS", "中东线：MARAD红海/亚丁湾advisory有效至2026-09-22，历史记录超过100起Houthi商船攻击", "中东线：AP称Bab el-Mandeb约承载12%全球贸易和1/4全球集装箱贸易，绕好望角增加1-2周"]
+}
+  </script>
+</body>
+</html>
