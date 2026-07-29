@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日晨报 · 2026-07-28</title>
+  <style>
+    :root{
+      --bg:#0b1020;--panel:#11182a;--panel2:#0f1726;--line:#263149;--text:#e7ecf6;--muted:#9aa7bd;
+      --blue:#5aa9ff;--green:#54d38a;--amber:#ffc857;--red:#ff6b6b;--violet:#b79cff;--cyan:#55d6d4;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.58}
+    a{color:#8cc8ff;text-decoration:none} a:hover{text-decoration:underline}
+    .wrap{max-width:1180px;margin:0 auto;padding:28px 18px 44px}
+    header{border:1px solid var(--line);background:linear-gradient(180deg,#151d31,#101729);border-radius:12px;padding:22px;margin-bottom:16px}
+    h1{margin:0 0 8px;font-size:28px;letter-spacing:0}
+    .sub{color:var(--muted);font-size:14px}
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+    .filters button{border:1px solid #33425f;background:#18233a;color:var(--text);border-radius:8px;padding:8px 12px;cursor:pointer;font-size:14px}
+    .filters button.off{opacity:.45;background:#0e1525}
+    .grid{display:grid;gap:16px}
+    section{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:18px}
+    section.hidden{display:none}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+    h2{margin:0;font-size:20px}
+    .badge{font-size:12px;color:#06111f;background:var(--blue);border-radius:999px;padding:4px 9px;font-weight:700}
+    .badge.green{background:var(--green)} .badge.amber{background:var(--amber)} .badge.violet{background:var(--violet)} .badge.cyan{background:var(--cyan)}
+    .rates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .rate-card{background:var(--panel2);border:1px solid #25314a;border-radius:10px;padding:16px}
+    .ccy{font-size:13px;color:var(--muted)} .num{font-size:34px;font-weight:800;margin-top:4px}
+    .note,.sources{color:var(--muted);font-size:12px;margin-top:12px}
+    .timeline{display:grid;gap:10px}
+    .time-item{display:grid;grid-template-columns:118px 1fr;gap:12px;align-items:start;background:var(--panel2);border:1px solid #26324a;border-radius:10px;padding:11px}
+    .date{font-weight:800;color:#fff}
+    ul.news{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    ul.news li{background:var(--panel2);border:1px solid #26324a;border-radius:10px;padding:12px}
+    .tag{display:inline-block;font-size:12px;border:1px solid #3a4966;color:#cbd6e8;border-radius:999px;padding:2px 7px;margin-right:6px}
+    .tag.ok{border-color:#2f7d56;color:#8df0b4}.tag.warn{border-color:#8d7130;color:#ffd983}.tag.info{border-color:#3f6d9a;color:#9fd1ff}.tag.media{border-color:#7260a8;color:#c8b8ff}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .group-title{color:#cbd6e8;font-weight:800;margin:2px 0 8px}
+    strong{color:#fff}
+    .top3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+    .top3 div{border:1px solid #33425f;background:#0e1628;border-radius:10px;padding:10px;font-size:13px}
+    @media (max-width:760px){
+      .rates,.two-col,.top3{grid-template-columns:1fr}.time-item{grid-template-columns:1fr}.num{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>每日晨报 · 2026-07-28（周二）</h1>
+      <div class="sub">口径：跨境电商经营决策优先；官方/监管/机构优先，媒体与行业报告只作交叉验证。生成时间按任务口径：2026-07-28 晚间。</div>
+      <div class="filters" aria-label="板块筛选">
+        <button data-target="rates">汇率</button>
+        <button data-target="promo">大促日历</button>
+        <button data-target="ecom">跨境电商</button>
+        <button data-target="algo">Amazon算法研究</button>
+        <button data-target="logistics">物流预警</button>
+        <button data-target="tech">科技</button>
+      </div>
+      <div class="top3">
+        <div><strong>1</strong> USTR 已对 60 个经济体采取强迫劳动相关 Section 301 关税行动，覆盖 99.4% 美国进口，税率为 10% 或 12.5%。</div>
+        <div><strong>2</strong> Amazon Seller Forums 公告：Seller Central passkey 7月扩展到所有账户，部分账户 2026 年晚些时候将被要求使用。</div>
+        <div><strong>3</strong> 美线运价仍高位：Flexport 称 Asia-USWC 自5月中旬约涨 120%，Asia-USEC 约涨 85%，8-9月货需提前锁舱。</div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section id="rates">
+        <div class="section-head"><h2>汇率</h2><span class="badge green">CNH</span></div>
+        <div class="rates">
+          <div class="rate-card"><div class="ccy">1 USD = CNH</div><div class="num">6.7682</div></div>
+          <div class="rate-card"><div class="ccy">1 AED = CNH</div><div class="num">1.8430</div></div>
+          <div class="rate-card"><div class="ccy">1 SAR = CNH</div><div class="num">1.8049</div></div>
+        </div>
+        <div class="note">数据时间：2026-07-29 02:20 UTC / 北京 22:20。按任务 Step1 已预取数据直接使用。</div>
+        <div class="sources">数据来源：fawazahmed0 currency API（任务预取）、用户提供 Step1 汇率数据。</div>
+      </section>
+
+      <section id="promo">
+        <div class="section-head"><h2>大促日历</h2><span class="badge amber">未来14天</span></div>
+        <div class="timeline">
+          <div class="time-item"><div class="date">2026-07-28</div><div><span class="tag info">暂无明确更新</span>Prime Day 2026 官方口径已于 <strong>06-23 至 06-26</strong> 在美国、UAE、沙特等站点完成；未来14天内未发现 Amazon 官方公布的新全球大促。</div></div>
+          <div class="time-item"><div class="date">2026-08-01</div><div><span class="tag ok">官方确认</span>Seller Forums 引用 Peak readiness playbook：Black Friday/Cyber Monday Week 的 <strong>11月容量限制</strong>从 08-01 起可在 Capacity Monitor 查看；这不是入仓截止日。</div></div>
+          <div class="time-item"><div class="date">2026-08-10前</div><div><span class="tag warn">官方未公布</span>未来14天未发现 Amazon 官方 FBA 入仓截止日；第三方未给出可验证的 07-28 至 08-10 入仓截止估算。后续已知官方/论坛口径显示 Prime Big Deal Day 相关 AWD 截止为 <strong>08-29</strong>，超出本次14天窗口。</div></div>
+          <div class="time-item"><div class="date">2026-08</div><div><span class="tag media">媒体/行业交叉验证</span>UAE Seller Forums 旧帖把 8月描述为 UAE Back-to-School 备货执行月，但未发现 2026 当日 Amazon.ae/Amazon.sa 官方活动页公布新大促。</div></div>
+        </div>
+        <div class="sources">数据来源：<a href="https://advertising.amazon.com/events/prime-day">Amazon Ads Prime Day</a>、<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/67ab1bf7-8ea5-4a10-ab19-dc600193715a">Amazon Seller Forums FBA Holiday Shipment Cutoff Dates</a>、<a href="https://sell.amazon.com/fulfillment-by-amazon/holiday">Sell on Amazon FBA holiday guide</a>、Amazon UAE/Saudi Seller Forums 检索。</div>
+      </section>
+
+      <section id="ecom">
+        <div class="section-head"><h2>跨境电商</h2><span class="badge violet">Amazon</span></div>
+        <ul class="news">
+          <li><span class="tag ok">官方确认</span><strong>账号安全/登录方式变更：</strong>Amazon Seller Forums 公告称 2026年7月起 passkeys 扩展到所有 Seller Central 账户，并“强烈建议”立即设置；部分账户将在 <strong>2026年晚些时候</strong>变为必需。该条为单独检索账号安全项所得，不与其它政策检索复用。</li>
+          <li><span class="tag ok">官方确认</span><strong>FBA/MCF/BWP 燃油与物流附加费复查：</strong>Seller Forums 仍显示美国/加拿大 FBA 自 <strong>2026-04-17</strong>起按履约费加收 <strong>3.5%</strong>，平均约 <strong>$0.17/件</strong>；未发现 07-28 当日新费率或计价方式更新。</li>
+          <li><span class="tag ok">官方确认</span><strong>Aged inventory surcharge 复查：</strong>Seller Forums 近期重申 2026-01-16 生效档位：181-210天 <strong>$0.50/ft³</strong>，456天以上 <strong>$7.90/ft³ 或 $0.35/件取高</strong>；按月 15 日评估，未发现当日新档位。</li>
+          <li><span class="tag ok">官方确认</span><strong>中东站点：</strong>Amazon UAE/Saudi Seller Forums 仍显示“中东局势期间 UAE/沙特 FBA removal fees 暂不收取，直至另行通知”；同时原 UAE removal fee 表（标准件 1.6-2.2 AED/件、超大件 2-2.6 AED/件+超30kg每kg 0.5 AED）处于延后执行状态，未见新日期。</li>
+          <li><span class="tag info">监管/机构信息</span><strong>美国进口监管：</strong>USTR 07-23 对 60 个经济体采取强迫劳动相关 Section 301 行动，适用 <strong>10% 或 12.5%</strong>税率并设若干豁免；USTR fact sheet 称覆盖美国 <strong>99.4%</strong>进口。对中国/香港、UAE、沙特等供应链需复核原产地和强迫劳动合规证据。</li>
+          <li><span class="tag ok">官方确认</span><strong>Amazon Ads 产品更新：</strong>Amazon Ads 07-22 发布 Brand+ / Performance+ 十项能力，含 Audience Signals for Brand+、Performance+，通过 Ads Data Manager 接入第一方受众数据，未来数周 Open Beta/GA；对站外与全漏斗广告优化有直接影响。</li>
+          <li><span class="tag media">媒体/行业交叉验证</span><strong>SimilarWeb 最新 Amazon 相关文章：</strong>SimilarWeb Ecommerce Blog 最新 Amazon Insight 仍为 Amazon SEO 主题，强调 Amazon 在美国电商占比 <strong>37.6%</strong>、广告成本近年上升 <strong>48%</strong>，库存、转化率、价格竞争力仍影响搜索排名；非官方算法确认，仅作运营参考。</li>
+          <li><span class="tag media">媒体/行业交叉验证</span><strong>Marketplace Pulse 最新 Amazon 文章：</strong>Amazon Business 年化 GMV 达 <strong>$60B</strong>，Marketplace Pulse 估算约占 Amazon 总 GMV <strong>7%</strong>；若历史结构延续，约 <strong>$30B</strong>流向第三方卖家，B2B 定价与数量折扣值得检查。</li>
+        </ul>
+        <div class="sources">数据来源：<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/8cc9ea8c-6e1c-4c32-812c-28de469f3df4">Amazon Seller Forums passkey announcement</a>、<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/7cbc0233-ee5b-4359-978a-dee7cad5c6f4">Amazon Seller Forums fuel surcharge</a>、<a href="https://sellercentral.amazon.com/seller-forums/discussions/t/85f60e98-f93c-48fe-bee7-07917616f827">Amazon Seller Forums aged inventory</a>、<a href="https://sellercentral.amazon.ae/seller-forums/discussions/t/acf12795-4fc8-4980-b74b-23dade3de375">Amazon UAE Seller Forums removal fees</a>、<a href="https://advertising.amazon.com/en-us/resources/whats-new/brand-plus-and-performance-plus-expand-ai/">Amazon Ads What's New</a>、<a href="https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ustr-takes-action-forced-labor-section-301-investigations">USTR</a>、<a href="https://ustr.gov/about/policy-offices/press-office/fact-sheets/2026/july/fact-sheet-ustr-section-301-action-response-failure-60-economies-ban-imports-produced-forced-labor">USTR Fact Sheet</a>、<a href="https://www.similarweb.com/blog/ecommerce/amazon-insights/amazon-seo/">SimilarWeb</a>、<a href="https://www.marketplacepulse.com/articles/amazon-business-reaches-60-billion">Marketplace Pulse</a>。</div>
+      </section>
+
+      <section id="algo">
+        <div class="section-head"><h2>Amazon算法研究</h2><span class="badge cyan">Science</span></div>
+        <ul class="news">
+          <li><span class="tag info">监管/机构信息</span><strong>暂无当日新发布，近期可跟踪：</strong>Amazon Science 的 Search and Information Retrieval 研究区列出 WSDM 2026 论文“Design and evaluation of whole-page experience optimization for e-commerce search”，关注从线性列表到整页搜索体验优化，卖家侧含义是点击/短期收入之外的长期满意指标可能进入排序实验。</li>
+          <li><span class="tag info">监管/机构信息</span><strong>推荐系统：</strong>Amazon Science 列出 The Web Conference 2026 “AgentDR”，利用 LLM agent 捕捉替代品/互补品隐式关系，目标是减少推荐幻觉并改善全目录排序；对捆绑、替代关键词和场景化 Listing 有参考价值。</li>
+          <li><span class="tag info">监管/机构信息</span><strong>电商实体搜索：</strong>SIGIR 2026 “From unstructured to structured: LLM-guided attribute graphs for entity search and ranking”用 LLM 属性图做实体搜索/相似商品排序；对 3C 类目属性完整度、兼容性字段、规格标准化更敏感。</li>
+          <li><span class="tag info">暂无明确更新</span><strong>Rufus/COSMO：</strong>未发现 07-28 当日 Amazon Science 新论文；但 COSMO 论文仍是电商常识知识图谱官方公开基线，Amazon 公开页面称部署在搜索导航等应用，Seller 侧应持续补足使用场景、受众、功能和兼容性语义。</li>
+          <li><span class="tag media">媒体/行业交叉验证</span><strong>第三方观察：</strong>Marketplace Pulse 07-16 文章称 Rufus 推荐不严格跟随自然搜索排名；这是第三方实验/观点，不是 Amazon 官方算法确认，但提示卖家不要只盯 Best Seller Rank。</li>
+        </ul>
+        <div class="sources">数据来源：<a href="https://www.amazon.science/research-areas/search-and-information-retrieval">amazon.science Search & Information Retrieval</a>、<a href="https://www.amazon.science/publications/cosmo-a-large-scale-e-commerce-common-sense-knowledge-generation-and-serving-system-at-amazon">Amazon Science COSMO</a>、Amazon Research Blog / <a href="https://www.amazon.science/blog/">Amazon Science Blog</a>、Amazon Ads Tech Blog/Ads technical updates 检索、arXiv（Amazon authors + ecommerce/recommendation/search/ad 关键词检索）、<a href="https://www.marketplacepulse.com/articles?search=2026">Marketplace Pulse Rufus 相关文章列表</a>。</div>
+      </section>
+
+      <section id="logistics">
+        <div class="section-head"><h2>物流预警</h2><span class="badge amber">物流预警</span></div>
+        <div class="two-col">
+          <div>
+            <div class="group-title">美线：中国 → 美国</div>
+            <ul class="news">
+              <li><span class="tag media">媒体/行业交叉验证</span><strong>运价：</strong>Flexport 07-16 称全球集装箱运价连续 <strong>5周</strong>上涨，07-02 周环比 <strong>+9%</strong>；Asia-USWC 自5月中旬约 <strong>+120%</strong>，Asia-USEC 约 <strong>+85%</strong>。上海航运交易所 07-24 发布最新 SCFI 周报列表，但正文需登录，未能公开核验逐航线数值。</li>
+              <li><span class="tag ok">官方确认</span><strong>港口与拥堵：</strong>洛杉矶港 06月吞吐 <strong>1,002,734 TEU</strong>，同比 <strong>+12%</strong>，进口 <strong>530,558 TEU</strong> 同比 <strong>+13%</strong>；港方称无船舶积压或货物延误。高吞吐支持“提前出货”判断，但未构成爆仓。</li>
+              <li><span class="tag ok">官方确认</span><strong>船司/运力与GRI：</strong>COSCO 公告显示 07-01 起远东/印度次大陆/中东至美国多目的地服务合同货执行 GRI，美西 all-water 及相关内陆点为 <strong>$2,400/20'</strong>、<strong>$3,000/40'</strong>、<strong>$3,375/40HC</strong>；Maersk 也称美线空间紧张、PSS 已实施，并建议提前订舱。</li>
+              <li><span class="tag ok">官方确认</span><strong>AGL/AMD：</strong>Amazon Global Logistics 官方页仍显示从中国/香港/越南到美国等站的 ocean/air 方案，并给新 FBA 卖家 <strong>60天 8%</strong> ocean base freight 折扣；未发现 07-28 当日 AGL/AMD 停航或新费率公告。</li>
+            </ul>
+          </div>
+          <div>
+            <div class="group-title">中东线：中国 → UAE / 沙特</div>
+            <ul class="news">
+              <li><span class="tag info">监管/机构信息</span><strong>海峡风险：</strong>MARAD active advisory 2026-004 指出 Persian Gulf / Strait of Hormuz / Gulf of Oman 商船遭袭风险仍高，2026-006 对 Red Sea / Bab el Mandeb / Gulf of Aden 的 Houthi commercial vessel attacks 仍有效至 <strong>2026-09-22</strong>。</li>
+              <li><span class="tag media">媒体/行业交叉验证</span><strong>中东运力影响：</strong>Flexport 07-16 称 Strait of Hormuz 自 07-10 起正常商船通行受限，跟踪显示 transit 较前周下降约 <strong>60%</strong>，约 <strong>200k TEU</strong>集装箱运力受限或滞留；这是行业估算，不是 Amazon 官方确认。</li>
+              <li><span class="tag info">监管/机构信息</span><strong>红海/亚欧绕航外溢：</strong>Flexport 07-09 称多数 Asia-Europe 服务继续绕好望角，单航次增加 <strong>10-14天</strong>，亚洲-欧洲经苏伊士占比约 <strong>19%</strong>，远低于 2023年前约 <strong>80%</strong>；对中东 FBA 的直接结论是海运 ETA 和保险报价波动继续偏高。</li>
+              <li><span class="tag ok">官方确认</span><strong>Amazon UAE/Saudi FBA：</strong>截至本次检索，未发现 Amazon UAE/Saudi Seller Central 明确公告 FBA 仓被袭、入仓暂停或配送暂停；因此业务结论为“暂无仓网中断官方确认”。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sources">数据来源于：<a href="https://en.sse.net.cn/eninfo/MarketReport/index.shtml">上海航运交易所</a>、<a href="https://www.flexport.com/global-logistics-update/july-16-2026-glu-newsletter/">Flexport</a>、<a href="https://world.lines.coscoshipping.com/na/en/news/businessnews/1/2">COSCO</a>、JOC 检索、<a href="https://portoflosangeles.org/references/2026-news-releases/news_071526_june_cargo">Port of Los Angeles</a>、<a href="https://www.maritime.dot.gov/msci-advisories">MARAD</a>、<a href="https://www.ukmto.org/">UKMTO</a>、<a href="https://www.maersk.com/news/articles/2026/06/29/north-america-market-update-july">Maersk</a>、<a href="https://sell.amazon.com/programs/amazon-global-logistics">Amazon Global Logistics (AGL)</a>。</div>
+      </section>
+
+      <section id="tech">
+        <div class="section-head"><h2>科技</h2><span class="badge">过去24h</span></div>
+        <ul class="news">
+          <li><span class="tag ok">官方确认</span><strong>OpenAI：</strong>OpenAI Newsroom 最新列表显示 07-27 “How AI is expanding what people do at work”；过去24小时未发现 ChatGPT/Sora 官方重大模型发布。OpenAI Help/官网仍显示 GPT-5.6 Sol 于 07-09 推出，Sora 产品状态页显示 Sora 旧产品已于 2026-04-26 不再可用。</li>
+          <li><span class="tag ok">官方确认</span><strong>Google AI：</strong>Google AI Blog 最新 AI 栏目显示 Gemini App、Research、Developers 多项近期更新，但过去24小时未发现 Gemini/Veo 官方重大新模型发布；6月 AI recap 仍是最近综合更新。</li>
+          <li><span class="tag ok">官方确认</span><strong>NVIDIA：</strong>NVIDIA Newsroom 07-27 宣布与 Ilya Sutskever 的 Safe Superintelligence Inc. 长期战略合作，并投资 SSI；SSI 将获得 Vera Rubin 系统访问，NVIDIA 称其 compute 将提升 <strong>一个数量级</strong>。</li>
+          <li><span class="tag media">媒体/行业交叉验证</span><strong>TechCrunch AI：</strong>TechCrunch 07-28 列出多条 AI 产业新闻，包括 OpenAI 硬件设备报道、Apple Siri AI public beta、Google AI 训练诉讼、DeepMind CEO 呼吁 frontier AI 标准机构等；属媒体报道，需以公司官方后续确认作为决策依据。</li>
+          <li><span class="tag media">媒体/行业交叉验证</span><strong>The Information：</strong>The Information OpenAI topic 最新可见重点仍为 07-23 “Why OpenAI’s Hugging Face AI Hack Spooked Employees”；其 exclusive feed 07-27 报道美国政府接近 AI 模型发布自愿审查框架。付费墙内容仅作趋势提示。</li>
+          <li><span class="tag info">暂无明确更新</span><strong>生图/生视频：</strong>按 Seedance、Seedream、Kling、Sora、Veo 等关键词及重点源检索，过去24小时未找到官方重大能力更新；Sora/Veo 相关需继续等待官方 blog 或 release notes。</li>
+        </ul>
+        <div class="sources">数据来源：<a href="https://openai.com/news/company-announcements/">OpenAI Blog/Newsroom</a>、<a href="https://blog.google/innovation-and-ai/technology/ai/">Google AI Blog</a>、<a href="https://nvidianews.nvidia.com/news/latest">NVIDIA Newsroom</a>、<a href="https://techcrunch.com/category/artificial-intelligence/">TechCrunch AI</a>、<a href="https://www.theinformation.com/topics/openai">The Information</a>、Anthropic/Claude release notes 检索。</div>
+      </section>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('.filters button').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const el=document.getElementById(btn.dataset.target);
+        el.classList.toggle('hidden');
+        btn.classList.toggle('off');
+      });
+    });
+  </script>
+  <script type="application/json" id="pulse-data">
+{
+  "rates": {"USD": "6.7682", "AED": "1.8430", "SAR": "1.8049"},
+  "promotions": ["08-01 — BFCM Week 11月容量限制可在 Capacity Monitor 查看（官方确认，非入仓截止）", "08-10前 — 官方未公布未来14天 FBA 入仓截止日", "08月 — UAE Back-to-School 仅有旧论坛备货建议，暂无2026官方大促"],
+  "top3": ["USTR 07-23 对60个经济体采取强迫劳动相关Section 301行动，税率10%或12.5%，覆盖99.4%美国进口。", "Seller Central passkey 7月扩展到所有账户，部分账户将在2026年晚些时候要求使用。", "Flexport称Asia-USWC自5月中旬约涨120%、Asia-USEC约涨85%，8-9月货需提前锁舱。"],
+  "ecommerce": ["Seller Central passkey 7月扩展到所有账户，部分账户将在2026年晚些时候要求使用。", "美国/加拿大FBA燃油与物流附加费仍为3.5%，平均约0.17美元/件，暂无当日新费率。", "Aged inventory surcharge 181-210天为0.50美元/ft³，456天以上7.90美元/ft³或0.35美元/件取高。", "UAE/沙特FBA removal fees仍因中东局势暂缓收取，暂无新恢复日期。", "USTR对60个经济体采取强迫劳动相关Section 301行动，税率10%或12.5%。", "Amazon Business年化GMV达600亿美元，Marketplace Pulse估算约300亿美元流向第三方卖家。"],
+  "algo": ["Amazon Science WSDM 2026整页搜索体验优化研究关注长期满意指标，可能影响SRP布局与曝光逻辑。", "AgentDR利用LLM agent建模替代品/互补品关系，提示卖家补足场景化和配件语义。", "LLM-guided attribute graphs研究强调属性图用于实体搜索与排序，3C规格字段完整度更重要。"],
+  "logistics": ["美线运价高位：Flexport称Asia-USWC自5月中旬约涨120%、Asia-USEC约涨85%。", "洛杉矶港6月吞吐1002734 TEU，同比+12%，港方称无船舶积压或货物延误。", "COSCO 07-01 GRI：远东至美国美西all-water为2400美元/20尺、3000美元/40尺、3375美元/40HC。", "AGL官方页未见07-28停航或新费率，仍提供新卖家60天8% ocean base freight折扣。", "Flexport估算Hormuz正常商船通行较前周下降约60%，约200k TEU运力受限或滞留。", "红海绕航仍增加10-14天，亚欧经苏伊士占比约19%，低于2023年前约80%。"]
+}
+  </script>
+</body>
+</html>
